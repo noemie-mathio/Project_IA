@@ -17,24 +17,19 @@ namespace Project_IA
             InitializeComponent();
         }
 
-<<<<<<< HEAD
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 QCM = new Form2();
+            Form3 QCM = new Form3();
             QCM.Show();
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form3 Dijkstra = new Form3();
+            Dijkstra Dijkstra = new Dijkstra();
             Dijkstra.Show();
             this.Hide();
-=======
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
->>>>>>> 1aed35111ce156073cbd637ce0dc417f76c13ccb
         }
     }
 }
