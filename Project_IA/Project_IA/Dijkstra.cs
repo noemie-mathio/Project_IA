@@ -23,7 +23,7 @@ namespace Project_IA
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_init1_Click(object sender, EventArgs e)
         {
 
             matrice = new double[nbnodes, nbnodes];
@@ -40,7 +40,7 @@ namespace Project_IA
             matrice[5, 6] = 4; matrice[6, 5] = 4;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button_Dijkstra_Click(object sender, EventArgs e)
         {
             numinitial = Convert.ToInt32(textBox1.Text);
             numfinal = Convert.ToInt32(textBox2.Text);
@@ -62,7 +62,7 @@ namespace Project_IA
             g.GetSearchTree(treeView1);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button_init2_Click(object sender, EventArgs e)
         {
 
             StreamReader monStreamReader = new StreamReader("graphe1.txt");
@@ -137,6 +137,31 @@ namespace Project_IA
             monStreamReader.Close();
 
 
+
+        }
+
+        private void listBoxgraphe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void noeudInitial_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void noeudFinal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_NoeudInitial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_NoeudFinal_Click(object sender, EventArgs e)
+        {
 
         }
     }

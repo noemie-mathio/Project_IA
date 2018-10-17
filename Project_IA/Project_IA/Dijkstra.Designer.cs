@@ -28,133 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.button_init1 = new System.Windows.Forms.Button();
+            this.noeudInitial = new System.Windows.Forms.TextBox();
+            this.noeudFinal = new System.Windows.Forms.TextBox();
+            this.button_Dijkstra = new System.Windows.Forms.Button();
+            this.label_NoeudInitial = new System.Windows.Forms.Label();
+            this.label_NoeudFinal = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button_init2 = new System.Windows.Forms.Button();
             this.listBoxgraphe = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // button1
+            // button_init1
             // 
-            this.button1.Location = new System.Drawing.Point(47, 27);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Init1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_init1.Location = new System.Drawing.Point(35, 22);
+            this.button_init1.Name = "button_init1";
+            this.button_init1.Size = new System.Drawing.Size(75, 23);
+            this.button_init1.TabIndex = 0;
+            this.button_init1.Text = "Init1";
+            this.button_init1.UseVisualStyleBackColor = true;
+            this.button_init1.Click += new System.EventHandler(this.button_init1_Click);
             // 
-            // textBox1
+            // noeudInitial
             // 
-            this.textBox1.Location = new System.Drawing.Point(228, 47);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "0";
+            this.noeudInitial.Location = new System.Drawing.Point(171, 38);
+            this.noeudInitial.Name = "noeudInitial";
+            this.noeudInitial.Size = new System.Drawing.Size(100, 20);
+            this.noeudInitial.TabIndex = 1;
+            this.noeudInitial.Text = "0";
+            this.noeudInitial.TextChanged += new System.EventHandler(this.noeudInitial_TextChanged);
             // 
-            // textBox2
+            // noeudFinal
             // 
-            this.textBox2.Location = new System.Drawing.Point(415, 47);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 22);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "6";
+            this.noeudFinal.Location = new System.Drawing.Point(311, 38);
+            this.noeudFinal.Name = "noeudFinal";
+            this.noeudFinal.Size = new System.Drawing.Size(100, 20);
+            this.noeudFinal.TabIndex = 2;
+            this.noeudFinal.Text = "6";
+            this.noeudFinal.TextChanged += new System.EventHandler(this.noeudFinal_TextChanged);
             // 
-            // button2
+            // button_Dijkstra
             // 
-            this.button2.Location = new System.Drawing.Point(639, 27);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "A*";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_Dijkstra.Location = new System.Drawing.Point(479, 22);
+            this.button_Dijkstra.Name = "button_Dijkstra";
+            this.button_Dijkstra.Size = new System.Drawing.Size(75, 23);
+            this.button_Dijkstra.TabIndex = 3;
+            this.button_Dijkstra.Text = "A*";
+            this.button_Dijkstra.UseVisualStyleBackColor = true;
+            this.button_Dijkstra.Click += new System.EventHandler(this.button_Dijkstra_Click);
             // 
-            // label1
+            // label_NoeudInitial
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(224, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 17);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Noeud initial";
+            this.label_NoeudInitial.AutoSize = true;
+            this.label_NoeudInitial.Location = new System.Drawing.Point(168, 9);
+            this.label_NoeudInitial.Name = "label_NoeudInitial";
+            this.label_NoeudInitial.Size = new System.Drawing.Size(65, 13);
+            this.label_NoeudInitial.TabIndex = 4;
+            this.label_NoeudInitial.Text = "Noeud initial";
+            this.label_NoeudInitial.Click += new System.EventHandler(this.label_NoeudInitial_Click);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(411, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 17);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Noeud final";
+            this.label_NoeudFinal.AutoSize = true;
+            this.label_NoeudFinal.Location = new System.Drawing.Point(308, 9);
+            this.label_NoeudFinal.Name = "label2";
+            this.label_NoeudFinal.Size = new System.Drawing.Size(61, 13);
+            this.label_NoeudFinal.TabIndex = 5;
+            this.label_NoeudFinal.Text = "Noeud final";
+            this.label_NoeudFinal.Click += new System.EventHandler(this.label_NoeudFinal_Click);
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(448, 124);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox1.Location = new System.Drawing.Point(336, 101);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(169, 148);
+            this.listBox1.Size = new System.Drawing.Size(128, 121);
             this.listBox1.TabIndex = 6;
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(639, 95);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(4);
+            this.treeView1.Location = new System.Drawing.Point(479, 77);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(201, 221);
+            this.treeView1.Size = new System.Drawing.Size(152, 180);
             this.treeView1.TabIndex = 7;
             // 
-            // button3
+            // button_init2
             // 
-            this.button3.Location = new System.Drawing.Point(47, 83);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Init2";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button_init2.Location = new System.Drawing.Point(35, 67);
+            this.button_init2.Name = "button_init2";
+            this.button_init2.Size = new System.Drawing.Size(75, 23);
+            this.button_init2.TabIndex = 8;
+            this.button_init2.Text = "Init2";
+            this.button_init2.UseVisualStyleBackColor = true;
+            this.button_init2.Click += new System.EventHandler(this.button_init2_Click);
             // 
             // listBoxgraphe
             // 
             this.listBoxgraphe.FormattingEnabled = true;
-            this.listBoxgraphe.ItemHeight = 16;
-            this.listBoxgraphe.Location = new System.Drawing.Point(228, 115);
+            this.listBoxgraphe.Location = new System.Drawing.Point(171, 93);
+            this.listBoxgraphe.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxgraphe.Name = "listBoxgraphe";
-            this.listBoxgraphe.Size = new System.Drawing.Size(132, 148);
+            this.listBoxgraphe.Size = new System.Drawing.Size(100, 121);
             this.listBoxgraphe.TabIndex = 9;
+            this.listBoxgraphe.SelectedIndexChanged += new System.EventHandler(this.listBoxgraphe_SelectedIndexChanged);
             // 
-            // Form1
+            // Dijkstra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 329);
+            this.ClientSize = new System.Drawing.Size(674, 267);
             this.Controls.Add(this.listBoxgraphe);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button_init2);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Controls.Add(this.label_NoeudFinal);
+            this.Controls.Add(this.label_NoeudInitial);
+            this.Controls.Add(this.button_Dijkstra);
+            this.Controls.Add(this.noeudFinal);
+            this.Controls.Add(this.noeudInitial);
+            this.Controls.Add(this.button_init1);
+            this.Name = "Dijkstra";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,15 +157,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button_init1;
+        private System.Windows.Forms.TextBox noeudInitial;
+        private System.Windows.Forms.TextBox noeudFinal;
+        private System.Windows.Forms.Button button_Dijkstra;
+        private System.Windows.Forms.Label label_NoeudInitial;
+        private System.Windows.Forms.Label label_NoeudFinal;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button_init2;
         private System.Windows.Forms.ListBox listBoxgraphe;
     }
 }
