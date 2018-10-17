@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe.config
+=======
+C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe.config
+>>>>>>> 1befd2fd0fce19c5eea396f156c7835ad0816ba8
