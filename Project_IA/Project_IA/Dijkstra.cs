@@ -42,8 +42,8 @@ namespace Project_IA
 
         private void button_Dijkstra_Click(object sender, EventArgs e)
         {
-            numinitial = Convert.ToInt32(textBox1.Text);
-            numfinal = Convert.ToInt32(textBox2.Text);
+            numinitial = Convert.ToInt32(noeudInitial.Text);
+            numfinal = Convert.ToInt32(noeudFinal.Text);
             SearchTree g = new SearchTree();
             Node2 N0 = new Node2();
             N0.numero = numinitial;

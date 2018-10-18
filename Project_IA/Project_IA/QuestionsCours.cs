@@ -9,6 +9,8 @@ using System.Xml.Serialization;
 
 namespace Project_IA
 {
+    [Serializable()]
+
     class QuestionsCours
     {
         private string question;
@@ -18,7 +20,6 @@ namespace Project_IA
         private string reponse4;
         private string bonnereponse;
         
-
         public QuestionsCours(string _question, string _reponse1, string _reponse2, string _reponse3, string _reponse4, string _bonnereponse)
         {
             question = _question;
@@ -29,8 +30,9 @@ namespace Project_IA
             bonnereponse = _bonnereponse;
         }
 
-        public static List<QuestionsCours> Deserialize (string xml)
+        public string GetQuestion()
+        { return question; }
 
-
+     
     }
 }
