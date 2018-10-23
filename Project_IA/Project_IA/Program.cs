@@ -28,7 +28,7 @@ namespace Project_IA
             foreach (QuestionsCours element in questions)
             {
                 numero++;
-                Console.WriteLine(element.GetQuestion());
+                Console.WriteLine(element.reponse1);
             }
             Console.WriteLine();
             Console.Read();
