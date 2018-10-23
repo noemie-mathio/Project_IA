@@ -20,26 +20,59 @@ namespace Project_IA
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            Test list = null;
-            list = Test.Charger("test3.xml");
+
+            
+            List<QuestionsCours> questions = new List<QuestionsCours>();
+            questions = DeserializeFromXml("test_question.xml");
+            int numero = 0;
+            foreach (QuestionsCours element in questions)
+            {
+                numero++;
+                Console.WriteLine(element.GetQuestion());
+            }
+            Console.WriteLine();
+            Console.Read();
+
+
+        }
+        // Serialisation fonctionnelle, à modifier en tant voulue dans le programme
+        public static void Serialisation()
+        {
+            List<QuestionsCours> questions = new List<QuestionsCours>();
+
+            QuestionsCours question_1 = new QuestionsCours("Une liaison rotule à :", "4 degrés de liberté", "3 degrés de liberté", "2 degrés de liberté", "Ca dépends", "3 degrés de liberté");
+            QuestionsCours question_2 = new QuestionsCours("Quel est la différence entre un servo-contrôleur et un micro-contrôleur?", "Purement sémantique", "Le servo-contrôleur n’est pas programmable", "Le servo-contrôleur ne fonctionne pas en autonomie", "Le micro-contrôleur ne possede pas de mémoire interne", "Le servo-contrôleur ne fonctionne pas en autonomie");
+
+            questions.Add(question_1);
+            questions.Add(question_2);
+
+            XmlSerializer xs = new XmlSerializer(typeof(List<QuestionsCours>));
+            using (StreamWriter wr = new StreamWriter("test_question.xml"))
+            {
+                xs.Serialize(wr, questions);
+            }
+
+
+            /*Test list = null;
+            list = Test.Charger("test7.xml");
 
             foreach (QuestionsCours element in list)
             {
                 Console.WriteLine(element.GetQuestion());
             }
             Console.ReadLine();
-
+            */
         }
-        /*public static List<QuestionsCours> DeserializeFromXml(string filePath)
+        public static List<QuestionsCours> DeserializeFromXml(string filePath)
         {
            List<QuestionsCours> questions = null;
 
-            XmlSerializer serializer = new XmlSerializer(typeof(QuestionsCours));
+            XmlSerializer serializer = new XmlSerializer(typeof(List<QuestionsCours>));
 
             StreamReader reader = new StreamReader(filePath);
             questions = (List<QuestionsCours>)serializer.Deserialize(reader);
             reader.Close();
             return questions;
-        }*/
+        }
     }
 }

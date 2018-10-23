@@ -9,16 +9,19 @@ using System.Xml.Serialization;
 
 namespace Project_IA
 {
-    [Serializable()]
-
+    public class Test
+    {
+        [XmlElement("Test")]
+        public List<QuestionsCours> test = new List<QuestionsCours>();
+    }
     public class QuestionsCours
     {
-        private string question;
-        private string reponse1;
-        private string reponse2;
-        private string reponse3;
-        private string reponse4;
-        private string bonnereponse;
+        public string question { get;  set; }
+        public string reponse1 { get;  set; }
+        public string reponse2 { get;  set; }
+        public string reponse3 { get;  set; }
+        public string reponse4 { get;  set; }
+        public string bonnereponse;
         
         public QuestionsCours(string _question, string _reponse1, string _reponse2, string _reponse3, string _reponse4, string _bonnereponse)
         {
