@@ -20,21 +20,26 @@ namespace Project_IA
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            List<QuestionsCours> list = new List<QuestionsCours>();
-            list= DeserializeFromXml("test.xml");
+            Test list = null;
+            list = Test.Charger("test3.xml");
+
+            foreach (QuestionsCours element in list)
+            {
+                Console.WriteLine(element.GetQuestion());
+            }
+            Console.ReadLine();
 
         }
-        public static List<QuestionsCours> DeserializeFromXml(string filePath)
+        /*public static List<QuestionsCours> DeserializeFromXml(string filePath)
         {
-            //lSerializer deserializer = new XmlSerializer(typeof(List<QuestionsCours>));
-            StreamReader reader = new StreamReader(filePath);
-            List<QuestionsCours> list;
-            XmlSerializer xs = new XmlSerializer(typeof(QuestionsCours));
-            list = XmlSerializer.;
-                (typeof(List<QuestionsCours>)).Deserialize(reader);
-            reader.Close();
+           List<QuestionsCours> questions = null;
 
-            return list;
-        }
+            XmlSerializer serializer = new XmlSerializer(typeof(QuestionsCours));
+
+            StreamReader reader = new StreamReader(filePath);
+            questions = (List<QuestionsCours>)serializer.Deserialize(reader);
+            reader.Close();
+            return questions;
+        }*/
     }
 }

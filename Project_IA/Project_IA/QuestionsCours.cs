@@ -11,7 +11,7 @@ namespace Project_IA
 {
     [Serializable()]
 
-    class QuestionsCours
+    public class QuestionsCours
     {
         private string question;
         private string reponse1;
@@ -29,6 +29,8 @@ namespace Project_IA
             reponse4 = _reponse4;
             bonnereponse = _bonnereponse;
         }
+        public QuestionsCours()
+        { }
 
         public string GetQuestion()
         { return question; }
