@@ -29,7 +29,13 @@ namespace Project_IA
             bonnereponse = _bonnereponse;
         }
 
-        public static List<QuestionsCours> Deserialize (string xml)
+        public List<QuestionsCours> Deserialise(string xmlString)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<QuestionsCours>), new XmlRootAttribute("QuestionsCours"));
+            StringReader stringReader = new StringReader(xmlString);
+            List<QuestionsCours> productList = (List<QuestionsCours>)serializer.Deserialize(stringReader);
+            return productList;
+        }
 
 
     }
