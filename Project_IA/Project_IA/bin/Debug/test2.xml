@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfQuestionsCours>
+<QuestionsCours>
+	<question>Une liaison rotule</question>
+	<reponse1>4 degrés de liberté</reponse1>
+	<reponse2>3 degrés de liberté</reponse2>
+	<reponse3>2 degrés de liberté</reponse3>
+	<reponse4>Ca dépends</reponse4>
+	<bonnereponse>3 degrés de liberté</bonnereponse>
+</QuestionsCours>
+<QuestionsCours>
+    <question> Quelle est la différence entre un servo-contrôleur et un micro-contrôleur</question>
+	<reponse1>Purement sémantique</reponse1>
+	<reponse2>Le servo-contrôleur n’est pas programmable</reponse2>
+	<reponse3>Le servo-contrôleur ne fonctionne pas en autonomie</reponse3>
+	<reponse4>Le micro-contrôleur ne possède pas de mémoire interne</reponse4>
+	<bonnereponse>Le servo-contrôleur ne fonctionne pas en autonomie</bonnereponse>
+</QuestionsCours>
+</ArrayOfQuestionsCours>

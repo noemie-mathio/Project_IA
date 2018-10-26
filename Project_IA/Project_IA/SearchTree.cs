@@ -119,7 +119,7 @@ namespace Project_IA
                             // Mise à jour de N2bis
                             N2bis.SetGCost(N.GetGCost() + N.GetArcCost(N2));
                             // HCost pas recalculé car toujours bon
-                            N2bis.calculCoutTotal(); // somme de GCost et HCost
+                            N2bis.RecalculeCoutTotal(); // somme de GCost et HCost
                             // Mise à jour de la famille ....
                             N2bis.Supprime_Liens_Parent();
                             N2bis.SetNoeud_Parent(N);
@@ -133,7 +133,6 @@ namespace Project_IA
                     {
                         // N2 est nouveau, MAJ et insertion dans les ouverts
                         N2.SetGCost(N.GetGCost() + N.GetArcCost(N2));
-                        N2.CalculeHCost();
                         N2.SetNoeud_Parent(N);
                         N2.calculCoutTotal(); // somme de GCost et HCost
                         this.InsertNewNodeInOpenList(N2);
@@ -201,5 +200,6 @@ namespace Project_IA
                 if (GNfils.GetEnfants().Count > 0) AjouteBranche(GNfils, TNfils);
             }
         }
+
     }
 }
