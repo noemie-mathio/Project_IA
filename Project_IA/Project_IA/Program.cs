@@ -36,9 +36,9 @@ namespace Project_IA
 
         }
         // Serialisation fonctionnelle, à modifier en tant voulue dans le programme
-        public static void Serialisation()
+        public static void Serialisation(List<QuestionsCours> questions)
         {
-            List<QuestionsCours> questions = new List<QuestionsCours>();
+            questions = new List<QuestionsCours>();
 
             QuestionsCours question_1 = new QuestionsCours("Une liaison rotule à :", "4 degrés de liberté", "3 degrés de liberté", "2 degrés de liberté", "Ca dépends", "3 degrés de liberté");
             QuestionsCours question_2 = new QuestionsCours("Quel est la différence entre un servo-contrôleur et un micro-contrôleur?", "Purement sémantique", "Le servo-contrôleur n’est pas programmable", "Le servo-contrôleur ne fonctionne pas en autonomie", "Le micro-contrôleur ne possede pas de mémoire interne", "Le servo-contrôleur ne fonctionne pas en autonomie");
@@ -53,15 +53,7 @@ namespace Project_IA
             }
 
 
-            /*Test list = null;
-            list = Test.Charger("test7.xml");
-
-            foreach (QuestionsCours element in list)
-            {
-                Console.WriteLine(element.GetQuestion());
-            }
-            Console.ReadLine();
-            */
+          
         }
         public static List<QuestionsCours> DeserializeFromXml(string filePath)
         {

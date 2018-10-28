@@ -8,12 +8,7 @@ using System.Xml;
 using System.Xml.Serialization;
 
 namespace Project_IA
-{
-    public class Test
-    {
-        [XmlElement("Test")]
-        public List<QuestionsCours> test = new List<QuestionsCours>();
-    }
+{  
     public class QuestionsCours
     {
         public string question { get;  set; }
@@ -22,7 +17,11 @@ namespace Project_IA
         public string reponse3 { get;  set; }
         public string reponse4 { get;  set; }
         public string bonnereponse;
-        
+        public List<QuestionsCours> questionsCours;
+        Random random;
+
+
+
         public QuestionsCours(string _question, string _reponse1, string _reponse2, string _reponse3, string _reponse4, string _bonnereponse)
         {
             question = _question;
@@ -32,23 +31,52 @@ namespace Project_IA
             reponse4 = _reponse4;
             bonnereponse = _bonnereponse;
         }
-        public QuestionsCours()
-        { }
+        public QuestionsCours(){ }
 
-<<<<<<< HEAD
-        public List<QuestionsCours> Deserialise(string xmlString)
+        public List<QuestionsCours> deserializeFromXmlFile(string filePath)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(List<QuestionsCours>), new XmlRootAttribute("QuestionsCours"));
-            StringReader stringReader = new StringReader(xmlString);
-            List<QuestionsCours> productList = (List<QuestionsCours>)serializer.Deserialize(stringReader);
-            return productList;
+            XmlSerializer serializer = new XmlSerializer(typeof(List<QuestionsCours>));
+
+            StreamReader reader = new StreamReader(filePath);
+            questionsCours = (List<QuestionsCours>)serializer.Deserialize(reader);
+            reader.Close();
+            return questionsCours;
         }
 
-=======
-        public string GetQuestion()
-        { return question; }
->>>>>>> def99f21fc369d762d03da212fc6f1ebde1da474
+        public List<QuestionsCours> newQuiz() //à revoir
+        {
+            int count = questionsCours.Count;
+            int questionCount = 0;
+            List<QuestionsCours> questionsQuiz = new List<QuestionsCours>();
+            int[] librairie = new int[20]; 
 
-     
+            while (questionCount < 20)
+            {
+                int numRandom=0;
+                bool controle = false;
+                while (controle == false)
+                {
+                    int randomNumber = random.Next(1, questionsCours.Count+1);
+                    for (int i = 0; i < 20; i++)
+                    {
+                        if (librairie[i] != randomNumber)
+                        {
+                            controle = true;
+                            numRandom = randomNumber;
+                            librairie[i] = randomNumber;
+                        }
+                    }
+                }
+                QuestionsCours randSong = questionsCours[numRandom];
+                if (!questionsQuiz.Contains(randSong))
+                {
+                    questionsQuiz.Add(randSong);
+                    questionCount++;
+                }
+            }
+            return questionsQuiz;
+        }
+
+
     }
 }
