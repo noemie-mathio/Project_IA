@@ -20,8 +20,7 @@ namespace Project_IA
         public string explicationBonneReponse { get; set; } // Penser à ajouter les balises dans le fichier XML
         public List<QuestionsCours> questionsCours;
         Random random;
-
-
+        public static List<QuestionsCours> quizzzzz { get; set; }
 
         public QuestionsCours(string _question, string _reponse1, string _reponse2, string _reponse3, string _reponse4, string _bonnereponse, string _explicationBonneReponse)
         {
@@ -45,11 +44,10 @@ namespace Project_IA
             return questionsCours;
         }
 
-        public List<QuestionsCours> newQuiz() //à revoir
+        public void newQuiz() 
         {
             int count = questionsCours.Count;
             int questionCount = 0;
-            List<QuestionsCours> questionsQuiz = new List<QuestionsCours>();
             int[] librairie = new int[20]; 
 
             while (questionCount < 20)
@@ -76,11 +74,10 @@ namespace Project_IA
                     }
                 }
                 QuestionsCours nouvelleQuestion = questionsCours[numRandom];
-                questionsQuiz.Add(nouvelleQuestion);
+                quizzzzz.Add(nouvelleQuestion);
                 questionCount++;
 
             }
-            return questionsQuiz;
         }
 
 
