@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project_IA
 {
-    public partial class Form3 : Form
+    public partial class Test : Form
     {
-        public Form3()
+        public Test()
         {
             InitializeComponent();
         }

@@ -36,3 +36,6 @@ C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Pro
 /Users/noemiem/Documents/GitHub/Project_IA/Project_IA/Project_IA/bin/Debug/Project_IA.exe.config
 /Users/noemiem/Documents/GitHub/Project_IA/Project_IA/Project_IA/bin/Debug/Project_IA.exe
 /Users/noemiem/Documents/GitHub/Project_IA/Project_IA/Project_IA/bin/Debug/Project_IA.pdb
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe.config
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.exe
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.pdb
