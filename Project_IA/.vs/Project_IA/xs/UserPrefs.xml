@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{D3D46A6B-CDDB-42D0-808F-64A0F87B3E89}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Project_IA/QuestionsCours.cs">
     <Files>
-      <File FileName="Project_IA/QuestionsCours.cs" Line="46" Column="57" />
+      <File FileName="Project_IA/QuestionsCours.cs" Line="33" Column="42" />
       <File FileName="Project_IA/Program.cs" Line="68" Column="10" />
       <File FileName="Project_IA/Node2.cs" Line="1" Column="1" />
       <File FileName="Project_IA/Quiz.cs" Line="81" Column="35" />

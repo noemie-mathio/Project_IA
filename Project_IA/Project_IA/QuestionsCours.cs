@@ -8,7 +8,7 @@ using System.Xml;
 using System.Xml.Serialization;
 
 namespace Project_IA
-{  
+{   // Dans le fichier XML, penser à mettre au minimum 20 questions avant d'essayer de le lire sinon erreur
     public class QuestionsCours
     {
         public string question { get;  set; }
@@ -17,12 +17,13 @@ namespace Project_IA
         public string reponse3 { get;  set; }
         public string reponse4 { get;  set; }
         public string bonnereponse;
+        public string explicationBonneReponse { get; set; } // Penser à ajouter les balises dans le fichier XML
         public List<QuestionsCours> questionsCours;
         Random random;
 
 
 
-        public QuestionsCours(string _question, string _reponse1, string _reponse2, string _reponse3, string _reponse4, string _bonnereponse)
+        public QuestionsCours(string _question, string _reponse1, string _reponse2, string _reponse3, string _reponse4, string _bonnereponse, string _explicationBonneReponse)
         {
             question = _question;
             reponse1 = _reponse1;
@@ -30,6 +31,7 @@ namespace Project_IA
             reponse3 = _reponse3;
             reponse4 = _reponse4;
             bonnereponse = _bonnereponse;
+            explicationBonneReponse = _explicationBonneReponse;
         }
         public QuestionsCours(){ }
 
@@ -56,23 +58,27 @@ namespace Project_IA
                 bool controle = false;
                 while (controle == false)
                 {
+                    int compteur_question = 0;
                     int randomNumber = random.Next(1, questionsCours.Count+1);
                     for (int i = 0; i < 20; i++)
                     {
-                        if (librairie[i] != randomNumber)
+                        if (librairie[i] == randomNumber)
                         {
-                            controle = true;
-                            numRandom = randomNumber;
-                            librairie[i] = randomNumber;
+                            compteur_question++;
                         }
                     }
+                    if (compteur_question==0)
+                    {
+                        controle = true;
+                        numRandom = randomNumber;
+                        librairie[questionCount] = randomNumber;
+          
+                    }
                 }
-                QuestionsCours randSong = questionsCours[numRandom];
-                if (!questionsQuiz.Contains(randSong))
-                {
-                    questionsQuiz.Add(randSong);
-                    questionCount++;
-                }
+                QuestionsCours nouvelleQuestion = questionsCours[numRandom];
+                questionsQuiz.Add(nouvelleQuestion);
+                questionCount++;
+
             }
             return questionsQuiz;
         }
