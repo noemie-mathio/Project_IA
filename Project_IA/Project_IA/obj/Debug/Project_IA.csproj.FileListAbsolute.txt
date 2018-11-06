@@ -43,3 +43,11 @@ C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Pro
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.exe
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.pdb
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csprojResolveAssemblyReference.cache
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csprojResolveAssemblyReference.cache
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Form1.resources
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Dijkstra.resources
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Properties.Resources.resources
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csproj.GenerateResource.Cache
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.pdb
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Quizz.resources
