@@ -65,12 +65,38 @@ namespace Project_IA
         private void button_init2_Click(object sender, EventArgs e)
         {
 
-            StreamReader monStreamReader = new StreamReader("graphe1.txt");
-
+            
+                StreamReader monStreamReader = new StreamReader("graphe1.txt"); // donner un autre nom, StreamReader monStreamReader = new StreamReader("grapheDijkstra.txt");
+                string ligne = monStreamReader.ReadLine();
+            
+            int i = 0;
+            while (ligne[i] != ':') i++; // premiere ligne est le ,ombre de graphes
+            string nbgraph = "";
+            i++; // On dépasse le ":"
+            while (ligne[i] == ' ') i++; // on saute les blancs éventuels
+            while (i < ligne.Length)
+            {
+                nbgraph = nbgraph + ligne[i];
+                i++;
+            }
+            int intnbgraph = Int32.Parse(nbgraph);
             // Lecture du fichier avec un while, évidemment !
             // 1ère ligne : "nombre de noeuds du graphe
-            string ligne = monStreamReader.ReadLine();
-            int i = 0;
+
+
+            //choix au hasard du graph à étudier parmi le nombre de graph total.
+            Random random = new Random();
+            string graph = "graphe "+random.Next(1, intnbgraph + 1).ToString(); 
+
+
+            // ATTENTION, il est necessaire de réinitialiser
+            while (ligne != graph)
+            {
+                ligne = monStreamReader.ReadLine();
+               
+            }
+            ligne = monStreamReader.ReadLine();
+            i = 0;
             while (ligne[i] != ':') i++;
             string strnbnoeuds = "";
             i++; // On dépasse le ":"
@@ -91,7 +117,7 @@ namespace Project_IA
             //  arc : n°noeud départ    n°noeud arrivée  valeur
             //  exemple 4 : 
             ligne = monStreamReader.ReadLine();
-            while (ligne != null)
+            while (ligne != "fin")
             {
                 i = 0;
                 while (ligne[i] != ':') i++;
@@ -162,7 +188,7 @@ namespace Project_IA
 
         private void label_NoeudFinal_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

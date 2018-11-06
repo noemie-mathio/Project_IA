@@ -17,12 +17,12 @@ namespace Project_IA
         
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
 
             
-            List<QuestionsCours> questions = new List<QuestionsCours>();
+           /* List<QuestionsCours> questions = new List<QuestionsCours>();
             questions = DeserializeFromXml("test_question.xml");
             int numero = 0;
             foreach (QuestionsCours element in questions)
@@ -31,7 +31,7 @@ namespace Project_IA
                 Console.WriteLine(element.reponse1);
             }
             Console.WriteLine();
-            Console.Read();
+            Console.Read(); */
 
 
         }

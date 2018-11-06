@@ -38,6 +38,7 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.button_init2 = new System.Windows.Forms.Button();
             this.listBoxgraphe = new System.Windows.Forms.ListBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // button_init1
@@ -88,11 +89,11 @@
             this.label_NoeudInitial.Text = "Noeud initial";
             this.label_NoeudInitial.Click += new System.EventHandler(this.label_NoeudInitial_Click);
             // 
-            // label2
+            // label_NoeudFinal
             // 
             this.label_NoeudFinal.AutoSize = true;
             this.label_NoeudFinal.Location = new System.Drawing.Point(308, 9);
-            this.label_NoeudFinal.Name = "label2";
+            this.label_NoeudFinal.Name = "label_NoeudFinal";
             this.label_NoeudFinal.Size = new System.Drawing.Size(61, 13);
             this.label_NoeudFinal.TabIndex = 5;
             this.label_NoeudFinal.Text = "Noeud final";
@@ -167,5 +168,6 @@
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Button button_init2;
         private System.Windows.Forms.ListBox listBoxgraphe;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

@@ -39,3 +39,7 @@ C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Pro
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe.config
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.exe
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.pdb
+C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe.config
+C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.exe
+C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.pdb
+C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csprojResolveAssemblyReference.cache
