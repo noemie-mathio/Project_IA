@@ -19,7 +19,7 @@ namespace Project_IA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form3 QCM = new Form3();
+            Quizz QCM = new Quizz();
             QCM.Show();
             this.Hide();
         }
@@ -29,7 +29,6 @@ namespace Project_IA
             Dijkstra Dijkstra = new Dijkstra();
             Dijkstra.Show();
             this.Hide();
-
         }
     }
 }

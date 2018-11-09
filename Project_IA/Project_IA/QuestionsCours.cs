@@ -19,7 +19,7 @@ namespace Project_IA
         public string bonnereponse;
         public string explicationBonneReponse { get; set; } // Penser à ajouter les balises dans le fichier XML
         public List<QuestionsCours> questionsCours;
-        Random random;
+        public Random random=new Random();
         public static List<QuestionsCours> quizzzzz { get; set; }
 
         public QuestionsCours(string _question, string _reponse1, string _reponse2, string _reponse3, string _reponse4, string _bonnereponse, string _explicationBonneReponse)
