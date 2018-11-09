@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{D3D46A6B-CDDB-42D0-808F-64A0F87B3E89}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Project_IA/QuestionsCours.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Project_IA/SearchTree.cs">
     <Files>
-      <File FileName="Project_IA/QuestionsCours.cs" Line="1" Column="1" />
-      <File FileName="Project_IA/Program.cs" Line="68" Column="10" />
+      <File FileName="Project_IA/QuestionsCours.cs" Line="21" Column="52" />
+      <File FileName="Project_IA/Program.cs" Line="1" Column="1" />
       <File FileName="Project_IA/Node2.cs" Line="1" Column="1" />
+      <File FileName="Project_IA/SearchTree.cs" Line="24" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

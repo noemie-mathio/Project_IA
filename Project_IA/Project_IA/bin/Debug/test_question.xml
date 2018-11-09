@@ -8,7 +8,6 @@
     <reponse4>Ca dépends</reponse4>
     <bonnereponse>2</bonnereponse>
     <explicationBonneReponse>Blablabla</explicationBonneReponse>
-
   </QuestionsCours>
   <QuestionsCours>
     <question>Quel est la différence entre un servo-contrôleur et un micro-contrôleur?</question>
@@ -18,6 +17,159 @@
     <reponse4>Le micro-contrôleur ne possede pas de mémoire interne</reponse4>
     <bonnereponse>3</bonnereponse>
     <explicationBonneReponse>Blablabla</explicationBonneReponse>
-
   </QuestionsCours>
+<QuestionsCours>
+<question>Quel est l’avantage d’une résolution utilisant A+ sur un simple Dijkstra?</question>
+<reponse1>Trouver une solution plus rapide</reponse1>
+<reponse2>Trouver une solution plus rapidement</reponse2>
+<reponse3>Trouver une meilleur solution</reponse3>
+<reponse4>Redessiner le graphe</reponse4>
+<bonnereponse>2</bonnereponse>
+<explicationBonneReponse>Blabla</explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question>Quelle est l'utilisation d’un algorithme min/max ?</question>
+<reponse1>Trouver le meilleur coup
+</reponse1>
+<reponse2>Trouver le chemin le plus court</reponse2>
+<reponse3>Trouver l’équilibre le moins énergétique</reponse3>
+<reponse4>Trouver une meilleure solution</reponse4>
+<bonnereponse>1</bonnereponse>
+<explicationBonneReponse>Blablabla</explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question>Quelle amélioration apporte l’algorithme Alpha-Beta par rapport à l’algorithme min/max ?</question>
+<reponse1>Mieux identifier le coup de l’adversaire</reponse1>
+<reponse2>Trouver une meilleur solution</reponse2>
+<reponse3>Ne pas étudier les coups possibles moins forts</reponse3>
+<reponse4>Identifier le chemin le plus court</reponse4>
+<bonnereponse>3</bonnereponse>
+<explicationBonneReponse>Blabla</explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
+<QuestionsCours>
+<question></question>
+<reponse1></reponse1>
+<reponse2></reponse2>
+<reponse3></reponse3>
+<reponse4></reponse4>
+<bonnereponse></bonnereponse>
+<explicationBonneReponse></explicationBonneReponse>
+</QuestionsCours>
 </ArrayOfQuestionsCours>
