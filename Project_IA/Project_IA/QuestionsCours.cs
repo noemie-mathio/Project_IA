@@ -18,9 +18,7 @@ namespace Project_IA
         public string reponse4 { get;  set; }
         public string bonnereponse;
         public string explicationBonneReponse { get; set; } // Penser à ajouter les balises dans le fichier XML
-        public List<QuestionsCours> questionsCours;
-        public Random random=new Random();
-        public static List<QuestionsCours> quizzzzz { get; set; }
+
 
         public QuestionsCours(string _question, string _reponse1, string _reponse2, string _reponse3, string _reponse4, string _bonnereponse, string _explicationBonneReponse)
         {
@@ -33,52 +31,6 @@ namespace Project_IA
             explicationBonneReponse = _explicationBonneReponse;
         }
         public QuestionsCours(){ }
-
-        public List<QuestionsCours> deserializeFromXmlFile(string filePath)
-        {
-            XmlSerializer serializer = new XmlSerializer(typeof(List<QuestionsCours>));
-
-            StreamReader reader = new StreamReader(filePath);
-            questionsCours = (List<QuestionsCours>)serializer.Deserialize(reader);
-            reader.Close();
-            return questionsCours;
-        }
-
-        public void newQuiz() 
-        {
-            int count = questionsCours.Count;
-            int questionCount = 0;
-            int[] librairie = new int[20]; 
-
-            while (questionCount < 20)
-            {
-                int numRandom=0;
-                bool controle = false;
-                while (controle == false)
-                {
-                    int compteur_question = 0;
-                    int randomNumber = random.Next(1, questionsCours.Count+1);
-                    for (int i = 0; i < 20; i++)
-                    {
-                        if (librairie[i] == randomNumber)
-                        {
-                            compteur_question++;
-                        }
-                    }
-                    if (compteur_question==0)
-                    {
-                        controle = true;
-                        numRandom = randomNumber;
-                        librairie[questionCount] = randomNumber;
-          
-                    }
-                }
-                QuestionsCours nouvelleQuestion = questionsCours[numRandom];
-                quizzzzz.Add(nouvelleQuestion);
-                questionCount++;
-
-            }
-        }
 
 
     }
