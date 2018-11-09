@@ -16,11 +16,11 @@ namespace Project_IA
         public string reponse2 { get;  set; }
         public string reponse3 { get;  set; }
         public string reponse4 { get;  set; }
-        public string bonnereponse;
+        public int bonnereponse;
         public string explicationBonneReponse { get; set; } // Penser à ajouter les balises dans le fichier XML
 
 
-        public QuestionsCours(string _question, string _reponse1, string _reponse2, string _reponse3, string _reponse4, string _bonnereponse, string _explicationBonneReponse)
+        public QuestionsCours(string _question, string _reponse1, string _reponse2, string _reponse3, string _reponse4, int _bonnereponse, string _explicationBonneReponse)
         {
             question = _question;
             reponse1 = _reponse1;

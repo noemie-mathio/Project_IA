@@ -52,3 +52,14 @@ C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Pro
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.pdb
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Quizz.resources
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Test.resources
+H:\2A\IA\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe.config
+H:\2A\IA\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe
+H:\2A\IA\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.pdb
+H:\2A\IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csprojResolveAssemblyReference.cache
+H:\2A\IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Form1.resources
+H:\2A\IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Dijkstra.resources
+H:\2A\IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Properties.Resources.resources
+H:\2A\IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Quizz.resources
+H:\2A\IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csproj.GenerateResource.Cache
+H:\2A\IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.exe
+H:\2A\IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.pdb

@@ -18,18 +18,24 @@ namespace Project_IA
         public List<QuestionsCours> questionsCours;
         public Random random = new Random();
         public List<QuestionsCours> quizzzzz { get; set; }
+        bool answered;
+        int bonnereponse;
+        int score;
+        int compteur = 0;
+
+        
 
         public Quizz()
         {
             InitializeComponent();
-            deserializeFromXmlFile("test_question.xml");
+            //deserializeFromXmlFile("test_question.xml");
             //quizzzzz = new List<QuestionsCours>();
             //newQuiz();
             quizzzzz = new List<QuestionsCours>();
-            QuestionsCours question_2 = new QuestionsCours("Quel est la différence entre un servo-contrôleur et un micro-contrôleur?", "Purement sémantique", "Le servo-contrôleur n’est pas programmable", "Le servo-contrôleur ne fonctionne pas en autonomie", "Le micro-contrôleur ne possede pas de mémoire interne", "Le servo-contrôleur ne fonctionne pas en autonomie", "Blabla");
+            QuestionsCours question_2 = new QuestionsCours("Quel est la différence entre un servo-contrôleur et un micro-contrôleur?", "Purement sémantique", "Le servo-contrôleur n’est pas programmable", "Le servo-contrôleur ne fonctionne pas en autonomie", "Le micro-contrôleur ne possede pas de mémoire interne", 3, "Blabla");
 
             quizzzzz.Add(question_2);
-            newQuestion(0);
+            newQuestion();
             
         }
         public List<QuestionsCours> deserializeFromXmlFile(string filePath)
@@ -78,7 +84,7 @@ namespace Project_IA
 
             }
         }
-        private void newQuestion(int compteur)
+        private void newQuestion()
         {
             QuestionsCours questionPosee = quizzzzz.ElementAt(compteur);
 
@@ -87,7 +93,25 @@ namespace Project_IA
             option2Button.Text = questionPosee.reponse2;
             option3Button.Text = questionPosee.reponse3;
             option4Button.Text = questionPosee.reponse4;
+            bonnereponse = questionPosee.bonnereponse;
         }
+        private bool answerCheck(int answerNumber)
+        {
+            
+            if(answerNumber==this.bonnereponse)
+            {
+                
+                 score++;
+                feedbackLabel.Text = "Bonne réponse! Bien joué";
+                return true;       
+            }
+            else
+            { MessageBox.Show(quizzzzz.ElementAt(compteur).explicationBonneReponse);
+                feedbackLabel.Text = "Mauvais réponse";
+                return false;
+            }
+        }
+
 
         private void labelQuestion_Click(object sender, EventArgs e)
         {
@@ -96,12 +120,28 @@ namespace Project_IA
 
         private void option1Button_Click(object sender, EventArgs e)
         {
-
+            answered=answerCheck(1);
+            if(answered==true)
+            {
+                option1Button.ForeColor = Color.Green;
+            }
         }
 
         private void option2Button_Click(object sender, EventArgs e)
         {
-
+            answered = answerCheck(2);
         }
+
+        private void option3Button_Click(object sender, EventArgs e)
+        {
+            answered = answerCheck(3);
+        }
+
+        private void option4Button_Click(object sender, EventArgs e)
+        {
+            answered = answerCheck(4);
+        }
+
+        
     }
 }
