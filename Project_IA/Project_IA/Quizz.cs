@@ -25,6 +25,7 @@ namespace Project_IA
         {
             InitializeComponent();
             deserializeFromXmlFile("test_question.xml");
+            quizzzzz = new List<QuestionsCours>();
             newQuiz();
             newQuestion();
             
@@ -51,7 +52,7 @@ namespace Project_IA
                 while (controle == false)
                 {
                     int compteur_question = 0;
-                    int randomNumber = random.Next(1, questionsCours.Count + 1);
+                    int randomNumber = random.Next(1, questionsCours.Count);
                     for (int i = 0; i < 20; i++)
                     {
                         if (librairie[i] == randomNumber)
