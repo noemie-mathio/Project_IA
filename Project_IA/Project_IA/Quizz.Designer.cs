@@ -53,29 +53,30 @@
             this.option2Button.UseVisualStyleBackColor = true;
             this.option2Button.Click += new System.EventHandler(this.option2Button_Click);
             // 
-            // button3
+            // option3Button
             // 
             this.option3Button.Location = new System.Drawing.Point(97, 260);
-            this.option3Button.Name = "button3";
+            this.option3Button.Name = "option3Button";
             this.option3Button.Size = new System.Drawing.Size(281, 53);
             this.option3Button.TabIndex = 2;
             this.option3Button.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // option4Button
             // 
             this.option4Button.Location = new System.Drawing.Point(97, 337);
-            this.option4Button.Name = "button4";
+            this.option4Button.Name = "option4Button";
             this.option4Button.Size = new System.Drawing.Size(281, 53);
             this.option4Button.TabIndex = 3;
             this.option4Button.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // labelQuestion
             // 
             this.labelQuestion.AutoSize = true;
             this.labelQuestion.Location = new System.Drawing.Point(109, 47);
-            this.labelQuestion.Name = "label1";
-            this.labelQuestion.Size = new System.Drawing.Size(35, 13);
+            this.labelQuestion.Name = "labelQuestion";
+            this.labelQuestion.Size = new System.Drawing.Size(29, 13);
             this.labelQuestion.TabIndex = 4;
+            this.labelQuestion.Text = "labal";
             // 
             // Quizz
             // 

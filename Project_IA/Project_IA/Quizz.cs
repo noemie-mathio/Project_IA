@@ -18,16 +18,18 @@ namespace Project_IA
         public List<QuestionsCours> questionsCours;
         public Random random = new Random();
         public List<QuestionsCours> quizzzzz { get; set; }
-        int num_ref=0;
-        public QuestionsCours questionPosée;
 
         public Quizz()
         {
             InitializeComponent();
             deserializeFromXmlFile("test_question.xml");
+            //quizzzzz = new List<QuestionsCours>();
+            //newQuiz();
             quizzzzz = new List<QuestionsCours>();
-            newQuiz();
-            newQuestion();
+            QuestionsCours question_2 = new QuestionsCours("Quel est la différence entre un servo-contrôleur et un micro-contrôleur?", "Purement sémantique", "Le servo-contrôleur n’est pas programmable", "Le servo-contrôleur ne fonctionne pas en autonomie", "Le micro-contrôleur ne possede pas de mémoire interne", "Le servo-contrôleur ne fonctionne pas en autonomie", "Blabla");
+
+            quizzzzz.Add(question_2);
+            newQuestion(0);
             
         }
         public List<QuestionsCours> deserializeFromXmlFile(string filePath)
@@ -39,6 +41,7 @@ namespace Project_IA
             reader.Close();
             return questionsCours;
         }
+
         public void newQuiz()
         {
             int count = questionsCours.Count;
@@ -52,7 +55,8 @@ namespace Project_IA
                 while (controle == false)
                 {
                     int compteur_question = 0;
-                    int randomNumber = random.Next(1, questionsCours.Count);
+
+                    int randomNumber = random.Next(1, count+1);
                     for (int i = 0; i < 20; i++)
                     {
                         if (librairie[i] == randomNumber)
@@ -68,32 +72,21 @@ namespace Project_IA
 
                     }
                 }
-                QuestionsCours nouvelleQuestion = questionsCours[numRandom];
+                QuestionsCours nouvelleQuestion = questionsCours[numRandom-1];
                 quizzzzz.Add(nouvelleQuestion);
                 questionCount++;
 
             }
         }
-        private void newQuestion()
+        private void newQuestion(int compteur)
         {
-            int compteur = 0;
-            foreach (QuestionsCours quest in quizzzzz)
-            {       if (compteur == num_ref)
-                    {
-                    questionPosée = quest;
-                    num_ref++;
-                    break;
-                     }
-                compteur++;
-                labelQuestion.Text = questionPosée.question;
-                option1Button.Text = questionPosée.reponse1;
-                option2Button.Text = questionPosée.reponse2;
-                option3Button.Text = questionPosée.reponse3;
-                option4Button.Text = questionPosée.reponse4;
-            }
+            QuestionsCours questionPosee = quizzzzz.ElementAt(compteur);
 
-
-
+            labelQuestion.Text = questionPosee.question;
+            option1Button.Text = questionPosee.reponse1;
+            option2Button.Text = questionPosee.reponse2;
+            option3Button.Text = questionPosee.reponse3;
+            option4Button.Text = questionPosee.reponse4;
         }
 
         private void labelQuestion_Click(object sender, EventArgs e)
