@@ -100,14 +100,12 @@ namespace Project_IA
             
             if(answerNumber==this.bonnereponse)
             {
-                
                  score++;
-                feedbackLabel.Text = "Bonne réponse! Bien joué";
+               
                 return true;       
             }
             else
-            { MessageBox.Show(quizzzzz.ElementAt(compteur).explicationBonneReponse);
-                feedbackLabel.Text = "Mauvais réponse";
+            {
                 return false;
             }
         }
@@ -123,25 +121,99 @@ namespace Project_IA
             answered=answerCheck(1);
             if(answered==true)
             {
-                option1Button.ForeColor = Color.Green;
+                option1Button.BackColor =Color.Green;
+            }
+            else if (answerCheck(2) == true)
+            {
+                option1Button.BackColor = Color.Red;
+                option2Button.BackColor = Color.Green;
+            }
+            else if (answerCheck(3) == true)
+            {
+                option1Button.BackColor = Color.Red;
+                option3Button.BackColor = Color.Green;
+            }
+            else
+            {
+                option1Button.BackColor = Color.Red;
+                option4Button.BackColor = Color.Green;
             }
         }
 
         private void option2Button_Click(object sender, EventArgs e)
         {
             answered = answerCheck(2);
+            if (answered == true)
+            {
+                option2Button.BackColor = Color.Green;
+            }
+            else if (answerCheck(1)==true)
+            {
+                option2Button.BackColor = Color.Red;
+                option1Button.BackColor = Color.Green;
+            }
+            else if (answerCheck(3) == true)
+            {
+                option2Button.BackColor = Color.Red;
+                option3Button.BackColor = Color.Green;
+            }
+            else
+            {
+                option2Button.BackColor = Color.Red;
+                option4Button.BackColor = Color.Green;
+            }
         }
 
         private void option3Button_Click(object sender, EventArgs e)
         {
+            if (answerCheck(3)==true)
+            {
+                option3Button.BackColor = Color.Green;
+            }
+            else if (answerCheck(1) == true)
+            {
+                option3Button.BackColor = Color.Red;
+                option1Button.BackColor = Color.Green;
+            }
+            else if (answerCheck(2) == true)
+            {
+                option3Button.BackColor = Color.Red;
+                option2Button.BackColor = Color.Green;
+            }
+            else
+            {
+                option3Button.BackColor = Color.Red;
+                option4Button.BackColor = Color.Green;
+            }
             answered = answerCheck(3);
+
         }
 
         private void option4Button_Click(object sender, EventArgs e)
         {
+            if (answerCheck(4)==true)
+            {
+                option4Button.BackColor =Color.Green;
+            }
+            else if (answerCheck(1) == true)
+            {
+                option4Button.BackColor = Color.Red;
+                option1Button.BackColor = Color.Green;
+            }
+            else if (answerCheck(2) == true)
+            {
+                option4Button.BackColor = Color.Red;
+                option2Button.BackColor = Color.Green;
+            }
+            else
+            {
+                option4Button.BackColor = Color.Red;
+                option3Button.BackColor = Color.Green;
+            }
             answered = answerCheck(4);
+
         }
 
-        
+
     }
 }
