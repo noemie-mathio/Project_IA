@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/bin/Debug/Project_IA.exe.config
-=======
 C:/Users/sboylan/Documents/GitHub/Project_IA/Project_IA/Project_IA/bin/Debug/Project_IA.exe.config
->>>>>>> 1befd2fd0fce19c5eea396f156c7835ad0816ba8
 C:/Users/sboylan/Documents/GitHub/Project_IA/Project_IA/Project_IA/bin/Debug/Project_IA.exe
 C:/Users/sboylan/Documents/GitHub/Project_IA/Project_IA/Project_IA/bin/Debug/Project_IA.pdb
 C:/Users/sboylan/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.csprojResolveAssemblyReference.cache
@@ -13,17 +9,6 @@ C:/Users/sboylan/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Pro
 C:/Users/sboylan/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.exe
 C:/Users/sboylan/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.pdb
 C:/Users/sboylan/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.Form3.resources
-C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.exe
-C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.pdb
-C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.csprojResolveAssemblyReference.cache
-C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.Form1.resources
-C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.Form2.resources
-C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.Form3.resources
-C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.Properties.Resources.resources
-C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.csproj.GenerateResource.Cache
-C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/bin/Debug/Project_IA.exe
-C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/bin/Debug/Project_IA.pdb
-C:/Users/nmathio/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.Dijkstra.resources
 /Users/noemiem/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.csprojAssemblyReference.cache
 /Users/noemiem/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.Form1.resources
 /Users/noemiem/Documents/GitHub/Project_IA/Project_IA/Project_IA/obj/Debug/Project_IA.Dijkstra.resources
@@ -43,7 +28,6 @@ C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Pro
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.exe
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.pdb
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csprojResolveAssemblyReference.cache
-C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csprojResolveAssemblyReference.cache
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Form1.resources
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Dijkstra.resources
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Properties.Resources.resources
@@ -51,7 +35,6 @@ C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Pro
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.pdb
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Quizz.resources
-C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Test.resources
 H:\2A\IA\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe.config
 H:\2A\IA\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe
 H:\2A\IA\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.pdb
