@@ -18,13 +18,9 @@ namespace Project_IA
         public List<QuestionsCours> questionsCours;
         public Random random = new Random();
         public List<QuestionsCours> quizzzzz { get; set; }
-        bool answered;
         int bonnereponse;
         int score;
         int compteur = 0;
-
-        
-
         public Quizz()
         {
             InitializeComponent();
@@ -33,10 +29,12 @@ namespace Project_IA
             //newQuiz();
             quizzzzz = new List<QuestionsCours>();
             QuestionsCours question_2 = new QuestionsCours("Quel est la différence entre un servo-contrôleur et un micro-contrôleur?", "Purement sémantique", "Le servo-contrôleur n’est pas programmable", "Le servo-contrôleur ne fonctionne pas en autonomie", "Le micro-contrôleur ne possede pas de mémoire interne", 3, "Blabla");
-
+            QuestionsCours question_1= new QuestionsCours("Une liaison rotule à :", "4 degrés de liberté", "3 degrés de liberté", "2 degrés de liberté", "Ca dépends", 2, "Blabla");
             quizzzzz.Add(question_2);
+            quizzzzz.Add(question_1);
             newQuestion();
             
+
         }
         public List<QuestionsCours> deserializeFromXmlFile(string filePath)
         {
@@ -94,14 +92,23 @@ namespace Project_IA
             option3Button.Text = questionPosee.reponse3;
             option4Button.Text = questionPosee.reponse4;
             bonnereponse = questionPosee.bonnereponse;
+            option1Button.Enabled = true;
+            option2Button.Enabled = true;
+            option3Button.Enabled = true;
+            option4Button.Enabled = true;
+            buttonNext.Visible = false;
+
         }
         private bool answerCheck(int answerNumber)
         {
-            
+            option1Button.Enabled = false;
+            option2Button.Enabled = false;
+            option3Button.Enabled = false;
+            option4Button.Enabled = false;
+            buttonNext.Visible = true;
             if(answerNumber==this.bonnereponse)
             {
-                 score++;
-               
+                 
                 return true;       
             }
             else
@@ -109,19 +116,14 @@ namespace Project_IA
                 return false;
             }
         }
-
-
-        private void labelQuestion_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void option1Button_Click(object sender, EventArgs e)
-        {
-            answered=answerCheck(1);
-            if(answered==true)
+        { 
+            if(answerCheck(1)==true)
             {
                 option1Button.BackColor =Color.Green;
+                score++;
             }
             else if (answerCheck(2) == true)
             {
@@ -138,14 +140,28 @@ namespace Project_IA
                 option1Button.BackColor = Color.Red;
                 option4Button.BackColor = Color.Green;
             }
+            if (answerCheck(1) == false)
+            {
+                MessageBox.Show(quizzzzz.ElementAt(compteur).explicationBonneReponse);
+            }
+            compteur++;
         }
+        private void defaultBackColor()
+        {
+            option1Button.BackColor = Control.DefaultBackColor;
+            option2Button.BackColor = Control.DefaultBackColor;
+            option3Button.BackColor = Control.DefaultBackColor;
+            option4Button.BackColor = Control.DefaultBackColor;
 
+
+        }
         private void option2Button_Click(object sender, EventArgs e)
         {
-            answered = answerCheck(2);
-            if (answered == true)
+            if (answerCheck(2) == true)
             {
                 option2Button.BackColor = Color.Green;
+                score++;
+
             }
             else if (answerCheck(1)==true)
             {
@@ -162,6 +178,11 @@ namespace Project_IA
                 option2Button.BackColor = Color.Red;
                 option4Button.BackColor = Color.Green;
             }
+            if (answerCheck(2) == false)
+            {
+                MessageBox.Show(quizzzzz.ElementAt(compteur).explicationBonneReponse);
+            }
+            compteur++;
         }
 
         private void option3Button_Click(object sender, EventArgs e)
@@ -169,6 +190,8 @@ namespace Project_IA
             if (answerCheck(3)==true)
             {
                 option3Button.BackColor = Color.Green;
+                score++;
+
             }
             else if (answerCheck(1) == true)
             {
@@ -185,8 +208,11 @@ namespace Project_IA
                 option3Button.BackColor = Color.Red;
                 option4Button.BackColor = Color.Green;
             }
-            answered = answerCheck(3);
-
+            if (answerCheck(3) == false)
+            {
+                MessageBox.Show(quizzzzz.ElementAt(compteur).explicationBonneReponse);
+            }
+            compteur++;
         }
 
         private void option4Button_Click(object sender, EventArgs e)
@@ -194,6 +220,7 @@ namespace Project_IA
             if (answerCheck(4)==true)
             {
                 option4Button.BackColor =Color.Green;
+                score++;
             }
             else if (answerCheck(1) == true)
             {
@@ -210,10 +237,30 @@ namespace Project_IA
                 option4Button.BackColor = Color.Red;
                 option3Button.BackColor = Color.Green;
             }
-            answered = answerCheck(4);
-
+            if (answerCheck(4) == false)
+            {
+                if (answerCheck(1) == false)
+                {
+                    MessageBox.Show(quizzzzz.ElementAt(compteur).explicationBonneReponse);
+                }
+            }
+            compteur++;
         }
 
+        private void buttonNext_Click(object sender, EventArgs e)
+        {
+            if (compteur<20)
+            {
+                defaultBackColor();
+                newQuestion();
+                labelScore.Text = "SCORE :" + score + "/" + compteur;
+            }
+           else
+            {
+                MessageBox.Show("coucou");
+            }
+        }
 
+        
     }
 }
