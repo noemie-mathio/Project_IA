@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project_IA
 {
-    public partial class Form1 : Form
+    public partial class Accueil : Form
     {
-        public Form1()
+        public Accueil()
         {
             InitializeComponent();
         }
@@ -28,6 +28,13 @@ namespace Project_IA
         {
             Dijkstra Dijkstra = new Dijkstra();
             Dijkstra.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            NouvelleQuestion AjoutNouvelleQuestion = new NouvelleQuestion();
+            AjoutNouvelleQuestion.Show();
             this.Hide();
         }
     }
