@@ -34,11 +34,12 @@
             this.button_Dijkstra = new System.Windows.Forms.Button();
             this.label_NoeudInitial = new System.Windows.Forms.Label();
             this.label_NoeudFinal = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.ToutEnsembleFerme = new System.Windows.Forms.ListBox();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.button_init2 = new System.Windows.Forms.Button();
-            this.listBoxgraphe = new System.Windows.Forms.ListBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.ToutEnsembleOuvert = new System.Windows.Forms.ListBox();
+            this.listBoxgraphe = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // button_init1
@@ -99,13 +100,14 @@
             this.label_NoeudFinal.Text = "Noeud final";
             this.label_NoeudFinal.Click += new System.EventHandler(this.label_NoeudFinal_Click);
             // 
-            // listBox1
+            // ToutEnsembleFerme
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(336, 101);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(128, 121);
-            this.listBox1.TabIndex = 6;
+            this.ToutEnsembleFerme.FormattingEnabled = true;
+            this.ToutEnsembleFerme.Location = new System.Drawing.Point(336, 101);
+            this.ToutEnsembleFerme.Name = "ToutEnsembleFerme";
+            this.ToutEnsembleFerme.Size = new System.Drawing.Size(128, 121);
+            this.ToutEnsembleFerme.TabIndex = 6;
+            this.ToutEnsembleFerme.SelectedIndexChanged += new System.EventHandler(this.ToutEnsembleFerme_SelectedIndexChanged);
             // 
             // treeView1
             // 
@@ -124,13 +126,22 @@
             this.button_init2.UseVisualStyleBackColor = true;
             this.button_init2.Click += new System.EventHandler(this.button_init2_Click);
             // 
+            // ToutEnsembleOuvert
+            // 
+            this.ToutEnsembleOuvert.FormattingEnabled = true;
+            this.ToutEnsembleOuvert.Location = new System.Drawing.Point(171, 101);
+            this.ToutEnsembleOuvert.Name = "ToutEnsembleOuvert";
+            this.ToutEnsembleOuvert.Size = new System.Drawing.Size(120, 121);
+            this.ToutEnsembleOuvert.TabIndex = 10;
+            this.ToutEnsembleOuvert.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            // 
             // listBoxgraphe
             // 
             this.listBoxgraphe.FormattingEnabled = true;
-            this.listBoxgraphe.Location = new System.Drawing.Point(171, 93);
+            this.listBoxgraphe.Location = new System.Drawing.Point(22, 101);
             this.listBoxgraphe.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxgraphe.Name = "listBoxgraphe";
-            this.listBoxgraphe.Size = new System.Drawing.Size(100, 121);
+            this.listBoxgraphe.Size = new System.Drawing.Size(127, 121);
             this.listBoxgraphe.TabIndex = 9;
             this.listBoxgraphe.SelectedIndexChanged += new System.EventHandler(this.listBoxgraphe_SelectedIndexChanged);
             // 
@@ -139,10 +150,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 267);
+            this.Controls.Add(this.ToutEnsembleOuvert);
             this.Controls.Add(this.listBoxgraphe);
             this.Controls.Add(this.button_init2);
             this.Controls.Add(this.treeView1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.ToutEnsembleFerme);
             this.Controls.Add(this.label_NoeudFinal);
             this.Controls.Add(this.label_NoeudInitial);
             this.Controls.Add(this.button_Dijkstra);
@@ -164,10 +176,11 @@
         private System.Windows.Forms.Button button_Dijkstra;
         private System.Windows.Forms.Label label_NoeudInitial;
         private System.Windows.Forms.Label label_NoeudFinal;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox ToutEnsembleFerme;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Button button_init2;
-        private System.Windows.Forms.ListBox listBoxgraphe;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ListBox ToutEnsembleOuvert;
+        private System.Windows.Forms.ListBox listBoxgraphe;
     }
 }

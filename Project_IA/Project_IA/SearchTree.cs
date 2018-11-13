@@ -11,6 +11,8 @@ namespace Project_IA
     {
         public List<GenericNode> L_Ouverts;
         public List<GenericNode> L_Fermes;
+        public List<GenericNode> EnsembleOuvert;
+        public List<int> NbrAjoutOuvert;
 
         public int CountInOpenList()
         {
@@ -51,22 +53,29 @@ namespace Project_IA
         {
             L_Ouverts = new List<GenericNode>();
             L_Fermes = new List<GenericNode>();
-            // Le noeud passé en paramètre est supposé être le noeud initial
-            GenericNode N = N0;
+            EnsembleOuvert = new List<GenericNode>();
+            NbrAjoutOuvert = new List<int>();
+        // Le noeud passé en paramètre est supposé être le noeud initial
+        GenericNode N = N0;
             L_Ouverts.Add(N0);
-
+            EnsembleOuvert.Add(N0);
+            NbrAjoutOuvert.Add(1);
             // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
             while (L_Ouverts.Count != 0 && N.EndState() == false)
             {
                 // Le meilleur noeud des ouverts est supposé placé en tête de liste
                 // On le place dans les fermés
+
+
+                NbrAjoutOuvert.Add(L_Ouverts.Count);
                 L_Ouverts.Remove(N);
                 L_Fermes.Add(N);
 
                 // Il faut trouver les noeuds successeurs de N
                 this.MAJSuccesseurs(N);
                 // Inutile de retrier car les insertions ont été faites en respectant l'ordre
-
+                EnsembleOuvert.Add(N);
+              
                 // On prend le meilleur, donc celui en position 0, pour continuer à explorer les états
                 // A condition qu'il existe bien sûr
                 if (L_Ouverts.Count > 0)
