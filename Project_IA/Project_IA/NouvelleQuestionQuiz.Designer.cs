@@ -1,6 +1,6 @@
 ﻿namespace Project_IA
 {
-    partial class NouvelleQuestion
+    partial class NouvelleQuestionQuiz
     {
         /// <summary>
         /// Required designer variable.

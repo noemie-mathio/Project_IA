@@ -64,4 +64,14 @@
     <reponse4>reponse</reponse4>
     <explicationBonneReponse>reponse</explicationBonneReponse>
   </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>3</bonnereponse>
+    <question>Coucou simon
+Coucousimon</question>
+    <reponse1>bsde</reponse1>
+    <reponse2>kjsfdhvohdh</reponse2>
+    <reponse3>sldhvshd</reponse3>
+    <reponse4>vskdvkjshd</reponse4>
+    <explicationBonneReponse>zhefoizheiozheghv</explicationBonneReponse>
+  </QuestionsCours>
 </ArrayOfQuestionsCours>

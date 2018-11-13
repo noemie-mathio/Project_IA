@@ -62,11 +62,17 @@
       <DependentUpon>Dijkstra.cs</DependentUpon>
     </Compile>
     <Compile Include="GenericNode.cs" />
-    <Compile Include="NouvelleQuestion.cs">
+    <Compile Include="NouveauDijkstra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NouvelleQuestion.Designer.cs">
-      <DependentUpon>NouvelleQuestion.cs</DependentUpon>
+    <Compile Include="NouveauDijkstra.Designer.cs">
+      <DependentUpon>NouveauDijkstra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NouvelleQuestionQuiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NouvelleQuestionQuiz.Designer.cs">
+      <DependentUpon>NouvelleQuestionQuiz.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,8 +90,11 @@
     <EmbeddedResource Include="Dijkstra.resx">
       <DependentUpon>Dijkstra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NouvelleQuestion.resx">
-      <DependentUpon>NouvelleQuestion.cs</DependentUpon>
+    <EmbeddedResource Include="NouveauDijkstra.resx">
+      <DependentUpon>NouveauDijkstra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NouvelleQuestionQuiz.resx">
+      <DependentUpon>NouvelleQuestionQuiz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

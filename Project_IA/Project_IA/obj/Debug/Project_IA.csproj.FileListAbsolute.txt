@@ -47,4 +47,5 @@ H:\2A\IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.exe
 H:\2A\IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.pdb
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csprojResolveAssemblyReference.cache
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Accueil.resources
-C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.NouvelleQuestion.resources
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.NouveauDijkstra.resources
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.NouvelleQuestionQuiz.resources

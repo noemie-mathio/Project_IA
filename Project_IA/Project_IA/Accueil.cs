@@ -17,24 +17,31 @@ namespace Project_IA
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void quizButton_Click(object sender, EventArgs e)
         {
             Quizz QCM = new Quizz();
             QCM.Show();
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dijkstraButton_Click(object sender, EventArgs e)
         {
             Dijkstra Dijkstra = new Dijkstra();
             Dijkstra.Show();
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void ajoutQuizButton_Click(object sender, EventArgs e)
         {
-            NouvelleQuestion AjoutNouvelleQuestion = new NouvelleQuestion();
+            NouvelleQuestionQuiz AjoutNouvelleQuestion = new NouvelleQuestionQuiz();
             AjoutNouvelleQuestion.Show();
+            this.Hide();
+        }
+
+        private void ajoutDijkstraButton_Click(object sender, EventArgs e)
+        {
+            NouveauDijkstra NouveauDijkstra = new NouveauDijkstra();
+            NouveauDijkstra.Show();
             this.Hide();
         }
     }

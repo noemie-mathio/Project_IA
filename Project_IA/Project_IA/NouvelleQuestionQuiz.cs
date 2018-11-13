@@ -13,11 +13,11 @@ using System.Xml.Serialization;
 
 namespace Project_IA
 {
-    public partial class NouvelleQuestion : Form
+    public partial class NouvelleQuestionQuiz : Form
     {
         public List<QuestionsCours> listeQuestionsCours;
 
-        public NouvelleQuestion()
+        public NouvelleQuestionQuiz()
         {
             InitializeComponent();
             msgErreurLabel.Visible = false;
