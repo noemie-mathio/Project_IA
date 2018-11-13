@@ -17,6 +17,8 @@ namespace Project_IA
         static public int nbnodes = 10;
         static public int numinitial;
         static public int numfinal;
+        static public List<GenericNode> FermeLigneCompare;
+        static public List<GenericNode> OuvertLigneCompare;
 
         public Dijkstra()
         {
@@ -42,6 +44,7 @@ namespace Project_IA
 
         private void button_Dijkstra_Click(object sender, EventArgs e)
         {
+
             numinitial = Convert.ToInt32(noeudInitial.Text);
             numfinal = Convert.ToInt32(noeudFinal.Text);
             SearchTree g = new SearchTree();
@@ -53,13 +56,35 @@ namespace Project_IA
             for (int i = 1; i < solution.Count; i++)
             {
                 Node2 N2 = (Node2)solution[i];
-                listBox1.Items.Add(Convert.ToString(N1.numero)
+                ToutEnsembleFerme.Items.Add(Convert.ToString(N1.numero)
                      + "--->" + Convert.ToString(N2.numero)
                      + "   : " + Convert.ToString(matrice[N1.numero, N2.numero]));
                 N1 = N2;
             }
 
             g.GetSearchTree(treeView1);
+
+            StreamReader strglisteFerme = new StreamReader(ToutEnsembleFerme.Text);
+            
+                string ligne = strglisteFerme.ReadLine();
+            int j = 0;
+            while (ligne != null)
+            {
+                int i = 0;
+                while (i < ligne.Length)
+                {
+                    if (ligne[i] == ',') { i++; }
+                    Node2 N = new Node2(); // créer une liste de generic node à comparer avec isequal avec l'autre liste trouvé par l'ordi.
+                    N0.numero = Convert.ToInt32(ligne[i]);
+                    FermeLigneCompare.Add(N0);
+                    i++;
+                }
+                forFermeLigneCompare.Length;
+                j++;
+            }
+           
+
+            strglisteFerme.Close();
         }
 
         private void button_init2_Click(object sender, EventArgs e)
@@ -168,7 +193,7 @@ namespace Project_IA
 
         private void listBoxgraphe_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+         
         }
 
         private void noeudInitial_TextChanged(object sender, EventArgs e)
@@ -189,6 +214,16 @@ namespace Project_IA
         private void label_NoeudFinal_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ToutEnsembleFerme_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
