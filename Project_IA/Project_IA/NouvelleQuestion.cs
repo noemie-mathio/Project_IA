@@ -77,7 +77,6 @@ namespace Project_IA
 
         private void mdpTextBox_TextChanged(object sender, EventArgs e)
         {
-            mdpTextBox.Text = "";
             mdpTextBox.PasswordChar='*';
         }
 
@@ -85,8 +84,12 @@ namespace Project_IA
         {
             if (questiontextBox.Text != null && reponse1textBox.Text != null && reponse2textBox.Text != null && reponse3textBox.Text != null && reponse4textBox.Text != null && bonnereponsetextBox.Text != null && explicationBonneReponsetextBox.Text != null)
             {
-                DeserializeFromXml("test_question");
+                DeserializeFromXml("test_question.xml");
                 Serialisation(listeQuestionsCours, questiontextBox.Text, reponse1textBox.Text, reponse2textBox.Text, reponse3textBox.Text, reponse4textBox.Text, int.Parse(bonnereponsetextBox.Text), explicationBonneReponsetextBox.Text);
+                MessageBox.Show("Votre question a bien été ajoutée");
+                Accueil accueil = new Accueil();
+                accueil.Show();
+                this.Hide();
             }
         }
         public static void Serialisation(List<QuestionsCours> questions, string question, string reponse1, string reponse2, string reponse3, string reponse4, int bonnereponse, string explicationBonnereponse)
