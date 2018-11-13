@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Project_IA
 {
     public partial class NouvelleQuestion : Form
     {
+        public List<QuestionsCours> listeQuestionsCours;
+
         public NouvelleQuestion()
         {
             InitializeComponent();
@@ -73,8 +78,38 @@ namespace Project_IA
         private void mdpTextBox_TextChanged(object sender, EventArgs e)
         {
             mdpTextBox.Text = "";
-
             mdpTextBox.PasswordChar='*';
+        }
+
+        private void envoyerbutton_Click(object sender, EventArgs e)
+        {
+            if (questiontextBox.Text != null && reponse1textBox.Text != null && reponse2textBox.Text != null && reponse3textBox.Text != null && reponse4textBox.Text != null && bonnereponsetextBox.Text != null && explicationBonneReponsetextBox.Text != null)
+            {
+                DeserializeFromXml("test_question");
+                Serialisation(listeQuestionsCours, questiontextBox.Text, reponse1textBox.Text, reponse2textBox.Text, reponse3textBox.Text, reponse4textBox.Text, int.Parse(bonnereponsetextBox.Text), explicationBonneReponsetextBox.Text);
+            }
+        }
+        public static void Serialisation(List<QuestionsCours> questions, string question, string reponse1, string reponse2, string reponse3, string reponse4, int bonnereponse, string explicationBonnereponse)
+        {
+
+            QuestionsCours question_1 = new QuestionsCours(question, reponse1, reponse2, reponse3, reponse4,bonnereponse, explicationBonnereponse);
+
+            questions.Add(question_1);
+      
+            XmlSerializer xs = new XmlSerializer(typeof(List<QuestionsCours>));
+            using (StreamWriter wr = new StreamWriter("test_question.xml"))
+            {
+                xs.Serialize(wr, questions);
+            }
+        }
+        public  List<QuestionsCours> DeserializeFromXml(string filePath)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<QuestionsCours>));
+
+            StreamReader reader = new StreamReader(filePath);
+            listeQuestionsCours = (List<QuestionsCours>)serializer.Deserialize(reader);
+            reader.Close();
+            return listeQuestionsCours;
         }
     }
 }

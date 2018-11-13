@@ -84,7 +84,6 @@
             this.mdpTextBox.Size = new System.Drawing.Size(164, 20);
             this.mdpTextBox.TabIndex = 3;
             this.mdpTextBox.Click += new System.EventHandler(this.mdpTextBox_TextChanged);
-
             // 
             // validerIdentifiantButton
             // 
@@ -237,6 +236,7 @@
             this.envoyerbutton.TabIndex = 21;
             this.envoyerbutton.Text = "Envoyer";
             this.envoyerbutton.UseVisualStyleBackColor = true;
+            this.envoyerbutton.Click += new System.EventHandler(this.envoyerbutton_Click);
             // 
             // NouvelleQuestion
             // 
