@@ -49,7 +49,7 @@
             this.bonnereponsetextBox = new System.Windows.Forms.TextBox();
             this.explicationBonneReponselabel = new System.Windows.Forms.Label();
             this.explicationBonneReponsetextBox = new System.Windows.Forms.TextBox();
-            this.Envoyerbutton = new System.Windows.Forms.Button();
+            this.envoyerbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pseudoLabel
@@ -83,6 +83,8 @@
             this.mdpTextBox.Name = "mdpTextBox";
             this.mdpTextBox.Size = new System.Drawing.Size(164, 20);
             this.mdpTextBox.TabIndex = 3;
+            this.mdpTextBox.Click += new System.EventHandler(this.mdpTextBox_TextChanged);
+
             // 
             // validerIdentifiantButton
             // 
@@ -227,21 +229,21 @@
             this.explicationBonneReponsetextBox.Size = new System.Drawing.Size(200, 20);
             this.explicationBonneReponsetextBox.TabIndex = 20;
             // 
-            // button1
+            // envoyerbutton
             // 
-            this.Envoyerbutton.Location = new System.Drawing.Point(50, 332);
-            this.Envoyerbutton.Name = "button1";
-            this.Envoyerbutton.Size = new System.Drawing.Size(75, 23);
-            this.Envoyerbutton.TabIndex = 21;
-            this.Envoyerbutton.Text = "button1";
-            this.Envoyerbutton.UseVisualStyleBackColor = true;
+            this.envoyerbutton.Location = new System.Drawing.Point(50, 332);
+            this.envoyerbutton.Name = "envoyerbutton";
+            this.envoyerbutton.Size = new System.Drawing.Size(75, 23);
+            this.envoyerbutton.TabIndex = 21;
+            this.envoyerbutton.Text = "Envoyer";
+            this.envoyerbutton.UseVisualStyleBackColor = true;
             // 
             // NouvelleQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 367);
-            this.Controls.Add(this.Envoyerbutton);
+            this.Controls.Add(this.envoyerbutton);
             this.Controls.Add(this.explicationBonneReponsetextBox);
             this.Controls.Add(this.explicationBonneReponselabel);
             this.Controls.Add(this.bonnereponsetextBox);
@@ -293,6 +295,6 @@
         private System.Windows.Forms.TextBox bonnereponsetextBox;
         private System.Windows.Forms.Label explicationBonneReponselabel;
         private System.Windows.Forms.TextBox explicationBonneReponsetextBox;
-        private System.Windows.Forms.Button Envoyerbutton;
+        private System.Windows.Forms.Button envoyerbutton;
     }
 }
