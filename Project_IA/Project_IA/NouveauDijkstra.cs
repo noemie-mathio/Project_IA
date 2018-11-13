@@ -36,13 +36,28 @@ namespace Project_IA
         {
             if (dijkstraTextBox.Text != "" && fichierOrigine !=null)
             {
-                MessageBox.Show(dijkstraTextBox.Text);
-                string fichierCopie = Path.GetFileName(fichierOrigine); //Pensez à le renommer suivant le numéro de Dijkstra auquel il correspond
+
+                StreamReader monStreamReader = new StreamReader("graphe.txt");
+                string ligne = monStreamReader.ReadLine();
+                int compteurDijkstra = 0;
+                while(ligne!= null)
+                {
+                    ligne = monStreamReader.ReadLine();
+                    if (ligne=="fin")
+                    {
+                        compteurDijkstra++;
+                    }
+                    
+                }
+                monStreamReader.Close();
+                string fichierCopie = Path.GetFileName("image"+ (compteurDijkstra+1).ToString()+".jpg");//Pensez à le renommer suivant le numéro de Dijkstra auquel il correspond
                 File.Copy(fichierOrigine, fichierCopie);
-                File.AppendAllText("graphe1.txt", dijkstraTextBox.Text); // pensez à modifier le fichier en fonction 
+                File.AppendAllText("graphe.txt", "\r\n" + dijkstraTextBox.Text);
+                File.AppendAllText("graphe.txt", "\r\n" + "fin");// pensez à modifier le fichier en fonction 
             }
             else
             {
+                erreurLabel.BackColor = Color.Red;
                 erreurLabel.Visible = true;
             }
             

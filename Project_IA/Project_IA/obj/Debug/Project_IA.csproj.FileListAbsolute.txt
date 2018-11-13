@@ -35,11 +35,8 @@ H:\2A\IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.exe
 H:\2A\IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.pdb
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csprojResolveAssemblyReference.cache
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Accueil.resources
-<<<<<<< HEAD
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.NouveauDijkstra.resources
 C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.NouvelleQuestionQuiz.resources
-=======
-C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.NouvelleQuestion.resources
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.pdb
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Accueil.resources
@@ -48,4 +45,3 @@ C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Pro
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Properties.Resources.resources
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Quizz.resources
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csproj.GenerateResource.Cache
->>>>>>> d8ab4fa6c2167f01235abb63cee559abc39dfa19

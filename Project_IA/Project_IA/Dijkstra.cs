@@ -79,7 +79,7 @@ namespace Project_IA
                     FermeLigneCompare.Add(N0);
                     i++;
                 }
-                forFermeLigneCompare.Length;
+                //forFermeLigneCompare.Length;
                 j++;
             }
            

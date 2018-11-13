@@ -238,7 +238,7 @@
             this.envoyerbutton.UseVisualStyleBackColor = true;
             this.envoyerbutton.Click += new System.EventHandler(this.envoyerbutton_Click);
             // 
-            // NouvelleQuestion
+            // NouvelleQuestionQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -265,7 +265,7 @@
             this.Controls.Add(this.pseudoTextBox);
             this.Controls.Add(this.mdpLabel);
             this.Controls.Add(this.pseudoLabel);
-            this.Name = "NouvelleQuestion";
+            this.Name = "NouvelleQuestionQuiz";
             this.Text = "NouvelleQuestion";
             this.ResumeLayout(false);
             this.PerformLayout();

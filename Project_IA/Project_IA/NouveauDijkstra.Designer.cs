@@ -96,12 +96,12 @@
             this.chargementImageOklabel.Size = new System.Drawing.Size(0, 13);
             this.chargementImageOklabel.TabIndex = 5;
             // 
-            // label1
+            // erreurLabel
             // 
             this.erreurLabel.AutoSize = true;
-            this.erreurLabel.Location = new System.Drawing.Point(86, 299);
+            this.erreurLabel.Location = new System.Drawing.Point(12, 302);
             this.erreurLabel.Name = "erreurLabel";
-            this.erreurLabel.Size = new System.Drawing.Size(35, 13);
+            this.erreurLabel.Size = new System.Drawing.Size(346, 13);
             this.erreurLabel.TabIndex = 6;
             this.erreurLabel.Text = "Veuillez compléter la zone de texte ou charger une image représentative";
             // 
