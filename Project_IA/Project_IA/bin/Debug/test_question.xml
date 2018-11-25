@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfQuestionsCours xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <QuestionsCours>
+    <bonnereponse>2</bonnereponse>
     <question>Une liaison rotule à :</question>
     <reponse1>4 degrés de liberté</reponse1>
     <reponse2>3 degrés de liberté</reponse2>
     <reponse3>2 degrés de liberté</reponse3>
     <reponse4>Ca dépends</reponse4>
-    <bonnereponse>2</bonnereponse>
     <explicationBonneReponse>Blablabla</explicationBonneReponse>
   </QuestionsCours>
   <QuestionsCours>
+    <bonnereponse>3</bonnereponse>
     <question>Quel est la différence entre un servo-contrôleur et un micro-contrôleur?</question>
     <reponse1>Purement sémantique</reponse1>
     <reponse2>Le servo-contrôleur n’est pas programmable</reponse2>
     <reponse3>Le servo-contrôleur ne fonctionne pas en autonomie</reponse3>
     <reponse4>Le micro-contrôleur ne possede pas de mémoire interne</reponse4>
-    <bonnereponse>3</bonnereponse>
     <explicationBonneReponse>Blablabla</explicationBonneReponse>
   </QuestionsCours>
+<<<<<<< HEAD
 <QuestionsCours>
 <question>Quel est l’avantage d’une résolution utilisant A+ sur un simple Dijkstra?</question>
 <reponse1>Trouver une solution plus rapide</reponse1>
@@ -200,4 +201,62 @@
 <explicationBonneReponse>La navigation métrique est plus précise : possibilité de trouver un chemin plus direct en passant par des endroits inconnus, grâce à la connaissance du positionnement 2D (ou 3D) relatif à l’objectif.
 </explicationBonneReponse>
 </QuestionsCours>
+=======
+  <QuestionsCours>
+    <bonnereponse>2</bonnereponse>
+    <question>Quel est l’avantage d’une résolution utilisant A+ sur un simple Dijkstra?</question>
+    <reponse1>Trouver une solution plus rapide</reponse1>
+    <reponse2>Trouver une solution plus rapidement</reponse2>
+    <reponse3>Trouver une meilleur solution</reponse3>
+    <reponse4>Redessiner le graphe</reponse4>
+    <explicationBonneReponse>Blabla</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>1</bonnereponse>
+    <question>Quelle est l'utilisation d’un algorithme min/max ?</question>
+    <reponse1>Trouver le meilleur coup
+</reponse1>
+    <reponse2>Trouver le chemin le plus court</reponse2>
+    <reponse3>Trouver l’équilibre le moins énergétique</reponse3>
+    <reponse4>Trouver une meilleure solution</reponse4>
+    <explicationBonneReponse>Blablabla</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>3</bonnereponse>
+    <question>Quelle amélioration apporte l’algorithme Alpha-Beta par rapport à l’algorithme min/max ?</question>
+    <reponse1>Mieux identifier le coup de l’adversaire</reponse1>
+    <reponse2>Trouver une meilleur solution</reponse2>
+    <reponse3>Ne pas étudier les coups possibles moins forts</reponse3>
+    <reponse4>Identifier le chemin le plus court</reponse4>
+    <explicationBonneReponse>Blabla</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>1</bonnereponse>
+    <question>question</question>
+    <reponse1>reponse</reponse1>
+    <reponse2>reponse</reponse2>
+    <reponse3>reponse</reponse3>
+    <reponse4>reponse</reponse4>
+    <explicationBonneReponse>blblaa</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>2</bonnereponse>
+    <question>question</question>
+    <reponse1>reponse</reponse1>
+    <reponse2>reponse</reponse2>
+    <reponse3>reponse</reponse3>
+    <reponse4>reponse</reponse4>
+    <explicationBonneReponse>reponse</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>3</bonnereponse>
+    <question>Coucou simon
+Coucousimon</question>
+    <reponse1>bsde</reponse1>
+    <reponse2>kjsfdhvohdh</reponse2>
+    <reponse3>sldhvshd</reponse3>
+    <reponse4>vskdvkjshd</reponse4>
+    <explicationBonneReponse>zhefoizheiozheghv</explicationBonneReponse>
+  </QuestionsCours>
+>>>>>>> 4f073ad660860057ce3f2c1ea93ec162307e478d
 </ArrayOfQuestionsCours>

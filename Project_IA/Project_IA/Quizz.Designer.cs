@@ -33,7 +33,8 @@
             this.option3Button = new System.Windows.Forms.Button();
             this.option4Button = new System.Windows.Forms.Button();
             this.labelQuestion = new System.Windows.Forms.Label();
-            this.feedbackLabel = new System.Windows.Forms.Label();
+            this.buttonNext = new System.Windows.Forms.Button();
+            this.labelScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // option1Button
@@ -75,29 +76,39 @@
             // labelQuestion
             // 
             this.labelQuestion.AutoSize = true;
-            this.labelQuestion.Location = new System.Drawing.Point(109, 47);
+            this.labelQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelQuestion.Location = new System.Drawing.Point(33, 35);
             this.labelQuestion.Name = "labelQuestion";
-            this.labelQuestion.Size = new System.Drawing.Size(29, 13);
+            this.labelQuestion.Size = new System.Drawing.Size(73, 17);
             this.labelQuestion.TabIndex = 4;
-            this.labelQuestion.Text = "labal";
+            this.labelQuestion.Text = "Question :";
             // 
-            // feedbackLabel
+            // buttonNext
             // 
-           
-            this.feedbackLabel.AutoSize = true;
-            this.feedbackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.feedbackLabel.Location = new System.Drawing.Point(211, 419);
-            this.feedbackLabel.Name = "feedbackLabel";
-            this.feedbackLabel.Size = new System.Drawing.Size(35, 13);
-            this.feedbackLabel.TabIndex = 5;
-            this.feedbackLabel.Text = "";
+            this.buttonNext.Location = new System.Drawing.Point(341, 409);
+            this.buttonNext.Name = "buttonNext";
+            this.buttonNext.Size = new System.Drawing.Size(75, 23);
+            this.buttonNext.TabIndex = 6;
+            this.buttonNext.Text = "Suivant";
+            this.buttonNext.UseVisualStyleBackColor = true;
+            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
+            // 
+            // labelScore
+            // 
+            this.labelScore.AutoSize = true;
+            this.labelScore.Location = new System.Drawing.Point(36, 409);
+            this.labelScore.Name = "label1";
+            this.labelScore.Size = new System.Drawing.Size(35, 13);
+            this.labelScore.TabIndex = 7;
+            this.labelScore.Text = "";
             // 
             // Quizz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 465);
-            this.Controls.Add(this.feedbackLabel);
+            this.Controls.Add(this.labelScore);
+            this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.labelQuestion);
             this.Controls.Add(this.option4Button);
             this.Controls.Add(this.option3Button);
@@ -117,6 +128,7 @@
         private System.Windows.Forms.Button option3Button;
         private System.Windows.Forms.Button option4Button;
         private System.Windows.Forms.Label labelQuestion;
-        private System.Windows.Forms.Label feedbackLabel;
+        private System.Windows.Forms.Button buttonNext;
+        private System.Windows.Forms.Label labelScore;
     }
 }
