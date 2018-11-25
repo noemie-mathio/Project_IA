@@ -24,14 +24,9 @@ namespace Project_IA
         public Quizz()
         {
             InitializeComponent();
-            //deserializeFromXmlFile("test_question.xml");
-            //quizzzzz = new List<QuestionsCours>();
-            //newQuiz();
+            deserializeFromXmlFile("test_question.xml");
             quizzzzz = new List<QuestionsCours>();
-            QuestionsCours question_2 = new QuestionsCours("Quel est la différence entre un servo-contrôleur et un micro-contrôleur?", "Purement sémantique", "Le servo-contrôleur n’est pas programmable", "Le servo-contrôleur ne fonctionne pas en autonomie", "Le micro-contrôleur ne possede pas de mémoire interne", 3, "Blabla");
-            QuestionsCours question_1= new QuestionsCours("Une liaison rotule à :", "4 degrés de liberté", "3 degrés de liberté", "2 degrés de liberté", "Ca dépends", 2, "Blabla");
-            quizzzzz.Add(question_2);
-            quizzzzz.Add(question_1);
+            newQuiz();
             newQuestion();
             
 
@@ -257,7 +252,10 @@ namespace Project_IA
             }
            else
             {
-                MessageBox.Show("coucou");
+                MessageBox.Show("Votre score est :" + score + "/" + compteur);
+                Accueil accueil = new Accueil();
+                accueil.Show();
+                this.Hide();
             }
         }
 

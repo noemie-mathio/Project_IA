@@ -45,3 +45,17 @@ C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Pro
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Properties.Resources.resources
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Quizz.resources
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csproj.GenerateResource.Cache
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe.config
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.pdb
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csprojAssemblyReference.cache
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Accueil.resources
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Dijkstra.resources
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.NouveauDijkstra.resources
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.NouvelleQuestionQuiz.resources
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Properties.Resources.resources
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Quizz.resources
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csproj.GenerateResource.cache
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csproj.CoreCompileInputs.cache
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.exe
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.pdb
