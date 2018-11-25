@@ -59,3 +59,4 @@ C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Pro
 C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csproj.CoreCompileInputs.cache
 C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.exe
 C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.pdb
+C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.ConnexionProfesseur.resources

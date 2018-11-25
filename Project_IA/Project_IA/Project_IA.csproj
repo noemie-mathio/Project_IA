@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnexionProfesseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnexionProfesseur.Designer.cs">
+      <DependentUpon>ConnexionProfesseur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Node2.cs" />
     <Compile Include="Accueil.cs">
       <SubType>Form</SubType>
@@ -86,6 +92,9 @@
     <Compile Include="SearchTree.cs" />
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnexionProfesseur.resx">
+      <DependentUpon>ConnexionProfesseur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dijkstra.resx">
       <DependentUpon>Dijkstra.cs</DependentUpon>

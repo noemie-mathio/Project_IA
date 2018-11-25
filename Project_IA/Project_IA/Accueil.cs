@@ -12,9 +12,17 @@ namespace Project_IA
 {
     public partial class Accueil : Form
     {
+        private bool connexion = false;
         public Accueil()
         {
             InitializeComponent();
+
+        }
+        public Accueil(bool boolean)
+        {
+            connexion = boolean;
+            InitializeComponent();
+            Connexionbutton.Text="Bienvenue, professeur";
         }
 
         private void quizButton_Click(object sender, EventArgs e)
@@ -44,5 +52,29 @@ namespace Project_IA
             NouveauDijkstra.Show();
             this.Hide();
         }
+
+        private void Connexionbutton_Click(object sender, EventArgs e)
+        {
+            ConnexionProfesseur connexionProfesseur = new ConnexionProfesseur();
+            connexionProfesseur.Show();
+            this.Hide();
+        }
+
+        private void Accueil_Load(object sender, EventArgs e)
+        {
+            if (connexion==false)
+            {
+                ajoutDijkstraButton.Visible = false;
+                ajoutQuizButton.Visible = false;
+            }
+            else
+            {
+            
+                ajoutDijkstraButton.Visible = true;
+                ajoutQuizButton.Visible = true;
+            }
+        }
+
+       
     }
 }

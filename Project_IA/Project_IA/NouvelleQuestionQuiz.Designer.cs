@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pseudoLabel = new System.Windows.Forms.Label();
-            this.mdpLabel = new System.Windows.Forms.Label();
-            this.pseudoTextBox = new System.Windows.Forms.TextBox();
-            this.mdpTextBox = new System.Windows.Forms.TextBox();
-            this.validerIdentifiantButton = new System.Windows.Forms.Button();
-            this.msgErreurLabel = new System.Windows.Forms.Label();
             this.titreLabel = new System.Windows.Forms.Label();
             this.questionlabel = new System.Windows.Forms.Label();
             this.questiontextBox = new System.Windows.Forms.TextBox();
@@ -51,59 +45,6 @@
             this.explicationBonneReponsetextBox = new System.Windows.Forms.TextBox();
             this.envoyerbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // pseudoLabel
-            // 
-            this.pseudoLabel.AutoSize = true;
-            this.pseudoLabel.Location = new System.Drawing.Point(72, 55);
-            this.pseudoLabel.Name = "pseudoLabel";
-            this.pseudoLabel.Size = new System.Drawing.Size(53, 13);
-            this.pseudoLabel.TabIndex = 0;
-            this.pseudoLabel.Text = "Identifiant";
-            // 
-            // mdpLabel
-            // 
-            this.mdpLabel.AutoSize = true;
-            this.mdpLabel.Location = new System.Drawing.Point(72, 134);
-            this.mdpLabel.Name = "mdpLabel";
-            this.mdpLabel.Size = new System.Drawing.Size(72, 13);
-            this.mdpLabel.TabIndex = 1;
-            this.mdpLabel.Text = "Mot de Passe";
-            // 
-            // pseudoTextBox
-            // 
-            this.pseudoTextBox.Location = new System.Drawing.Point(75, 84);
-            this.pseudoTextBox.Name = "pseudoTextBox";
-            this.pseudoTextBox.Size = new System.Drawing.Size(164, 20);
-            this.pseudoTextBox.TabIndex = 2;
-            // 
-            // mdpTextBox
-            // 
-            this.mdpTextBox.Location = new System.Drawing.Point(75, 177);
-            this.mdpTextBox.Name = "mdpTextBox";
-            this.mdpTextBox.Size = new System.Drawing.Size(164, 20);
-            this.mdpTextBox.TabIndex = 3;
-            this.mdpTextBox.Click += new System.EventHandler(this.mdpTextBox_TextChanged);
-            // 
-            // validerIdentifiantButton
-            // 
-            this.validerIdentifiantButton.Location = new System.Drawing.Point(164, 221);
-            this.validerIdentifiantButton.Name = "validerIdentifiantButton";
-            this.validerIdentifiantButton.Size = new System.Drawing.Size(75, 23);
-            this.validerIdentifiantButton.TabIndex = 4;
-            this.validerIdentifiantButton.Text = "Envoyer";
-            this.validerIdentifiantButton.UseVisualStyleBackColor = true;
-            this.validerIdentifiantButton.Click += new System.EventHandler(this.validerIdentifiantButton_Click);
-            // 
-            // msgErreurLabel
-            // 
-            this.msgErreurLabel.AutoSize = true;
-            this.msgErreurLabel.BackColor = System.Drawing.Color.Red;
-            this.msgErreurLabel.Location = new System.Drawing.Point(29, 265);
-            this.msgErreurLabel.Name = "msgErreurLabel";
-            this.msgErreurLabel.Size = new System.Drawing.Size(315, 13);
-            this.msgErreurLabel.TabIndex = 5;
-            this.msgErreurLabel.Text = "Votre identifiant ou mot de passe est incorrect ! Veuillez réessayer";
             // 
             // titreLabel
             // 
@@ -259,12 +200,6 @@
             this.Controls.Add(this.questiontextBox);
             this.Controls.Add(this.questionlabel);
             this.Controls.Add(this.titreLabel);
-            this.Controls.Add(this.msgErreurLabel);
-            this.Controls.Add(this.validerIdentifiantButton);
-            this.Controls.Add(this.mdpTextBox);
-            this.Controls.Add(this.pseudoTextBox);
-            this.Controls.Add(this.mdpLabel);
-            this.Controls.Add(this.pseudoLabel);
             this.Name = "NouvelleQuestionQuiz";
             this.Text = "NouvelleQuestion";
             this.ResumeLayout(false);
@@ -273,13 +208,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label pseudoLabel;
-        private System.Windows.Forms.Label mdpLabel;
-        private System.Windows.Forms.TextBox pseudoTextBox;
-        private System.Windows.Forms.TextBox mdpTextBox;
-        private System.Windows.Forms.Button validerIdentifiantButton;
-        private System.Windows.Forms.Label msgErreurLabel;
         private System.Windows.Forms.Label titreLabel;
         private System.Windows.Forms.Label questionlabel;
         private System.Windows.Forms.TextBox questiontextBox;
