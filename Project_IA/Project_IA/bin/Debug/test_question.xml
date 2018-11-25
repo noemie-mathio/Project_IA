@@ -213,17 +213,41 @@ Une matrice d'adjacence représente une fonction définie entre les ensembles :
   </QuestionsCours>
   <QuestionsCours>
     <bonnereponse>4</bonnereponse>
-    <question>               A -----C
-	  /   \	
-            /      \
-E-----D - --- -B
-
+    <question>      
+         A ----C
+	      / \	
+       /   \
+E-----D ----B
 La matrice adjacente au graphe est :
 </question>
-    <reponse1>0 0 0 1 0</reponse1>
-    <reponse2>0 1 0 0 0</reponse2>
-    <reponse3>0 1 1 1 0</reponse3>
-    <reponse4>0 1 1 1 0</reponse4>
+    <reponse1>
+0 0 0 1 0
+1 1 0 0 1
+0 1 1 1 0
+1 0 0 1 0
+1 0 0 0 0
+</reponse1>
+    <reponse2>
+0 1 0 0 0
+1 0 0 1 1
+0 1 1 1 0
+0 1 0 0 1
+0 0 0 0 1
+</reponse2>
+    <reponse3>
+0 1 1 1 0
+0 1 0 0 1
+0 0 0 0 1
+1 0 0 1 1
+0 1 0 0 0
+    </reponse3>
+    <reponse4>
+0 1 1 1 0
+1 0 0 1 0
+1 0 0 0 0
+1 1 0 0 1
+0 0 0 1 0
+</reponse4>
     <explicationBonneReponse>En effet, la bonne matrice adjacente est : 0 1 1 1 0
 1 0 0 1 0
 1 0 0 0 0
