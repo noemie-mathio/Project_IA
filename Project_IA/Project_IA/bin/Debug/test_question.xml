@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfQuestionsCours xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <QuestionsCours>
-    <bonnereponse>2</bonnereponse>
     <question>Une liaison rotule à :</question>
     <reponse1>4 degrés de liberté</reponse1>
     <reponse2>3 degrés de liberté</reponse2>
     <reponse3>2 degrés de liberté</reponse3>
     <reponse4>Ca dépends</reponse4>
+        <bonnereponse>2</bonnereponse>
+
     <explicationBonneReponse>Blablabla</explicationBonneReponse>
   </QuestionsCours>
   <QuestionsCours>
-    <bonnereponse>3</bonnereponse>
     <question>Quel est la différence entre un servo-contrôleur et un micro-contrôleur?</question>
     <reponse1>Purement sémantique</reponse1>
     <reponse2>Le servo-contrôleur n’est pas programmable</reponse2>
     <reponse3>Le servo-contrôleur ne fonctionne pas en autonomie</reponse3>
     <reponse4>Le micro-contrôleur ne possede pas de mémoire interne</reponse4>
+        <bonnereponse>3</bonnereponse>
+
     <explicationBonneReponse>Blablabla</explicationBonneReponse>
+    
   </QuestionsCours>
 <QuestionsCours>
 <question>Quel est l’avantage d’une résolution utilisant A+ sur un simple Dijkstra?</question>
