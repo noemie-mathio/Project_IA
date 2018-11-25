@@ -214,9 +214,9 @@ Une matrice d'adjacence représente une fonction définie entre les ensembles :
   <QuestionsCours>
     <bonnereponse>4</bonnereponse>
     <question>      
-         A ----C
-	      / \	
-       /   \
+             A ----C
+	           / \	
+          /   \
 E-----D ----B
 La matrice adjacente au graphe est :
 </question>
