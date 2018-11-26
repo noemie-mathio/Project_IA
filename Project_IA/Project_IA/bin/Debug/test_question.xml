@@ -93,7 +93,7 @@
   </QuestionsCours>
   <QuestionsCours>
     <bonnereponse>1</bonnereponse>
-    <question>Par quoi ne modélise-t'on pas des graphes ?</question>
+    <question>Quel élément ne trouve-t'on pas dans un graphe ?</question>
     <reponse1>Axe</reponse1>
     <reponse2>Noeud ou sommet</reponse2>
     <reponse3>Arête</reponse3>
@@ -120,7 +120,7 @@
   </QuestionsCours>
   <QuestionsCours>
     <bonnereponse>1</bonnereponse>
-    <question>Vous prenez en cours une partie de puissance 4 mais vous ne savez pas quel est le meilleur coup à jouer pour anticiper les 3 prochains coups. Quel algorithme utiliseriez-vous ?</question>
+    <question>Vous prenez en cours une partie de puissance 4 mais vous ne savez pas quel est le meilleur coup \n à jouer pour anticiper les 3 prochains coups. Quel algorithme utiliseriez-vous ?</question>
     <reponse1>L'algorithme MinMax</reponse1>
     <reponse2>L'algorithme Alpha Beta</reponse2>
     <reponse3>L'algorithme de Dijkstra</reponse3>
@@ -186,8 +186,8 @@
     <question>Qu'est ce que la navigation topologique ?</question>
     <reponse1>Une navigation qui permet de trouver un chemin direct en passant par des endroits connus</reponse1>
     <reponse2>Une navigation qui permet de trouver un chemin direct en passant par des endroits inconnus</reponse2>
-    <reponse3>Une naviagation qui connaît des choses relatives sur un chemin et la distance entre les lieux</reponse3>
-    <reponse4>Une naviagation qui connaît des choses relatives sur un chemin mais pas la distance entre les lieux</reponse4>
+    <reponse3>Une navigation qui connaît des choses relatives sur un chemin et la distance entre les lieux</reponse3>
+    <reponse4>Une navigation qui connaît des choses relatives sur un chemin mais pas la distance entre les lieux</reponse4>
     <explicationBonneReponse>Naviagation topologique : connaissance de chose relatives sur un chemin mais on a pas la distance entre les lieux. Exemple : après tel élément rencontré dans l’environnement, il faut tourner à gauche ou à droite</explicationBonneReponse>
   </QuestionsCours>
   <QuestionsCours>
@@ -195,8 +195,8 @@
     <question>Qu'est ce que la navigation métrique ?</question>
     <reponse1>Une navigation qui permet de trouver un chemin direct en passant par des endroits connus</reponse1>
     <reponse2>Une navigation qui permet de trouver un chemin direct en passant par des endroits inconnus</reponse2>
-    <reponse3>Une naviagation qui connaît des choses relatives sur un chemin et la distance entre les lieux</reponse3>
-    <reponse4>Une naviagation qui connaît des choses relatives sur un chemin mais pas la distance entre les lieux</reponse4>
+    <reponse3>Une navigation qui connaît des choses relatives sur un chemin et la distance entre les lieux</reponse3>
+    <reponse4>Une navigation qui connaît des choses relatives sur un chemin mais pas la distance entre les lieux</reponse4>
     <explicationBonneReponse>La navigation métrique est plus précise : possibilité de trouver un chemin plus direct en passant par des endroits inconnus, grâce à la connaissance du positionnement 2D (ou 3D) relatif à l’objectif.
 </explicationBonneReponse>
   </QuestionsCours>
@@ -214,9 +214,9 @@ Une matrice d'adjacence représente une fonction définie entre les ensembles :
   <QuestionsCours>
     <bonnereponse>4</bonnereponse>
     <question>      
-             A ----C
-	           / \	
-          /   \
+            A ----C
+	            / \	
+           /   \
 E-----D---B
 La matrice adjacente au graphe est :
 </question>
