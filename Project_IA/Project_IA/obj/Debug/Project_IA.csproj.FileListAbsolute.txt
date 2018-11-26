@@ -58,3 +58,4 @@ H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.
 H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Properties.Resources.resources
 H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Quizz.resources
 H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csproj.GenerateResource.Cache
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.ConnexionProfesseur.resources

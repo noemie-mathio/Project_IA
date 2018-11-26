@@ -36,12 +36,14 @@ namespace Project_IA
         static public List<GenericNode> L_Fermes;
         static public List<GenericNode> N0List;
         static public List<List<GenericNode>> EnsembleOuvert;
-
+        public Image imageGraphe;
         static bool juste;
+        private object ImageWindow;
 
         public Dijkstra()
         {
             InitializeComponent();
+            pictureBox1.Visible = false;
         }
 
         private void button_init1_Click(object sender, EventArgs e)
@@ -79,7 +81,7 @@ namespace Project_IA
             EnsembleOuvertEleve = new List<int>();   
             NbrAjoutOuvertEleve = new List<int>();
             EnsembleFermesEleve = new List<int>();  
-
+            
             // Le noeud passé en paramètre est supposé être le noeud initial
             GenericNode N = N0;
             N0List.Add(N0);
@@ -286,41 +288,45 @@ namespace Project_IA
 
         }
 
-        private void button_init2_Click(object sender, EventArgs e)
+        private void graphAleatoirebutton_Click(object sender, EventArgs e)
         {
+            listBoxgraphe.Items.Clear();
 
-
-            StreamReader monStreamReader = new StreamReader("grapheDijkstra.txt"); 
-            string ligne = monStreamReader.ReadLine();
-
-            int i = 0;
-            while (ligne[i].Equals(':')!=true) { i++; } // premiere ligne est le nombre de graphes
-            string nbgraph = "";
-            i++; // On dépasse le ":"
-            while (ligne[i].Equals(' ')) { i++; } // on saute les blancs éventuels
-            while (i < ligne.Length)
-            {
-                nbgraph = nbgraph + ligne[i];
-                i++;
-            }
-            int intnbgraph = Int32.Parse(nbgraph);
-            // Lecture du fichier avec un while, évidemment !
-            // 1ère ligne : "nombre de noeuds du graphe
-
-
-            //choix au hasard du graph à étudier parmi le nombre de graph total.
             Random random = new Random();
-            string graph = "graphe " + random.Next(1, intnbgraph + 1).ToString();
-
-
-            // ATTENTION, il est necessaire de réinitialiser
-            while (string.Equals(graph, ligne) == false)
+            StreamReader monStreamReader = new StreamReader("graphe.txt");
+            string ligne = monStreamReader.ReadLine();
+            int compteurDijkstra = 0; // Compte le nombre de graph différent dans le fichier
+            while (ligne != null)
             {
                 ligne = monStreamReader.ReadLine();
+                if (ligne == "fin")
+                {
+                    compteurDijkstra++;
+                }
 
             }
+            monStreamReader = new StreamReader("graphe.txt");
+            //choix au hasard du graph à étudier parmi le nombre de graph total.
+            int choixGraph = random.Next(1,compteurDijkstra + 1);
+            imageGraphe = Image.FromFile("image" + choixGraph + ".jpg");
+
+            // On réinitialise la lecture du fichier
             ligne = monStreamReader.ReadLine();
-            i = 0;
+            int compteurDijkstra2 = 0;
+            while (compteurDijkstra2 != choixGraph-1)
+            {
+                ligne = monStreamReader.ReadLine();
+                if (ligne == "fin")
+                {
+                    compteurDijkstra2++;
+                }
+            }
+            if (choixGraph != 1)
+            {
+                ligne = monStreamReader.ReadLine();
+            }
+
+            int i = 0;
             while (ligne[i].Equals(':')!=true) { i++; }
             string strnbnoeuds = "";
             i++; // On dépasse le ":"
@@ -386,11 +392,15 @@ namespace Project_IA
                    + "   : " + Convert.ToString(matrice[N1, N2]));
 
                 ligne = monStreamReader.ReadLine();
+                
+
             }
             // Fermeture du StreamReader (obligatoire) 
             monStreamReader.Close();
-
-
+           // pictureBox1.Width = imageGraphe.Width;
+            //pictureBox1.Height = imageGraphe.Height;
+            pictureBox1.Image = imageGraphe;
+            pictureBox1.Visible = true;
 
         }
         public List<GenericNode> cheminParcoursArbre(GenericNode N, GenericNode N0)
@@ -410,58 +420,7 @@ namespace Project_IA
             return _LN;
         }
 
-        private void listBoxgraphe_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void noeudInitial_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void noeudFinal_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_NoeudInitial_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_NoeudFinal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ToutEnsembleOuvert_TextChanged(object sender, EventArgs e)
-       {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void ToutEnsembleFerme_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -472,10 +431,10 @@ namespace Project_IA
         {
 
         }
+        private void treeView1_AfterSelect(object sender, EventArgs e) { }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
 
-        }
+
+
     }
 }

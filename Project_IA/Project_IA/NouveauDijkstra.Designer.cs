@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dijkstraTextLabel = new System.Windows.Forms.Label();
             this.dijkstraTextBox = new System.Windows.Forms.TextBox();
             this.imageDijkstraOpenFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -36,6 +37,8 @@
             this.envoyerButton = new System.Windows.Forms.Button();
             this.chargementImageOklabel = new System.Windows.Forms.Label();
             this.erreurLabel = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.Infobutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dijkstraTextLabel
@@ -105,11 +108,25 @@
             this.erreurLabel.TabIndex = 6;
             this.erreurLabel.Text = "Veuillez compléter la zone de texte ou charger une image représentative";
             // 
+            // Infobutton
+            // 
+            this.Infobutton.BackColor = System.Drawing.Color.SkyBlue;
+            this.Infobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Infobutton.Location = new System.Drawing.Point(280, 53);
+            this.Infobutton.Name = "Infobutton";
+            this.Infobutton.Size = new System.Drawing.Size(32, 23);
+            this.Infobutton.TabIndex = 7;
+            this.Infobutton.Text = "i";
+            this.toolTip1.SetToolTip(this.Infobutton, "Entrez du contenue sous la forme :\r\n\r\nnombre de noeuds : 7\r\narc1 : 0 1 3\r\narc2 : " +
+        "0 2 5\r\narc3 : 0 3 7\r\narc4 :1 4 8\r\narc5 : 2 4 3\r\narc6 : 4 5 7\r\narc7 : 5 6 4");
+            this.Infobutton.UseVisualStyleBackColor = false;
+            // 
             // NouveauDijkstra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(361, 382);
+            this.Controls.Add(this.Infobutton);
             this.Controls.Add(this.erreurLabel);
             this.Controls.Add(this.chargementImageOklabel);
             this.Controls.Add(this.envoyerButton);
@@ -134,5 +151,7 @@
         private System.Windows.Forms.Button envoyerButton;
         private System.Windows.Forms.Label chargementImageOklabel;
         private System.Windows.Forms.Label erreurLabel;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button Infobutton;
     }
 }
