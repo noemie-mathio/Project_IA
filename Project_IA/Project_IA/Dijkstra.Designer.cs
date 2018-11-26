@@ -63,7 +63,7 @@
             // 
             // noeudInitial
             // 
-            this.noeudInitial.Location = new System.Drawing.Point(176, 248);
+            this.noeudInitial.Location = new System.Drawing.Point(204, 244);
             this.noeudInitial.Name = "noeudInitial";
             this.noeudInitial.Size = new System.Drawing.Size(100, 20);
             this.noeudInitial.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             // noeudFinal
             // 
-            this.noeudFinal.Location = new System.Drawing.Point(316, 247);
+            this.noeudFinal.Location = new System.Drawing.Point(367, 246);
             this.noeudFinal.Name = "noeudFinal";
             this.noeudFinal.Size = new System.Drawing.Size(100, 20);
             this.noeudFinal.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             // button_Dijkstra
             // 
-            this.button_Dijkstra.Location = new System.Drawing.Point(502, 245);
+            this.button_Dijkstra.Location = new System.Drawing.Point(531, 244);
             this.button_Dijkstra.Name = "button_Dijkstra";
             this.button_Dijkstra.Size = new System.Drawing.Size(152, 23);
             this.button_Dijkstra.TabIndex = 3;
@@ -90,7 +90,7 @@
             // label_NoeudInitial
             // 
             this.label_NoeudInitial.AutoSize = true;
-            this.label_NoeudInitial.Location = new System.Drawing.Point(173, 219);
+            this.label_NoeudInitial.Location = new System.Drawing.Point(201, 219);
             this.label_NoeudInitial.Name = "label_NoeudInitial";
             this.label_NoeudInitial.Size = new System.Drawing.Size(65, 13);
             this.label_NoeudInitial.TabIndex = 4;
@@ -99,7 +99,7 @@
             // label_NoeudFinal
             // 
             this.label_NoeudFinal.AutoSize = true;
-            this.label_NoeudFinal.Location = new System.Drawing.Point(313, 219);
+            this.label_NoeudFinal.Location = new System.Drawing.Point(364, 219);
             this.label_NoeudFinal.Name = "label_NoeudFinal";
             this.label_NoeudFinal.Size = new System.Drawing.Size(61, 13);
             this.label_NoeudFinal.TabIndex = 5;
@@ -107,7 +107,7 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(502, 299);
+            this.treeView1.Location = new System.Drawing.Point(531, 282);
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(152, 180);
             this.treeView1.TabIndex = 7;
