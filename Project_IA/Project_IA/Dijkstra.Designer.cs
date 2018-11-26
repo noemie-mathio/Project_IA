@@ -115,7 +115,7 @@
             // 
             // GraphAleatoirebutton
             // 
-            this.GraphAleatoirebutton.Location = new System.Drawing.Point(37, 89);
+            this.GraphAleatoirebutton.Location = new System.Drawing.Point(72, 92);
             this.GraphAleatoirebutton.Name = "GraphAleatoirebutton";
             this.GraphAleatoirebutton.Size = new System.Drawing.Size(99, 23);
             this.GraphAleatoirebutton.TabIndex = 8;
@@ -213,7 +213,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(259, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(298, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(363, 196);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
