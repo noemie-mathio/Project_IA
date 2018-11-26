@@ -18,6 +18,12 @@ namespace Project_IA
             return numero == N2bis.numero;
         }
 
+        public override string getNumero()
+        {
+           
+            return numero.ToString();
+        }
+
         public override double GetArcCost(GenericNode N2)
         {
             Node2 N2bis = (Node2)N2;

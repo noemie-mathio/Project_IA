@@ -75,6 +75,7 @@ namespace Project_IA
 
         // Méthodes abstrates, donc à surcharger obligatoirement avec override dans une classe fille
         public abstract bool IsEqual(GenericNode N2);
+        public abstract String getNumero();
         public abstract double GetArcCost(GenericNode N2);
         public abstract bool EndState();
         public abstract List<GenericNode> GetListSucc();

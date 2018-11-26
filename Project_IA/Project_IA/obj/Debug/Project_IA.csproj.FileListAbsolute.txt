@@ -45,3 +45,16 @@ C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Pro
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Properties.Resources.resources
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Quizz.resources
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csproj.GenerateResource.Cache
+H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe.config
+H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.exe
+H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.pdb
+H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe
+H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.pdb
+H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csprojResolveAssemblyReference.cache
+H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Accueil.resources
+H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Dijkstra.resources
+H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.NouveauDijkstra.resources
+H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.NouvelleQuestionQuiz.resources
+H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Properties.Resources.resources
+H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Quizz.resources
+H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csproj.GenerateResource.Cache

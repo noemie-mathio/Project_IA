@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,8 +11,8 @@ namespace Project_IA
     {
         public List<GenericNode> L_Ouverts;
         public List<GenericNode> L_Fermes;
-        // public List<GenericNode> EnsembleOuvert;
-        // public List<int> NbrAjoutOuvert;
+        public List<GenericNode> EnsembleOuvert;
+        public List<int> NbrAjoutOuvert;
 
         public int CountInOpenList()
         {
@@ -27,7 +27,7 @@ namespace Project_IA
         {
             int i = 0;
 
-            while (i < L_Fermes.Count) //faut-il faire new List<GenericNode>
+            while (i < L_Fermes.Count)
             {
                 if (L_Fermes[i].IsEqual(N2))
                     return L_Fermes[i];
@@ -49,61 +49,90 @@ namespace Project_IA
             return null;
         }
 
-        public GenericNode stepSolutionAEtoile(GenericNode N0, List<GenericNode> L_ouvert, List<GenericNode> L_ferme)
+        public List<GenericNode> RechercheSolutionAEtoile(GenericNode N0)
         {
-            L_Ouverts = L_ouvert;
-            L_Fermes = L_ferme;
-            GenericNode N = N0;
-
-            // Il faut trouver les noeuds successeurs de N
-            this.MAJSuccesseurs(N);
-            // Inutile de retrier car les insertions ont √©t√© faites en respectant l'ordre
-
-            // On prend le meilleur, donc celui en position 0, pour continuer √† explorer les √©tats
-            // A condition qu'il existe bien s√ªr
-            if (L_Ouverts.Count > 0)
+            L_Ouverts = new List<GenericNode>();
+            L_Fermes = new List<GenericNode>();
+            EnsembleOuvert = new List<GenericNode>();
+            NbrAjoutOuvert = new List<int>();
+        // Le noeud passÈ en paramËtre est supposÈ Ítre le noeud initial
+        GenericNode N = N0;
+            L_Ouverts.Add(N0);
+            EnsembleOuvert.Add(N0);
+            NbrAjoutOuvert.Add(1);
+            // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
+            while (L_Ouverts.Count != 0 && N.EndState() == false)
             {
-                N = L_Ouverts[0];
+                // Le meilleur noeud des ouverts est supposÈ placÈ en tÍte de liste
+                // On le place dans les fermÈs
+
+
+                NbrAjoutOuvert.Add(L_Ouverts.Count);
+                L_Ouverts.Remove(N);
+                L_Fermes.Add(N);
+
+                // Il faut trouver les noeuds successeurs de N
+                this.MAJSuccesseurs(N);
+                // Inutile de retrier car les insertions ont ÈtÈ faites en respectant l'ordre
+                EnsembleOuvert.Add(N);
+              
+                // On prend le meilleur, donc celui en position 0, pour continuer ‡ explorer les Ètats
+                // A condition qu'il existe bien s˚r
+                if (L_Ouverts.Count > 0)
+                {
+                    N = L_Ouverts[0];
+                }
+                else
+                {
+                    N = null;
+                }
             }
-            else
+
+            // A* terminÈ
+            // On retourne le chemin qui va du noeud initial au noeud final sous forme de liste
+            // Le chemin est retrouvÈ en partant du noeud final et en accÈdant aux parents de maniËre
+            // itÈrative jusqu'‡ ce qu'on tombe sur le noeud initial
+            List<GenericNode> _LN = new List<GenericNode>();
+            if (N != null)
             {
-                N = null;
+                _LN.Add(N);
+
+                while (N != N0)
+                {
+                    N = N.GetNoeud_Parent();
+                    _LN.Insert(0, N);  // On insËre en position 1
+                }
             }
-            return N;
+            return _LN;
         }
-        // A* termin√©
-        // On retourne le chemin qui va du noeud initial au noeud final sous forme de liste
-        // Le chemin est retrouv√© en partant du noeud final et en acc√©dant aux parents de mani√®re
-        // it√©rative jusqu'√† ce qu'on tombe sur le noeud initial
-   
 
-        public void MAJSuccesseurs(GenericNode N)
+        private void MAJSuccesseurs(GenericNode N)
         {
-            // On fait appel √† GetListSucc, m√©thode abstraite qu'on doit r√©√©crire pour chaque
-            // probl√®me. Elle doit retourner la liste compl√®te des noeuds successeurs de N.
+            // On fait appel ‡ GetListSucc, mÈthode abstraite qu'on doit rÈÈcrire pour chaque
+            // problËme. Elle doit retourner la liste complËte des noeuds successeurs de N.
             List<GenericNode> listsucc = N.GetListSucc();
             foreach (GenericNode N2 in listsucc)
             {
-                // N2 est-il une copie d'un n≈ìud d√©j√† vu et plac√© dans la liste des ferm√©s ?
+                // N2 est-il une copie d'un núud dÈj‡ vu et placÈ dans la liste des fermÈs ?
                 GenericNode N2bis = ChercheNodeDansFermes(N2);
                 if (N2bis == null)
                 {
-                    // Rien dans les ferm√©s. Est-il dans les ouverts ?
+                    // Rien dans les fermÈs. Est-il dans les ouverts ?
                     N2bis = ChercheNodeDansOuverts(N2);
                     if (N2bis != null)
                     {
-                        // Il existe, donc on l'a d√©j√† vu, N2 n'est qu'une copie de N2Bis
+                        // Il existe, donc on l'a dÈj‡ vu, N2 n'est qu'une copie de N2Bis
                         // Le nouveau chemin passant par N est-il meilleur ?
                         if (N.GetGCost() + N.GetArcCost(N2) < N2bis.GetGCost())
                         {
-                            // Mise √† jour de N2bis
+                            // Mise ‡ jour de N2bis
                             N2bis.SetGCost(N.GetGCost() + N.GetArcCost(N2));
-                            // HCost pas recalcul√© car toujours bon
+                            // HCost pas recalculÈ car toujours bon
                             N2bis.RecalculeCoutTotal(); // somme de GCost et HCost
-                            // Mise √† jour de la famille ....
+                            // Mise ‡ jour de la famille ....
                             N2bis.Supprime_Liens_Parent();
                             N2bis.SetNoeud_Parent(N);
-                            // Mise √† jour des ouverts
+                            // Mise ‡ jour des ouverts
                             L_Ouverts.Remove(N2bis);
                             this.InsertNewNodeInOpenList(N2bis);
                         }
@@ -118,8 +147,8 @@ namespace Project_IA
                         this.InsertNewNodeInOpenList(N2);
                     }
                 }
-                // else il est dans les ferm√©s donc on ne fait rien,
-                // car on a d√©j√† trouv√© le plus court chemin pour aller en N2
+                // else il est dans les fermÈs donc on ne fait rien,
+                // car on a dÈj‡ trouvÈ le plus court chemin pour aller en N2
             }
         }
 
@@ -154,14 +183,14 @@ namespace Project_IA
             }
         }
 
-        // Si on veut afficher l'arbre de recherche, il suffit de passer un treeview en param√®tres
-        // Celui-ci est mis √† jour avec les noeuds de la liste des ferm√©s, on ne tient pas compte des ouverts
+        // Si on veut afficher l'arbre de recherche, il suffit de passer un treeview en paramËtres
+        // Celui-ci est mis ‡ jour avec les noeuds de la liste des fermÈs, on ne tient pas compte des ouverts
         public void GetSearchTree(TreeView TV)
         {
             if (L_Fermes == null) return;
             if (L_Fermes.Count == 0) return;
 
-            // On suppose le TreeView pr√©existant
+            // On suppose le TreeView prÈexistant
             TV.Nodes.Clear();
 
             TreeNode TN = new TreeNode(L_Fermes[0].ToString());
@@ -170,7 +199,7 @@ namespace Project_IA
             AjouteBranche(L_Fermes[0], TN);
         }
 
-        // AjouteBranche est exclusivement appel√©e par GetSearchTree; les noeuds sont ajout√©s de mani√®re r√©cursive
+        // AjouteBranche est exclusivement appelÈe par GetSearchTree; les noeuds sont ajoutÈs de maniËre rÈcursive
         private void AjouteBranche(GenericNode GN, TreeNode TN)
         {
             foreach (GenericNode GNfils in GN.GetEnfants())
