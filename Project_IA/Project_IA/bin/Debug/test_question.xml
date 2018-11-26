@@ -30,12 +30,11 @@
   <QuestionsCours>
     <bonnereponse>1</bonnereponse>
     <question>Quelle est l'utilisation d’un algorithme min/max ?</question>
-    <reponse1>Trouver le meilleur coup
-</reponse1>
+    <reponse1>Trouver le meilleur coup</reponse1>
     <reponse2>Trouver le chemin le plus court</reponse2>
     <reponse3>Trouver l’équilibre le moins énergétique</reponse3>
     <reponse4>Trouver une meilleure solution</reponse4>
-    <explicationBonneReponse>Blablabla</explicationBonneReponse>
+    <explicationBonneReponse>Le but de min-max est de trouver le meilleur coup à jouer à partir d'un état donné du jeu. Le principe consiste à construire un arbre de jeu : c'est un arbre qui représente toutes les évolutions possibles du jeu à partir de la configuration actuelle.</explicationBonneReponse>
   </QuestionsCours>
   <QuestionsCours>
     <bonnereponse>3</bonnereponse>
@@ -47,31 +46,213 @@
     <explicationBonneReponse>Blabla</explicationBonneReponse>
   </QuestionsCours>
   <QuestionsCours>
-    <bonnereponse>1</bonnereponse>
-    <question>question</question>
-    <reponse1>reponse</reponse1>
-    <reponse2>reponse</reponse2>
-    <reponse3>reponse</reponse3>
-    <reponse4>reponse</reponse4>
-    <explicationBonneReponse>blblaa</explicationBonneReponse>
-  </QuestionsCours>
-  <QuestionsCours>
-    <bonnereponse>2</bonnereponse>
-    <question>question</question>
-    <reponse1>reponse</reponse1>
-    <reponse2>reponse</reponse2>
-    <reponse3>reponse</reponse3>
-    <reponse4>reponse</reponse4>
-    <explicationBonneReponse>reponse</explicationBonneReponse>
+    <bonnereponse>4</bonnereponse>
+    <question>Quelle est la différence majeure entre l'algorithme de Dijkstra et l'algorithme A* ?</question>
+    <reponse1>La rapidité d'analyse</reponse1>
+    <reponse2>Stratégie de classement des noeuds placés dans les fermés</reponse2>
+    <reponse3>L'anticipation des coups de l'adversaire </reponse3>
+    <reponse4>Stratégie de classement des noeuds placés dans les ouverts</reponse4>
+    <explicationBonneReponse>Les algorithmes sont strictement équivalents, sauf pour la stratégie de classement des nœuds placés dans les Ouverts</explicationBonneReponse>
   </QuestionsCours>
   <QuestionsCours>
     <bonnereponse>3</bonnereponse>
-    <question>Coucou simon
-Coucousimon</question>
-    <reponse1>bsde</reponse1>
-    <reponse2>kjsfdhvohdh</reponse2>
-    <reponse3>sldhvshd</reponse3>
-    <reponse4>vskdvkjshd</reponse4>
-    <explicationBonneReponse>zhefoizheiozheghv</explicationBonneReponse>
+    <question>Quelles sont les 4 grandes fonctions des robots mobiles ?</question>
+    <reponse1>mobilité, manipulation, perception, analyse</reponse1>
+    <reponse2>locomotion, analyse, perception, décision</reponse2>
+    <reponse3>locomotion, manipulation, perception, décision</reponse3>
+    <reponse4>fixation, détection, perception, analyse</reponse4>
+    <explicationBonneReponse>Les 4 grandes fonctions sont : locomotion, manipulation, perception, décision</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>2</bonnereponse>
+    <question>Quel élement ne se trouve pas dans un servo-moteur ?</question>
+    <reponse1>Un potentiomètre</reponse1>
+    <reponse2>Une mémoire</reponse2>
+    <reponse3>Un moteur électrique</reponse3>
+    <reponse4>Un asservissement</reponse4>
+    <explicationBonneReponse>Un servo-moteur comprend un moteur électrique, un potentiomètre et un asservissement.</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>1</bonnereponse>
+    <question>Quel est l'objectif de l'algorithme de Dijkstra ?</question>
+    <reponse1>Trouver le chemin le plus court entre un état initial et un état final</reponse1>
+    <reponse2>Trouver le meilleur coup à jouer </reponse2>
+    <reponse3>Trouver le chemin le plus court en tenant compte du contexte</reponse3>
+    <reponse4>Trouver le chemin le plus court en anticipant le coup de l'adversaire</reponse4>
+    <explicationBonneReponse>L'objectif est de trouver le plus court chemin entre un état initial et un état final, l’espace d’états étant défini par un graphe, avec un coût positif associé à chaque transition.
+</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>3</bonnereponse>
+    <question>Qu'est ce que l'IA forte ?</question>
+    <reponse1>Conception de programme partiellement intelligent</reponse1>
+    <reponse2>Conception de programme mathématiquement intelligent </reponse2>
+    <reponse3>Conception de programme intelligent avec autant de conscience qu'un humain</reponse3>
+    <reponse4>Conception de programme théoriquement capable de générer l'intelligence et la conscience mais pas en pratique</reponse4>
+    <explicationBonneReponse>Conception de programmes qui auront autant de conscience et de personnalité que des humains</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>1</bonnereponse>
+    <question>Par quoi ne modélise-t'on pas des graphes ?</question>
+    <reponse1>Axe</reponse1>
+    <reponse2>Noeud ou sommet</reponse2>
+    <reponse3>Arête</reponse3>
+    <reponse4>Arc</reponse4>
+    <explicationBonneReponse>Un graph est modéliser par des noeuds, des arêtes pour les graphe non orienté et par des arcs pour les graphes orientés</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>2</bonnereponse>
+    <question>Pour un graphe non-orienté, qu'est ce qu'une matrice adjacente ?</question>
+    <reponse1>C'est une matrice A=(ai,j) où ai,j est le nombre de noeud joignant le sommet i au sommet j</reponse1>
+    <reponse2>C'est une matrice A=(ai,j) où ai,j est le nombre d'arêtes joignant le sommet i au sommet j</reponse2>
+    <reponse3>C'est une matrice A(ai,j) où ai,j est le positionnement, ou non, d'un noeud au point i,j</reponse3>
+    <reponse4>C'est une matrice A(ai,j) où ai,j est le positionnement, ou non, d'un arc au point i,j</reponse4>
+    <explicationBonneReponse>On appelle matrice d'adjacence du graphe la matrice A=(ai,j) où ai,j est le nombre d'arêtes joignant le sommet i au sommet j.</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>3</bonnereponse>
+    <question>L'algorithme MinMax sert dans les jeux :</question>
+    <reponse1>qui se jouent seul ou à plusieurs</reponse1>
+    <reponse2>qui se jouent seul ou à 2</reponse2>
+    <reponse3>qui se jouent uniquement à 2</reponse3>
+    <reponse4>qui se jouent à plus de 2</reponse4>
+    <explicationBonneReponse>L'algorithme MinMax sert pour les jeux à 2 tels que les échecs ou les dames.</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>1</bonnereponse>
+    <question>Vous prenez en cours une partie de puissance 4 mais vous ne savez pas quel est le meilleur coup à jouer pour anticiper les 3 prochains coups. Quel algorithme utiliseriez-vous ?</question>
+    <reponse1>L'algorithme MinMax</reponse1>
+    <reponse2>L'algorithme Alpha Beta</reponse2>
+    <reponse3>L'algorithme de Dijkstra</reponse3>
+    <reponse4>L'algorithme A*</reponse4>
+    <explicationBonneReponse>L'algorithme MinMax permet de déterminer le meilleur coup possible à partir d'une situation donnée</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>1</bonnereponse>
+    <question>En quelle année apparaît pour la première fois le terme "Robot" ?</question>
+    <reponse1>1920</reponse1>
+    <reponse2>1930</reponse2>
+    <reponse3>1933</reponse3>
+    <reponse4>1940</reponse4>
+    <explicationBonneReponse>Le terme de robot apparaît pour la première fois dans une pièce de Karel Capek en 1920 : Rossum’s Universal Robots.</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>2</bonnereponse>
+    <question>Qu'est ce qu'un LIDAR ?</question>
+    <reponse1>Appareil qui permet de déterminer la radiation d'un objet</reponse1>
+    <reponse2>Appareil qui permet de déterminer la distance d'un objet</reponse2>
+    <reponse3>Appareil qui permet de déterminer la longueur d'un objet</reponse3>
+    <reponse4>Appareil qui permet de déterminer la matière d'un objet </reponse4>
+    <explicationBonneReponse>Un LIDAR est un appareil qui émet un faisceau laser et reçoit un écho. Cela permet de déterminer la distance d'un objet.</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>4</bonnereponse>
+    <question>Quelle affirmation est fausse ? </question>
+    <reponse1>Un robot est un dispositif mécatronique</reponse1>
+    <reponse2>Un robot accomplit automatiquement des tâches</reponse2>
+    <reponse3>Un robot peut imiter ou reproduire des actions humaines</reponse3>
+    <reponse4>Un robot ne peut pas effectuer des tâches sans un contrôle de l'homme </reponse4>
+    <explicationBonneReponse>Un robot est un dispositif mécatronique conçu pour accomplir automatiquement des tâches imitant ou reproduisant des tâches imitant ou reproduisant, dans un domain précis, des actions humaines</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>3</bonnereponse>
+    <question>Quelle stratégie de navigation n'existe pas ?</question>
+    <reponse1>Navigation topologique</reponse1>
+    <reponse2>Navigation métrique</reponse2>
+    <reponse3>Navigation logique</reponse3>
+    <reponse4>Guidage</reponse4>
+    <explicationBonneReponse>Toutes les stratégies de navigation existe, sauf la navigation logique</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>1</bonnereponse>
+    <question>A quoi sert un algorithme génétique ?</question>
+    <reponse1>A résoudre des problèmes d'optimisation </reponse1>
+    <reponse2>A trouver la meilleure réponse à un problème</reponse2>
+    <reponse3>A reproduire un raisonnement neuronal</reponse3>
+    <reponse4>A reproduire un raisonnement humain</reponse4>
+    <explicationBonneReponse>Les algorithmes génétiques sont classiquement utilisés pour résoudre des problèmes d’optimisation. </explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>3</bonnereponse>
+    <question>Vous souhaitez trouver le chemin le plus cours entre Lyon et Lille. Quel algorithme utilisez-vous ?</question>
+    <reponse1>Un perceptron</reponse1>
+    <reponse2>Dijkstra</reponse2>
+    <reponse3>A*</reponse3>
+    <reponse4>Un algorithme MinMax</reponse4>
+    <explicationBonneReponse>Utilisation de l'algorithme A* qui va prendre en compte le contexte pour trouver la meilleure solution.</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>4</bonnereponse>
+    <question>Qu'est ce que la navigation topologique ?</question>
+    <reponse1>Une navigation qui permet de trouver un chemin direct en passant par des endroits connus</reponse1>
+    <reponse2>Une navigation qui permet de trouver un chemin direct en passant par des endroits inconnus</reponse2>
+    <reponse3>Une naviagation qui connaît des choses relatives sur un chemin et la distance entre les lieux</reponse3>
+    <reponse4>Une naviagation qui connaît des choses relatives sur un chemin mais pas la distance entre les lieux</reponse4>
+    <explicationBonneReponse>Naviagation topologique : connaissance de chose relatives sur un chemin mais on a pas la distance entre les lieux. Exemple : après tel élément rencontré dans l’environnement, il faut tourner à gauche ou à droite</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>2</bonnereponse>
+    <question>Qu'est ce que la navigation métrique ?</question>
+    <reponse1>Une navigation qui permet de trouver un chemin direct en passant par des endroits connus</reponse1>
+    <reponse2>Une navigation qui permet de trouver un chemin direct en passant par des endroits inconnus</reponse2>
+    <reponse3>Une naviagation qui connaît des choses relatives sur un chemin et la distance entre les lieux</reponse3>
+    <reponse4>Une naviagation qui connaît des choses relatives sur un chemin mais pas la distance entre les lieux</reponse4>
+    <explicationBonneReponse>La navigation métrique est plus précise : possibilité de trouver un chemin plus direct en passant par des endroits inconnus, grâce à la connaissance du positionnement 2D (ou 3D) relatif à l’objectif.
+</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>2</bonnereponse>
+    <question>Soit un graphe défini par S l'ensemble de ses sommets et A l'ensemble de ses arcs. 
+Une matrice d'adjacence représente une fonction définie entre les ensembles :
+</question>
+    <reponse1>S et A</reponse1>
+    <reponse2>S et S</reponse2>
+    <reponse3>A et A</reponse3>
+    <reponse4>2S et A</reponse4>
+    <explicationBonneReponse>S et S</explicationBonneReponse>
+  </QuestionsCours>
+  <QuestionsCours>
+    <bonnereponse>4</bonnereponse>
+    <question>      
+             A ----C
+	           / \	
+          /   \
+E-----D---B
+La matrice adjacente au graphe est :
+</question>
+    <reponse1>
+0 0 0 1 0
+1 1 0 0 1
+0 1 1 1 0
+1 0 0 1 0
+1 0 0 0 0
+</reponse1>
+    <reponse2>
+0 1 0 0 0
+1 0 0 1 1
+0 1 1 1 0
+0 1 0 0 1
+0 0 0 0 1
+</reponse2>
+    <reponse3>
+0 1 1 1 0
+0 1 0 0 1
+0 0 0 0 1
+1 0 0 1 1
+0 1 0 0 0
+    </reponse3>
+    <reponse4>
+0 1 1 1 0
+1 0 0 1 0
+1 0 0 0 0
+1 1 0 0 1
+0 0 0 1 0
+</reponse4>
+    <explicationBonneReponse>En effet, la bonne matrice adjacente est : 0 1 1 1 0
+1 0 0 1 0
+1 0 0 0 0
+1 1 0 0 1
+0 0 0 1 0
+</explicationBonneReponse>
   </QuestionsCours>
 </ArrayOfQuestionsCours>
