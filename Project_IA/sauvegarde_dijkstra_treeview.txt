@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 
 /// <summary>
-/// quelques modifications Ã  faire : supprimer les Ajouts Ouverts qui ne servent Ã  rien.
-/// gÃ©rer les exceptions.
-/// empecher l'affichage de la solution si l'Ã©tudiant ne rentre aucun ensemble ouvert et fermÃ©
-/// Tester avec les bons ensembles ouverts et fermÃ©s
-/// retirer le premier ensemble des fermÃ©es car il est vide ?
+/// quelques modifications à faire : supprimer les Ajouts Ouverts qui ne servent à rien.
+/// gérer les exceptions.
+/// empecher l'affichage de la solution si l'étudiant ne rentre aucun ensemble ouvert et fermé
+/// Tester avec les bons ensembles ouverts et fermés
+/// retirer le premier ensemble des fermées car il est vide ?
 /// </summary>
 
 namespace Project_IA
@@ -81,7 +81,7 @@ namespace Project_IA
             NbrAjoutOuvertEleve = new List<int>();
             EnsembleFermesEleve = new List<int>();  
 
-            // Le noeud passÃ© en paramÃ¨tre est supposÃ© Ãªtre le noeud initial
+            // Le noeud passé en paramètre est supposé être le noeud initial
             GenericNode N = N0;
             N0List.Add(N0);
             L_Ouverts.Add(N0);
@@ -90,16 +90,16 @@ namespace Project_IA
             // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
             while (L_Ouverts.Count != 0 && N.EndState() == false)
             {
-                // Le meilleur noeud des ouverts est supposÃ© placÃ© en tÃªte de liste
-                // On le place dans les fermÃ©s
+                // Le meilleur noeud des ouverts est supposé placé en tête de liste
+                // On le place dans les fermés
                 L_Fermes.Add(N);
                 L_Ouverts.Remove(N);
                 GenericNode solu = g.stepSolutionAEtoile(N, L_Ouverts, L_Fermes);
-                EnsembleOuvert.Add(L_Ouverts); // comment utiliser la mÃ©thode MAjsuccesseur
+                EnsembleOuvert.Add(L_Ouverts); // comment utiliser la méthode MAjsuccesseur
                 N = solu;
                 //  NbrAjoutOuvert.Add(L_Ouverts.Count); 
             }
-            // renvois les noeuds parents jusqu'a avoir l'arbre total methode du SearchTree qui est passÃ© en ligne de code directement.
+            // renvois les noeuds parents jusqu'a avoir l'arbre total methode du SearchTree qui est passé en ligne de code directement.
             List<GenericNode> _LN = new List<GenericNode>();
             if (N != null)
             {
@@ -108,11 +108,11 @@ namespace Project_IA
                 while (N != N0)
                 {
                     N = N.GetNoeud_Parent();
-                    _LN.Insert(0, N);  // On insÃ¨re en position 1
+                    _LN.Insert(0, N);  // On insère en position 1
                 }
             }
             List<GenericNode> solution = _LN;
-            ///////////////////////////////////////////////  Lecture des rÃ©ponses de l'Ã©tudiant   /////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////  Lecture des réponses de l'étudiant   /////////////////////////////////////////////////////////////////////////
 
             //////////////////////////////////////////////     Lecture des ensembles ouverts     ///////////////
 
@@ -138,7 +138,7 @@ namespace Project_IA
                 lignes++;
             }
             
-            ////////////////// cas oÃ¹ l'eleve mets tous les ensembles fermÃ©s
+            ////////////////// cas où l'eleve mets tous les ensembles fermés
 
             
             int lignesF = 0;
@@ -164,7 +164,7 @@ namespace Project_IA
             }
 
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            ////////////////               Ã  partir de lÃ  nous pouvons commencer Ã  comparer les ensembles.                     //////////////
+            ////////////////               à partir de là nous pouvons commencer à comparer les ensembles.                     //////////////
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -205,20 +205,20 @@ namespace Project_IA
 
                 if (juste == false)
                 {
-                    textBox1.Text = ("Vous vous etes trompÃ© dans l'ensemble ouvert Ã  l'Ã©tape :" + CompteurO + "\r\n");
+                    textBox1.Text = ("Vous vous etes trompé dans l'ensemble ouvert à l'étape :" + CompteurO + "\r\n");
                 }
                 else
-                { textBox1.Text = ("Bravo, vous avez bien trouvÃ© l'ensemble des ouverts \r\n"); }
+                { textBox1.Text = ("Bravo, vous avez bien trouvé l'ensemble des ouverts \r\n"); }
             }
             // fin du test des ensembles ouverts dans l'ordre
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            // Test des ensembles fermÃ©s (toujours dans l'Ordre car si la personne les mets dans le dÃ©sordre c'est qu'elle n'a pas compris le Dijkstra
+            // Test des ensembles fermés (toujours dans l'Ordre car si la personne les mets dans le désordre c'est qu'elle n'a pas compris le Dijkstra
             juste = true;
             int CompteurF = 0;
             string LigneEnsFerm = "";
             if (ToutEnsembleFerme.Lines.Length == 0)
             {
-               textBox1.Text += ("Vous devez remplir les ensembles FermÃ©s au format 1,2,3... \r\n");
+               textBox1.Text += ("Vous devez remplir les ensembles Fermés au format 1,2,3... \r\n");
             }
             else
             {
@@ -257,18 +257,18 @@ namespace Project_IA
 
                 if (juste == false)
                 {
-                    textBox1.Text += ("Vous vous etes trompÃ© dans l'ensemble ferme Ã  l'Ã©tape :" + CompteurF + "\r\n");
+                    textBox1.Text += ("Vous vous etes trompé dans l'ensemble ferme à l'étape :" + CompteurF + "\r\n");
                 }
                 else if (ToutEnsembleFerme.Lines.Length != 0)
                 {
-                    textBox1.Text += ("Bravo, vous avez bien trouvÃ© l'ensemble des fermÃ©es \r\n");
+                    textBox1.Text += ("Bravo, vous avez bien trouvé l'ensemble des fermées \r\n");
                 }
             }
             ////////////////////////////////////////////////////////////////////////////////////////////////////
-            ///////////////////    fin des tests sur les ensembles ouverts et fermÃ©s    ////////////////////////
+            ///////////////////    fin des tests sur les ensembles ouverts et fermés    ////////////////////////
             ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-            /// affichage de l'arbre des solutions et du chemin le plus court Ã  condition que l'Ã©tudiant ait entrÃ© des ensembles ouverts et fermÃ©s
+            /// affichage de l'arbre des solutions et du chemin le plus court à condition que l'étudiant ait entré des ensembles ouverts et fermés
 
             Node2 N1 = N0;
             if ((ToutEnsembleFerme.Lines.Length != 0) && (ToutEnsembleOuvert.Lines.Length != 0))
@@ -299,24 +299,24 @@ namespace Project_IA
             int i = 0;
             while (ligne[i].Equals(':')!=true) { i++; } // premiere ligne est le nombre de graphes
             string nbgraph = "";
-            i++; // On dÃ©passe le ":"
-            while (ligne[i].Equals(' ')) { i++; } // on saute les blancs Ã©ventuels
+            i++; // On dépasse le ":"
+            while (ligne[i].Equals(' ')) { i++; } // on saute les blancs éventuels
             while (i < ligne.Length)
             {
                 nbgraph = nbgraph + ligne[i];
                 i++;
             }
             int intnbgraph = Int32.Parse(nbgraph);
-            // Lecture du fichier avec un while, Ã©videmment !
-            // 1Ã¨re ligne : "nombre de noeuds du graphe
+            // Lecture du fichier avec un while, évidemment !
+            // 1ère ligne : "nombre de noeuds du graphe
 
 
-            //choix au hasard du graph Ã  Ã©tudier parmi le nombre de graph total.
+            //choix au hasard du graph à étudier parmi le nombre de graph total.
             Random random = new Random();
             string graph = "graphe " + random.Next(1, intnbgraph + 1).ToString();
 
 
-            // ATTENTION, il est necessaire de rÃ©initialiser
+            // ATTENTION, il est necessaire de réinitialiser
             while (string.Equals(graph, ligne) == false)
             {
                 ligne = monStreamReader.ReadLine();
@@ -326,8 +326,8 @@ namespace Project_IA
             i = 0;
             while (ligne[i].Equals(':')!=true) { i++; }
             string strnbnoeuds = "";
-            i++; // On dÃ©passe le ":"
-            while (ligne[i].Equals(' ')) { i++; }// on saute les blancs Ã©ventuels
+            i++; // On dépasse le ":"
+            while (ligne[i].Equals(' ')) { i++; }// on saute les blancs éventuels
             while (i < ligne.Length)
             {
                 strnbnoeuds = strnbnoeuds + ligne[i];
@@ -345,7 +345,7 @@ namespace Project_IA
             }
 
             // Ensuite on a ls tructure suivante : 
-            //  arc : nÂ°noeud dÃ©part    nÂ°noeud arrivÃ©e  valeur
+            //  arc : n°noeud départ    n°noeud arrivée  valeur
             //  exemple 4 : 
             ligne = monStreamReader.ReadLine();
             while (ligne.Equals("fin")!=true)
@@ -353,7 +353,7 @@ namespace Project_IA
                 i = 0;
                 while (ligne[i].Equals(':') != true) { i++; }
                 i++; // on passe le :
-                while (ligne[i].Equals(' ')) { i++; } // on saute les blancs Ã©ventuels
+                while (ligne[i].Equals(' ')) { i++; } // on saute les blancs éventuels
                 string strN1 = "";
                 while (ligne[i].Equals(' ') != true)
                 {
@@ -362,7 +362,7 @@ namespace Project_IA
                 }
                 int N1 = Convert.ToInt32(strN1);
 
-                // On saute les blancs Ã©ventuels
+                // On saute les blancs éventuels
                 while (ligne[i].Equals(' ')) { i++; }
                 string strN2 = "";
                 while (ligne[i].Equals(' ') != true)
@@ -372,7 +372,7 @@ namespace Project_IA
                 }
                 int N2 = Convert.ToInt32(strN2);
 
-                // On saute les blancs Ã©ventuels
+                // On saute les blancs éventuels
                 while (ligne[i].Equals(' ')) { i++; }
                 string strVal = "";
                 while ((i < ligne.Length) && (ligne[i] != ' '))
@@ -417,7 +417,7 @@ namespace Project_IA
                 while (N != N0)
                 {
                     N = N.GetNoeud_Parent();
-                    _LN.Insert(0, N);  // On insÃ¨re en position 1
+                    _LN.Insert(0, N);  // On insère en position 1
                 }
             }
             return _LN;

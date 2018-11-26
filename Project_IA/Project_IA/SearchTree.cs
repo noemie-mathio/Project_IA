@@ -170,8 +170,29 @@ namespace Project_IA
             AjouteBranche(L_Fermes[0], TN);
         }
 
+        public void PrintEmptyTree(TreeView TV)
+        {
+            // On supprime le TreeView préexistant
+            TV.Nodes.Clear();
+
+            TreeNode TN = new TreeNode("");
+            TV.Nodes.Add(TN);
+
+            AjouteBrancheVide(L_Fermes[0], TN);
+        }
+        public void AjouteBrancheVide(GenericNode GN, TreeNode TN)
+        {
+            foreach (GenericNode GNfils in GN.GetEnfants())
+            {
+
+                TreeNode TNfils = new TreeNode("");
+                TN.Nodes.Add(TNfils);
+                //if (GNfils.GetEnfants().Count > 0)
+                AjouteBrancheVide(GNfils, TNfils);
+            }
+        }
         // AjouteBranche est exclusivement appelée par GetSearchTree; les noeuds sont ajoutés de manière récursive
-        private void AjouteBranche(GenericNode GN, TreeNode TN)
+        public void AjouteBranche(GenericNode GN, TreeNode TN)
         {
             foreach (GenericNode GNfils in GN.GetEnfants())
             {
@@ -180,6 +201,7 @@ namespace Project_IA
                 if (GNfils.GetEnfants().Count > 0) AjouteBranche(GNfils, TNfils);
             }
         }
+       
 
     }
 }
