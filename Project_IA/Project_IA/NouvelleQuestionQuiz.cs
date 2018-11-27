@@ -20,20 +20,24 @@ namespace Project_IA
         public NouvelleQuestionQuiz()
         {
             InitializeComponent();
-           
+            erreurlabel.Visible = false;
 
         }
         
         private void envoyerbutton_Click(object sender, EventArgs e)
         {
-            if (questiontextBox.Text != null && reponse1textBox.Text != null && reponse2textBox.Text != null && reponse3textBox.Text != null && reponse4textBox.Text != null && bonnereponsetextBox.Text != null && explicationBonneReponsetextBox.Text != null)
+            if (questiontextBox.Text != "" && reponse1textBox.Text != "" && reponse2textBox.Text != "" && reponse3textBox.Text != "" && reponse4textBox.Text != "" && bonnereponsetextBox.Text != "" && explicationBonneReponsetextBox.Text != "")
             {
                 DeserializeFromXml("test_question.xml");
                 Serialisation(listeQuestionsCours, questiontextBox.Text, reponse1textBox.Text, reponse2textBox.Text, reponse3textBox.Text, reponse4textBox.Text, int.Parse(bonnereponsetextBox.Text), explicationBonneReponsetextBox.Text);
                 MessageBox.Show("Votre question a bien été ajoutée");
-                Accueil accueil = new Accueil();
+                Accueil accueil = new Accueil(true);
                 accueil.Show();
                 this.Hide();
+            }
+            else
+            {
+                erreurlabel.Visible = true;
             }
         }
         public static void Serialisation(List<QuestionsCours> questions, string question, string reponse1, string reponse2, string reponse3, string reponse4, int bonnereponse, string explicationBonnereponse)

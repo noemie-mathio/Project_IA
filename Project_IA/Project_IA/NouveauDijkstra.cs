@@ -62,7 +62,6 @@ namespace Project_IA
             }
             else
             {
-                erreurLabel.BackColor = Color.Red;
                 erreurLabel.Visible = true;
             }
             
