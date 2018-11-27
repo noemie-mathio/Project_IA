@@ -38,12 +38,11 @@ namespace Project_IA
         static public List<List<GenericNode>> EnsembleOuvert;
         public Image imageGraphe;
         static bool juste;
-        private object ImageWindow;
 
         public Dijkstra()
         {
             InitializeComponent();
-            pictureBox1.Visible = false;
+            GraphpictureBox.Visible = false;
         }
 
         private void button_init1_Click(object sender, EventArgs e)
@@ -67,8 +66,8 @@ namespace Project_IA
         {
 
             listBox1.Items.Clear();
-            numinitial = Convert.ToInt32(noeudInitial.Text);
-            numfinal = Convert.ToInt32(noeudFinal.Text);
+            numinitial = Convert.ToInt32(noeud_debut.Text);
+            numfinal = Convert.ToInt32(noeud_fin.Text);
             SearchTree g = new SearchTree();
             Node2 N0 = new Node2();
             N0.numero = numinitial;
@@ -175,7 +174,7 @@ namespace Project_IA
             int CompteurO = 0;
             if (ToutEnsembleOuvert.Lines.Length == 0)
             {
-                textBox1.Text = ("Vous devez remplir les ensembles Ouverts au format 1,2,3... \r\n");
+                textBox1.Text += ("Vous devez remplir les ensembles Ouverts au format 1,2,3... \r\n");
             }
             else
             {
@@ -207,10 +206,10 @@ namespace Project_IA
 
                 if (juste == false)
                 {
-                    textBox1.Text = ("Vous vous etes trompé dans l'ensemble ouvert à l'étape :" + CompteurO + "\r\n");
+                    textBox1.Text += ("Vous vous etes trompé dans l'ensemble ouvert à l'étape :" + CompteurO + "\r\n");
                 }
                 else
-                { textBox1.Text = ("Bravo, vous avez bien trouvé l'ensemble des ouverts \r\n"); }
+                { textBox1.Text += ("Bravo, vous avez bien trouvé l'ensemble des ouverts \r\n"); }
             }
             // fin du test des ensembles ouverts dans l'ordre
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -275,23 +274,88 @@ namespace Project_IA
             Node2 N1 = N0;
             if ((ToutEnsembleFerme.Lines.Length != 0) && (ToutEnsembleOuvert.Lines.Length != 0))
             {
-                for (int i = 1; i < solution.Count; i++)
+                if (Convert.ToInt32(noeud_fin.Text) > nbnodes)
                 {
-                    Node2 N2 = (Node2)solution[i];
-                    listBox1.Items.Add(Convert.ToString(N1.numero)
-                         + "--->" + Convert.ToString(N2.numero)
-                         + "   : " + Convert.ToString(matrice[N1.numero, N2.numero]));
-                    N1 = N2;
+                    textBox1.Text += ("Le noeud final stipulé est plus grand que le nombre de noeuds total");
                 }
-
+                else
+                {
+                    for (int i = 1; i < solution.Count; i++)
+                    {
+                        Node2 N2 = (Node2)solution[i];
+                        listBox1.Items.Add(Convert.ToString(N1.numero)
+                             + "--->" + Convert.ToString(N2.numero)
+                             + "   : " + Convert.ToString(matrice[N1.numero, N2.numero]));
+                        N1 = N2;
+                    }
+               
                 g.GetSearchTree(treeView1);
-                //g.PrintEmptyTree(treeView2);
+                }
+                CompareTreeNodes(treeView1, treeView2);
+
 
             }
 
         }
+        void CompareRecursiveTree(TreeNode tn1, TreeNode tn2)
+        {
+            if (tn1.Text != tn2.Text)
+            {
+        //tn1.ForeColor = Color.Red;
+        //tn2.ForeColor = Color.Red;
 
-        private void graphAleatoirebutton_Click(object sender, EventArgs e)
+        TreeNode tnp = tn2;
+        while (tnp.Parent != null)
+                {
+            tnp = tnp.Parent;
+                }
+            }
+            // colour differently on comparing text
+            if (tn2.Text == null)
+            {
+                tn1.ForeColor = Color.Red;
+            }
+            else
+            {
+
+                int areThey = String.Compare(tn1.Text, tn2.Text, StringComparison.OrdinalIgnoreCase);
+
+                if (areThey != 0)
+                {
+                    tn2.ForeColor = Color.Green;
+                    tn1.ForeColor = Color.Red;
+                }
+                else if (areThey == 0)
+                {
+                    tn2.ForeColor = Color.Red;
+                    tn1.ForeColor = Color.Green;
+                }
+            }
+    int compare = Math.Min(tn1.Nodes.Count, tn2.Nodes.Count);
+    // ignore extra nodes
+    for (int i = 0; i < compare; i++)
+            {
+        CompareRecursiveTree(tn1.Nodes[i], tn2.Nodes[i]);
+    }
+}
+
+
+
+
+        void CompareTreeNodes(TreeView tv1, TreeView tv2)
+        {
+
+            int compare = Math.Min(tv1.Nodes.Count, tv2.Nodes.Count);
+            // ignore extra nodes
+            for (int i = 0; i < compare; i++)
+            {
+                CompareRecursiveTree(tv1.Nodes[i], tv2.Nodes[i]);
+            }
+        }
+    
+
+
+    private void graphAleatoirebutton_Click(object sender, EventArgs e)
         {
             listBoxgraphe.Items.Clear();
 
@@ -400,7 +464,7 @@ namespace Project_IA
             }
             // Fermeture du StreamReader (obligatoire) 
             monStreamReader.Close();
-<<<<<<< HEAD
+
 
             //////////////// initialisation du Treeview
 
@@ -413,12 +477,11 @@ namespace Project_IA
             //       TreeNode[] array = new TreeNode[] { node2, node3 };
             //      treeNode = new TreeNode("noeudInitial", array);
             //      treeView2.Nodes.Add(treeNode);
-=======
-           // pictureBox1.Width = imageGraphe.Width;
-            //pictureBox1.Height = imageGraphe.Height;
-            pictureBox1.Image = imageGraphe;
-            pictureBox1.Visible = true;
->>>>>>> 28d18c7170d4f9b74adfa6a6656159cf35681f03
+
+           
+            GraphpictureBox.Image = imageGraphe;
+            GraphpictureBox.Visible = true;
+
 
         }
         public List<GenericNode> cheminParcoursArbre(GenericNode N, GenericNode N0)
@@ -454,8 +517,8 @@ namespace Project_IA
 
 
 
-<<<<<<< HEAD
-        }
+
+      
 
         private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
         {
@@ -496,7 +559,6 @@ namespace Project_IA
                 treeView2.SelectedNode.Remove();
            
         }
-=======
->>>>>>> 28d18c7170d4f9b74adfa6a6656159cf35681f03
+
     }
 }
