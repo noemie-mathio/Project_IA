@@ -46,6 +46,9 @@ C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Pro
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Quizz.resources
 C:\Users\sboylan\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csproj.GenerateResource.Cache
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 28d18c7170d4f9b74adfa6a6656159cf35681f03
 H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe.config
 H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.exe
 H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.pdb
@@ -59,6 +62,7 @@ H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.
 H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Properties.Resources.resources
 H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.Quizz.resources
 H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 =======
 C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe.config
 C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\bin\Debug\Project_IA.exe
@@ -77,3 +81,6 @@ C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Pro
 C:\Users\Laurent\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.ConnexionProfesseur.resources
 >>>>>>> c4937320d2bf94543662d358cff968167d0d7bdf
 H:\SIMON BOYLAN\Projet IA\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.ConnexionProfesseur.resources
+=======
+C:\Users\nmathio\Documents\GitHub\Project_IA\Project_IA\Project_IA\obj\Debug\Project_IA.ConnexionProfesseur.resources
+>>>>>>> 28d18c7170d4f9b74adfa6a6656159cf35681f03

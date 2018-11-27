@@ -54,10 +54,14 @@ namespace Project_IA
                 File.Copy(fichierOrigine, fichierCopie);
                 File.AppendAllText("graphe.txt", "\r\n" + dijkstraTextBox.Text);
                 File.AppendAllText("graphe.txt", "\r\n" + "fin");// pensez à modifier le fichier en fonction 
+
+                MessageBox.Show("Le Dijkstra a bien été ajouté");
+                Dijkstra nouveauDijkstra = new Dijkstra();
+                nouveauDijkstra.Show();
+                this.Hide();
             }
             else
             {
-                erreurLabel.BackColor = Color.Red;
                 erreurLabel.Visible = true;
             }
             

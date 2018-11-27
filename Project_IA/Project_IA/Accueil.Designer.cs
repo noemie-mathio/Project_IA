@@ -38,9 +38,10 @@
             // 
             // dijkstraButton
             // 
-            this.dijkstraButton.Location = new System.Drawing.Point(106, 81);
+            this.dijkstraButton.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dijkstraButton.Location = new System.Drawing.Point(198, 107);
             this.dijkstraButton.Name = "dijkstraButton";
-            this.dijkstraButton.Size = new System.Drawing.Size(262, 54);
+            this.dijkstraButton.Size = new System.Drawing.Size(341, 84);
             this.dijkstraButton.TabIndex = 0;
             this.dijkstraButton.Text = "Exercice Algorithme de Dijkstra";
             this.dijkstraButton.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // 
             // quizButton
             // 
-            this.quizButton.Location = new System.Drawing.Point(106, 211);
+            this.quizButton.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quizButton.Location = new System.Drawing.Point(198, 263);
             this.quizButton.Name = "quizButton";
-            this.quizButton.Size = new System.Drawing.Size(262, 53);
+            this.quizButton.Size = new System.Drawing.Size(341, 83);
             this.quizButton.TabIndex = 1;
             this.quizButton.Text = "QCM sur l\'IA";
             this.quizButton.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@
             // 
             // ajoutQuizButton
             // 
-            this.ajoutQuizButton.Location = new System.Drawing.Point(197, 270);
+            this.ajoutQuizButton.Font = new System.Drawing.Font("Raleway", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ajoutQuizButton.Location = new System.Drawing.Point(257, 352);
             this.ajoutQuizButton.Name = "ajoutQuizButton";
-            this.ajoutQuizButton.Size = new System.Drawing.Size(94, 35);
+            this.ajoutQuizButton.Size = new System.Drawing.Size(218, 53);
             this.ajoutQuizButton.TabIndex = 2;
             this.ajoutQuizButton.Text = "Ajouter une question";
             this.ajoutQuizButton.UseVisualStyleBackColor = true;
@@ -68,9 +71,10 @@
             // 
             // ajoutDijkstraButton
             // 
-            this.ajoutDijkstraButton.Location = new System.Drawing.Point(190, 141);
+            this.ajoutDijkstraButton.Font = new System.Drawing.Font("Raleway", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ajoutDijkstraButton.Location = new System.Drawing.Point(265, 192);
             this.ajoutDijkstraButton.Name = "ajoutDijkstraButton";
-            this.ajoutDijkstraButton.Size = new System.Drawing.Size(101, 35);
+            this.ajoutDijkstraButton.Size = new System.Drawing.Size(210, 53);
             this.ajoutDijkstraButton.TabIndex = 3;
             this.ajoutDijkstraButton.Text = "Ajouter un Dijkstra";
             this.ajoutDijkstraButton.UseVisualStyleBackColor = true;
@@ -78,9 +82,10 @@
             // 
             // Connexionbutton
             // 
-            this.Connexionbutton.Location = new System.Drawing.Point(413, 26);
+            this.Connexionbutton.Font = new System.Drawing.Font("Raleway", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Connexionbutton.Location = new System.Drawing.Point(604, 15);
             this.Connexionbutton.Name = "Connexionbutton";
-            this.Connexionbutton.Size = new System.Drawing.Size(75, 23);
+            this.Connexionbutton.Size = new System.Drawing.Size(110, 50);
             this.Connexionbutton.TabIndex = 4;
             this.Connexionbutton.Text = "Connexion";
             this.Connexionbutton.UseVisualStyleBackColor = true;
@@ -89,10 +94,11 @@
             // TitreAccueilLabel
             // 
             this.TitreAccueilLabel.AutoSize = true;
-            this.TitreAccueilLabel.Font = new System.Drawing.Font("Georgia", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitreAccueilLabel.Location = new System.Drawing.Point(82, 23);
+            this.TitreAccueilLabel.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitreAccueilLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.TitreAccueilLabel.Location = new System.Drawing.Point(202, 24);
             this.TitreAccueilLabel.Name = "TitreAccueilLabel";
-            this.TitreAccueilLabel.Size = new System.Drawing.Size(314, 23);
+            this.TitreAccueilLabel.Size = new System.Drawing.Size(337, 25);
             this.TitreAccueilLabel.TabIndex = 5;
             this.TitreAccueilLabel.Text = "Révision module IA semestre 7";
             // 
@@ -100,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 365);
+            this.ClientSize = new System.Drawing.Size(749, 466);
             this.Controls.Add(this.TitreAccueilLabel);
             this.Controls.Add(this.Connexionbutton);
             this.Controls.Add(this.ajoutDijkstraButton);

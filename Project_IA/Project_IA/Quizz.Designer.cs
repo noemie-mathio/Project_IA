@@ -35,10 +35,12 @@
             this.labelQuestion = new System.Windows.Forms.Label();
             this.buttonNext = new System.Windows.Forms.Button();
             this.labelScore = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // option1Button
             // 
+            this.option1Button.Font = new System.Drawing.Font("Raleway", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.option1Button.Location = new System.Drawing.Point(39, 161);
             this.option1Button.Name = "option1Button";
             this.option1Button.Size = new System.Drawing.Size(281, 121);
@@ -48,6 +50,7 @@
             // 
             // option2Button
             // 
+            this.option2Button.Font = new System.Drawing.Font("Raleway", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.option2Button.Location = new System.Drawing.Point(359, 161);
             this.option2Button.Name = "option2Button";
             this.option2Button.Size = new System.Drawing.Size(281, 121);
@@ -57,6 +60,7 @@
             // 
             // option3Button
             // 
+            this.option3Button.Font = new System.Drawing.Font("Raleway", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.option3Button.Location = new System.Drawing.Point(39, 295);
             this.option3Button.Name = "option3Button";
             this.option3Button.Size = new System.Drawing.Size(281, 115);
@@ -66,6 +70,7 @@
             // 
             // option4Button
             // 
+            this.option4Button.Font = new System.Drawing.Font("Raleway", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.option4Button.Location = new System.Drawing.Point(359, 295);
             this.option4Button.Name = "option4Button";
             this.option4Button.Size = new System.Drawing.Size(281, 115);
@@ -76,18 +81,19 @@
             // labelQuestion
             // 
             this.labelQuestion.AutoSize = true;
-            this.labelQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelQuestion.Location = new System.Drawing.Point(33, 35);
+            this.labelQuestion.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelQuestion.Location = new System.Drawing.Point(36, 54);
             this.labelQuestion.Name = "labelQuestion";
-            this.labelQuestion.Size = new System.Drawing.Size(73, 17);
+            this.labelQuestion.Size = new System.Drawing.Size(77, 18);
             this.labelQuestion.TabIndex = 4;
             this.labelQuestion.Text = "Question :";
             // 
             // buttonNext
             // 
+            this.buttonNext.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNext.Location = new System.Drawing.Point(538, 439);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(75, 23);
+            this.buttonNext.Size = new System.Drawing.Size(91, 43);
             this.buttonNext.TabIndex = 6;
             this.buttonNext.Text = "Suivant";
             this.buttonNext.UseVisualStyleBackColor = true;
@@ -96,16 +102,30 @@
             // labelScore
             // 
             this.labelScore.AutoSize = true;
+            this.labelScore.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScore.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.labelScore.Location = new System.Drawing.Point(116, 449);
             this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(0, 13);
+            this.labelScore.Size = new System.Drawing.Size(0, 18);
             this.labelScore.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(306, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 25);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Quiz IA";
             // 
             // Quizz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 545);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelScore);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.labelQuestion);
@@ -129,5 +149,6 @@
         private System.Windows.Forms.Label labelQuestion;
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Label labelScore;
+        private System.Windows.Forms.Label label1;
     }
 }

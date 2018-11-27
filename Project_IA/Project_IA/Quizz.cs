@@ -252,7 +252,7 @@ namespace Project_IA
             }
            else
             {
-                MessageBox.Show("Votre score est :" + score + "/" + compteur);
+                MessageBox.Show("Votre score final est :" + score + "/" + compteur);
                 Accueil accueil = new Accueil();
                 accueil.Show();
                 this.Hide();
