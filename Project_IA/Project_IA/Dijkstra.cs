@@ -25,12 +25,14 @@ namespace Project_IA
         static public int numinitial;
         static public int numfinal;
         public List<GenericNode> Ouvert;
-        static public List<int> EnsembleOuvertEleve;
-        static public List<int> EnsembleFermesEleve;
+        public List<GenericNode> Fermes;
+        static public List<List<string>> EnsembleOuvertEleve;
+        static public List<List<string>> EnsembleFermeEleve;
         static public List<GenericNode> L_Ouverts;
         static public List<GenericNode> L_Fermes;
         static public List<GenericNode> N0List;
         static public List<List<GenericNode>> EnsembleOuvert;
+        static public List<List<GenericNode>> EnsembleFermes;
         public Image imageGraphe;
         static bool juste;
 
@@ -67,10 +69,11 @@ namespace Project_IA
             L_Ouverts = new List<GenericNode>();
             L_Fermes = new List<GenericNode>();
             EnsembleOuvert = new List<List<GenericNode>>();
+            EnsembleFermes = new List<List<GenericNode>>();
             N0List = new List<GenericNode>();
             Ouvert = new List<GenericNode>();
-            EnsembleOuvertEleve = new List<int>();   
-            EnsembleFermesEleve = new List<int>();  
+            EnsembleOuvertEleve = new List<List<string>>();   
+            EnsembleFermeEleve = new List<List<string>>();  
             
             // Le noeud passé en paramètre est supposé être le noeud initial
             GenericNode N = N0;
@@ -86,7 +89,10 @@ namespace Project_IA
                 L_Fermes.Add(N);
                 L_Ouverts.Remove(N);
                 GenericNode solu = g.stepSolutionAEtoile(N, L_Ouverts, L_Fermes);
-                EnsembleOuvert.Add(L_Ouverts); // comment utiliser la méthode MAjsuccesseur
+                List<GenericNode> listOuvert = new List<GenericNode>(L_Ouverts);
+                EnsembleOuvert.Add(listOuvert);
+                List<GenericNode> listFermes = new List<GenericNode>(L_Fermes);
+                EnsembleFermes.Add(listFermes);
                 N = solu;
  
             }
@@ -108,48 +114,47 @@ namespace Project_IA
             //////////////////////////////////////////////     Lecture des ensembles ouverts     ///////////////
 
             int lignes = 0;
-
-
+            List<string> LigneENsOuvElev = new List<string>();
             while (lignes < ToutEnsembleOuvert.Lines.Length)
             {
                 String ligne = ToutEnsembleOuvert.Lines[lignes];
                 int j = 0;
-                int compt = 0;
+                LigneENsOuvElev = new List<string>();
                 while (j < ToutEnsembleOuvert.Lines[lignes].Length)
                 {
                     if (ligne[j] != ',')
                     {
-                        compt++;
-                        EnsembleOuvertEleve.Add(Convert.ToInt32(ligne[j]));
+                        
+                        LigneENsOuvElev.Add(ligne[j].ToString());
                         j++;
                     }
-                    else j++;
+                    else { j++; }  
                 }
+                EnsembleOuvertEleve.Add(LigneENsOuvElev);
                 lignes++;
             }
-            
+
             ////////////////// cas où l'eleve mets tous les ensembles fermés
 
-            
-            int lignesF = 0;
 
-            
+            int lignesF = 0;
+            List<string>LigneENsFerElev = new List<string>();
             while (lignesF < ToutEnsembleFerme.Lines.Length)
             {
-                String ligneF = ToutEnsembleFerme.Lines[lignesF];
+                String ligne = ToutEnsembleFerme.Lines[lignesF];
                 int j = 0;
-                int compt = 0;
-                while (j < ligneF.Length)
+                LigneENsFerElev = new List<string>();
+                while (j < ToutEnsembleFerme.Lines[lignesF].Length)
                 {
-                    if (ligneF[j] != ',')
+                    if (ligne[j] != ',')
                     {
-                        compt++;
-                        EnsembleFermesEleve.Add(Convert.ToInt32(ligneF[j]));
+
+                        LigneENsFerElev.Add(ligne[j].ToString());
                         j++;
                     }
-                    else j++;
+                    else { j++; }
                 }
-                
+                EnsembleFermeEleve.Add(LigneENsFerElev);
                 lignesF++;
             }
 
@@ -161,29 +166,31 @@ namespace Project_IA
             //////////////////////// Comparaison des Ensembles ouverts //////////////////////////
             juste = true;
             int CompteurO = 0;
-            if (ToutEnsembleOuvert.Lines.Length == 0)
+            if (EnsembleOuvertEleve.Count == 0)
             {
                 textBox1.Text += ("Vous devez remplir les ensembles Ouverts au format 1,2,3... \r\n");
             }
             else
             {
-                while ((CompteurO < Math.Min(EnsembleOuvert.Count, ToutEnsembleOuvert.Lines.Length)) && (juste == true))
+                while ((CompteurO < Math.Min(EnsembleOuvert.Count, EnsembleOuvertEleve.Count)) && (juste == true))
                 {
 
-                    if (EnsembleOuvert[CompteurO].Count == ToutEnsembleOuvert.Lines[CompteurO].Length)
+                    Ouvert = EnsembleOuvert.ElementAt(CompteurO);
+                    List<string> LigneEnsOuv = EnsembleOuvertEleve.ElementAt(CompteurO);
+
+                    if (Ouvert.Count == LigneEnsOuv.Count)
                     {
-                        Ouvert = EnsembleOuvert.ElementAt(CompteurO);
+
                         int i = 0;
                         while (i < Ouvert.Count && juste == true)
                         {
 
                             Node2 OuvertBis = (Node2)Ouvert[i];
-                            string LigneEnsOuv = ToutEnsembleOuvert.Lines[CompteurO];
                             int j = 0;
                             juste = false;               // tant que la ligne ne contient pas de bonne réponse, on considere que c'est faut. On retourne donc faut si dans la ligne il n'y a pas la bonne réponse.
-                            while (j < Ouvert.Count - i)
+                            while (j < Ouvert.Count)
                             {
-                                if (OuvertBis.getNumero() == LigneEnsOuv[i + j].ToString())
+                                if (OuvertBis.getNumero() == LigneEnsOuv[j])
                                 {
                                     juste = true;
                                 }
@@ -193,12 +200,13 @@ namespace Project_IA
                         }
 
                     }
-                   
+
                     else
                     {
                         juste = false;
                     }
                     CompteurO++;
+                }
 
                     if (juste == true)
                     {
@@ -206,44 +214,47 @@ namespace Project_IA
                     }
                     else if (juste==false)
                     { textBox1.Text += ("Vous vous etes trompé dans l'ensemble ouvert à l'étape :" + CompteurO + "\r\n"); }
-                }
+                
             }
             // fin du test des ensembles ouverts dans l'ordre
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             // Test des ensembles fermés (toujours dans l'Ordre car si la personne les mets dans le désordre c'est qu'elle n'a pas compris le Dijkstra
             juste = true;
             int CompteurF = 0;
-            string LigneEnsFerm = "";
-            if (ToutEnsembleFerme.Lines.Length == 0)
+            if (EnsembleFermeEleve.Count == 0)
             {
-               textBox1.Text += ("Vous devez remplir les ensembles Fermés au format 1,2,3... \r\n");
+                textBox1.Text += ("Vous devez remplir les ensembles Fermés au format 1,2,3... \r\n");
             }
             else
             {
-                while ((CompteurF < L_Fermes.Count && juste == true) && (ToutEnsembleFerme.Lines.Length != 0))
+                while ((CompteurF < Math.Min(L_Fermes.Count, EnsembleFermeEleve.Count)) && (juste == true))
                 {
-                    LigneEnsFerm = ToutEnsembleFerme.Lines[CompteurF];
-                    if (L_Fermes.Count == ToutEnsembleFerme.Lines.Length - 1)
+
+                    Fermes = EnsembleFermes.ElementAt(CompteurF);
+                    List<string> LigneEnsFer = EnsembleFermeEleve.ElementAt(CompteurF);
+
+                    if (Fermes.Count == LigneEnsFer.Count)
                     {
 
                         int i = 0;
-                        while (i < LigneEnsFerm.Length && juste == true)
+                        while (i < Fermes.Count && juste == true)
                         {
-                            Node2 FermeBis = (Node2)L_Fermes[i];
 
-                            if ((FermeBis.getNumero() == LigneEnsFerm[i].ToString()) && juste == true)
+                            Node2 FermeBis = (Node2)Fermes[i];
+                            int j = 0;
+                            juste = false;               // tant que la ligne ne contient pas de bonne réponse, on considere que c'est faut. On retourne donc faut si dans la ligne il n'y a pas la bonne réponse.
+                            while (j < Fermes.Count)
                             {
-                                juste = true;
-                            }
-                            else
-                            {
-                                juste = false;
+                                if (FermeBis.getNumero() == LigneEnsFer[j])
+                                {
+                                    juste = true;
+                                }
+                                j++;
                             }
                             i++;
                         }
-                        CompteurF++;
-                    }
 
+                    }
 
                     else
                     {
@@ -252,15 +263,13 @@ namespace Project_IA
                     CompteurF++;
                 }
 
+                if (juste == true)
+                {
+                    textBox1.Text += ("Bravo, vous avez bien trouvé l'ensemble des fermes \r\n");
+                }
+                else if (juste == false)
+                { textBox1.Text += ("Vous vous etes trompé dans l'ensemble ferme à l'étape :" + CompteurF + "\r\n"); }
 
-                if (juste == false)
-                {
-                    textBox1.Text += ("Vous vous etes trompé dans l'ensemble ferme à l'étape :" + CompteurF + "\r\n");
-                }
-                else if (ToutEnsembleFerme.Lines.Length != 0)
-                {
-                    textBox1.Text += ("Bravo, vous avez bien trouvé l'ensemble des fermées \r\n");
-                }
             }
             ////////////////////////////////////////////////////////////////////////////////////////////////////
             ///////////////////    fin des tests sur les ensembles ouverts et fermés    ////////////////////////
@@ -302,35 +311,40 @@ namespace Project_IA
                 
 
         }
-        void ComparerTreeNodes(TreeNode tv1, TreeNode tv2)
+        void ComparerTreeNodes(TreeNode node1, TreeNode node2)
            {
-            if (tv1.Text != tv2.Text) //réponse incorrecte
+            if (node1.Text != node2.Text) //réponse incorrecte
             {
-                tv1.ForeColor = Color.Red;
-                tv2.ForeColor = Color.Red;
+                node1.ForeColor = Color.Red;
+                node2.ForeColor = Color.Red;
             }
 
-            if (tv1.Text == tv2.Text) // réponse correcte
+            if (node1.Text == node2.Text) // réponse correcte
             {
-                tv1.ForeColor = Color.Green;
-                tv2.ForeColor = Color.Green;
+                node1.ForeColor = Color.Green;
+                node2.ForeColor = Color.Green;
             }
 
-            if (tv2.Text == null) // l'étudiant à oublier un noeud
+            if (node2.Text == null) // l'étudiant à oublier un noeud
             {
-                tv1.ForeColor = Color.Red;
+                node1.ForeColor = Color.Red;
             }
 
-            if (tv1.Text == null) // l'étudiant à mis trop de noeuds
+            if (node1.Text == null) // l'étudiant à mis trop de noeuds
             {
-                tv2.ForeColor = Color.Red;
+                node2.ForeColor = Color.Red;
+            }
+            int comparer = Math.Min(node1.Nodes.Count, node2.Nodes.Count);
+            for (int i = 0; i < comparer; i++)
+            {
+                ComparerTreeNodes(node1.Nodes[i], node2.Nodes[i]);
             }
         }
 
         void ComparerTreeViews(TreeView tv1, TreeView tv2)
         {
             // Parcourons tous les noeuds, meme ceux qui sont en trop
-            int comparer = Math.Max(tv1.Nodes.Count, tv2.Nodes.Count);
+            int comparer = Math.Min(tv1.Nodes.Count, tv2.Nodes.Count);
             for (int i = 0; i < comparer; i++)
             {
                 ComparerTreeNodes(tv1.Nodes[i], tv2.Nodes[i]);
