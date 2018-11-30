@@ -21,15 +21,23 @@ namespace Project_IA
         int bonnereponse;
         int score;
         int compteur = 0;
+        int scoreMax = 3;
         public Quizz()
         {
             InitializeComponent();
+            Dijkstra dij = new Dijkstra(true);
+            dij.Show();
+            this.Hide();
+        }
+        public Quizz(int resul)
+        {
+            InitializeComponent();
+            score = resul;
             deserializeFromXmlFile("test_question.xml");
             quizzzzz = new List<QuestionsCours>();
+            labelScore.Text = "SCORE :" + score + "/" + scoreMax;
             newQuiz();
             newQuestion();
-            
-
         }
         public List<QuestionsCours> deserializeFromXmlFile(string filePath)
         {
@@ -45,9 +53,9 @@ namespace Project_IA
         {
             int count = questionsCours.Count;
             int questionCount = 0;
-            int[] librairie = new int[20];
+            int[] librairie = new int[17];
 
-            while (questionCount < 20)
+            while (questionCount < 17)
             {
                 int numRandom = 0;
                 bool controle = false;
@@ -56,7 +64,7 @@ namespace Project_IA
                     int compteur_question = 0;
 
                     int randomNumber = random.Next(1, count+1);
-                    for (int i = 0; i < 20; i++)
+                    for (int i = 0; i < 17; i++)
                     {
                         if (librairie[i] == randomNumber)
                         {
@@ -140,6 +148,7 @@ namespace Project_IA
                 MessageBox.Show(quizzzzz.ElementAt(compteur).explicationBonneReponse);
             }
             compteur++;
+            scoreMax++;
         }
         private void defaultBackColor()
         {
@@ -178,6 +187,8 @@ namespace Project_IA
                 MessageBox.Show(quizzzzz.ElementAt(compteur).explicationBonneReponse);
             }
             compteur++;
+            scoreMax++;
+
         }
 
         private void option3Button_Click(object sender, EventArgs e)
@@ -208,6 +219,8 @@ namespace Project_IA
                 MessageBox.Show(quizzzzz.ElementAt(compteur).explicationBonneReponse);
             }
             compteur++;
+            scoreMax++;
+
         }
 
         private void option4Button_Click(object sender, EventArgs e)
@@ -240,19 +253,21 @@ namespace Project_IA
                 }
             }
             compteur++;
+            scoreMax++;
+
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            if (compteur<20)
+            if (compteur<17)
             {
                 defaultBackColor();
                 newQuestion();
-                labelScore.Text = "SCORE :" + score + "/" + compteur;
+                labelScore.Text = "SCORE :" + score + "/" + scoreMax;
             }
            else
             {
-                MessageBox.Show("Votre score final est :" + score + "/" + compteur);
+                MessageBox.Show("Votre score final est :" + score + "/" + scoreMax);
                 Accueil accueil = new Accueil();
                 accueil.Show();
                 this.Hide();

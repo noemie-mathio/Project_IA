@@ -20,6 +20,10 @@ namespace Project_IA
 {
     public partial class Dijkstra : Form
     {
+        private bool quizz;
+        private int question1=0;
+        private int compteurQuestion2=0;
+
         static public int[,] matrice;
         static public int nbnodes = 10;
         static public int numinitial;
@@ -46,77 +50,105 @@ namespace Project_IA
         {
             InitializeComponent();
             GraphpictureBox.Visible = false;
+            groupBox2.Visible = false;
+            groupBox3.Visible = false;
+            nf_label.Visible = false;
+            ni_label.Visible = false;
+            noeud_debut_textbox.Visible = false;
+            noeud_fin_textbox.Visible = false;
+            boutonConsignes.Visible = false;
+            GrapheListBoxgraphe.Visible = false;
+        }
+        public Dijkstra(bool boolean)
+        {
+            quizz = boolean;
+
+            InitializeComponent();
+            GraphpictureBox.Visible = false;
+            groupBox2.Visible = false;
+            groupBox3.Visible = false;
+            nf_label.Visible = false;
+            ni_label.Visible = false;
+            noeud_debut_textbox.Visible = false;
+            noeud_fin_textbox.Visible = false;
+            boutonConsignes.Visible = false;
+            GrapheListBoxgraphe.Visible = false;
         }
 
         private void button_Dijkstra_Click(object sender, EventArgs e)
         {
-
             affichageCheminListBox.Items.Clear();
             commentaireTextBox.Clear();
+            string message = "ERREUR \r\n";
             try
             {
-                numinitial = Convert.ToInt32(noeud_debut.Text);
+                numinitial = Convert.ToInt32(noeud_debut_textbox.Text);
             }
             catch
             {
-                commentaireTextBox.Text = ("Vous n'avez pas entré de noeud initial \r\n");
+                message += ("Vous n'avez pas entré de noeud initial \r\n");
             }
             try
             {
-                numfinal = Convert.ToInt32(noeud_fin.Text);
+                numfinal = Convert.ToInt32(noeud_fin_textbox.Text);
             }
             catch
             {
-                commentaireTextBox.Text += ("Vous n'avez pas entré de noeud final \r\n");
+                message += ("Vous n'avez pas entré de noeud final \r\n");
             }
-            g = new SearchTree();
-            N0 = new Node2();
-            N0.numero = numinitial;
-
-            L_Ouverts = new List<GenericNode>();
-            L_Fermes = new List<GenericNode>();
-            EnsembleOuvert = new List<List<GenericNode>>();
-            EnsembleFermes = new List<List<GenericNode>>();
-            N0List = new List<GenericNode>();
-            
-            
-
-            // Le noeud passé en paramètre est supposé être le noeud initial
-            GenericNode N = N0;
-            N0List.Add(N0);
-            L_Ouverts.Add(N0);
-            EnsembleOuvert.Add(N0List);
-
-            // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
-            while (L_Ouverts.Count != 0 && N.EndState() == false)
+            if (message == "ERREUR \r\n")
             {
-                // Le meilleur noeud des ouverts est supposé placé en tête de liste
-                // On le place dans les fermés
-                L_Fermes.Add(N);
-                L_Ouverts.Remove(N);
-                GenericNode solu = g.stepSolutionAEtoile(N, L_Ouverts, L_Fermes);
-                List<GenericNode> listOuvert = new List<GenericNode>(L_Ouverts);
-                EnsembleOuvert.Add(listOuvert);
-                List<GenericNode> listFermes = new List<GenericNode>(L_Fermes);
-                EnsembleFermes.Add(listFermes);
-                N = solu;
+                g = new SearchTree();
+                N0 = new Node2();
+                N0.numero = numinitial;
 
-            }
-            // renvois les noeuds parents jusqu'a avoir l'arbre total methode du SearchTree qui est passé en ligne de code directement.
-            List<GenericNode> _LN = new List<GenericNode>();
-            if (N != null)
-            {
-                _LN.Add(N);
+                L_Ouverts = new List<GenericNode>();
+                L_Fermes = new List<GenericNode>();
+                EnsembleOuvert = new List<List<GenericNode>>();
+                EnsembleFermes = new List<List<GenericNode>>();
+                N0List = new List<GenericNode>();
 
-                while (N != N0)
+
+
+                // Le noeud passé en paramètre est supposé être le noeud initial
+                GenericNode N = N0;
+                N0List.Add(N0);
+                L_Ouverts.Add(N0);
+                EnsembleOuvert.Add(N0List);
+
+                // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
+                while (L_Ouverts.Count != 0 && N.EndState() == false)
                 {
-                    N = N.GetNoeud_Parent();
-                    _LN.Insert(0, N);  // On insère en position 1
-                }
-            }
-            solution = _LN;
+                    // Le meilleur noeud des ouverts est supposé placé en tête de liste
+                    // On le place dans les fermés
+                    L_Fermes.Add(N);
+                    L_Ouverts.Remove(N);
+                    GenericNode solu = g.stepSolutionAEtoile(N, L_Ouverts, L_Fermes);
+                    List<GenericNode> listOuvert = new List<GenericNode>(L_Ouverts);
+                    EnsembleOuvert.Add(listOuvert);
+                    List<GenericNode> listFermes = new List<GenericNode>(L_Fermes);
+                    EnsembleFermes.Add(listFermes);
+                    N = solu;
 
-            g.PrintEmptyTree(treeViewEtudiant);
+                }
+                // renvois les noeuds parents jusqu'a avoir l'arbre total methode du SearchTree qui est passé en ligne de code directement.
+                List<GenericNode> _LN = new List<GenericNode>();
+                if (N != null)
+                {
+                    _LN.Add(N);
+
+                    while (N != N0)
+                    {
+                        N = N.GetNoeud_Parent();
+                        _LN.Insert(0, N);  // On insère en position 1
+                    }
+                }
+                solution = _LN;
+
+
+                g.PrintEmptyTree(treeViewEtudiant);
+            }
+            else { MessageBox.Show(message); }
             
 
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -136,22 +168,7 @@ namespace Project_IA
             EnsembleOuvertEleve = new List<List<string>>();
             EnsembleFermeEleve = new List<List<string>>();
             Ouvert = new List<GenericNode>();
-            try
-            {
-                numinitial = Convert.ToInt32(noeud_debut.Text);
-            }
-            catch
-            {
-                commentaireTextBox.Text = ("Vous n'avez pas entré de noeud initial \r\n");
-            }
-            try
-            {
-                numfinal = Convert.ToInt32(noeud_fin.Text);
-            }
-            catch
-            {
-                commentaireTextBox.Text += ("Vous n'avez pas entré de noeud final \r\n");
-            }
+           
             ///////////////////////////////////////////////  Lecture des réponses de l'étudiant   /////////////////////////////////////////////////////////////////////////
 
             //////////////////////////////////////////////     Lecture des ensembles ouverts     ///////////////
@@ -203,7 +220,7 @@ namespace Project_IA
             Node2 N1 = N0;
                 if ((ToutEnsembleFerme.Lines.Length != 0) && (ToutEnsembleOuvert.Lines.Length != 0))
                 {
-                    if (Convert.ToInt32(noeud_fin.Text) > nbnodes)
+                    if (Convert.ToInt32(noeud_fin_textbox.Text) > nbnodes)
                     {
                         commentaireTextBox.Text += ("Le noeud final stipulé est plus grand que le nombre de noeuds total");
                     }
@@ -234,12 +251,7 @@ namespace Project_IA
             //////////////////////// Comparaison des Ensembles ouverts //////////////////////////
             juste = true;
             int CompteurO = 0;
-            if (EnsembleOuvertEleve.Count == 0)
-            {
-                commentaireTextBox.Text += ("Vous devez remplir les ensembles Ouverts au format 1,2,3... \r\n");
-            }
-            else
-            {
+          
                 while ((CompteurO < Math.Min(EnsembleOuvert.Count, EnsembleOuvertEleve.Count)) && (juste == true))
                 {
 
@@ -278,23 +290,20 @@ namespace Project_IA
 
                 if (juste == true)
                 {
+                question1++;
                     commentaireTextBox.Text += ("Bravo, vous avez bien trouvé l'ensemble des ouverts \r\n");
                 }
                 else if (juste == false)
                 { commentaireTextBox.Text += ("Vous vous etes trompé dans l'ensemble ouvert à l'étape :" + CompteurO + "\r\n"); }
-
-            }
+            
+            
             // fin du test des ensembles ouverts dans l'ordre
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             // Test des ensembles fermés (toujours dans l'Ordre car si la personne les mets dans le désordre c'est qu'elle n'a pas compris le Dijkstra
             juste = true;
             int CompteurF = 0;
-            if (EnsembleFermeEleve.Count == 0)
-            {
-                commentaireTextBox.Text += ("Vous devez remplir les ensembles Fermés au format 1,2,3... \r\n");
-            }
-            else
-            {
+          
+            
                 while ((CompteurF < Math.Min(L_Fermes.Count, EnsembleFermeEleve.Count)) && (juste == true))
                 {
 
@@ -333,12 +342,13 @@ namespace Project_IA
 
                 if (juste == true)
                 {
+                question1++;
                     commentaireTextBox.Text += ("Bravo, vous avez bien trouvé l'ensemble des fermes \r\n");
                 }
                 else if (juste == false)
                 { commentaireTextBox.Text += ("Vous vous etes trompé dans l'ensemble ferme à l'étape :" + CompteurF + "\r\n"); }
 
-            }
+            
 
         }
         void ComparerTreeNodes(TreeNode node1, TreeNode node2)
@@ -353,6 +363,7 @@ namespace Project_IA
             {
                 node1.ForeColor = Color.Green;
                 node2.ForeColor = Color.Green;
+                compteurQuestion2++;
             }
 
             if (node2.Text == null) // l'étudiant à oublier un noeud
@@ -364,18 +375,18 @@ namespace Project_IA
             {
                 node2.ForeColor = Color.Red;
             }
-            int comparer = Math.Min(node1.Nodes.Count, node2.Nodes.Count);
-            for (int i = 0; i < comparer; i++)
+            for (int i = 0; i < node1.Nodes.Count; i++)
             {
                 ComparerTreeNodes(node1.Nodes[i], node2.Nodes[i]);
             }
+            
         }
 
         void ComparerTreeViews(TreeView tv1, TreeView tv2)
         {
             // Parcourons tous les noeuds, meme ceux qui sont en trop
-            int comparer = Math.Min(tv1.Nodes.Count, tv2.Nodes.Count);
-            for (int i = 0; i < comparer; i++)
+            
+            for (int i = 0; i < tv1.Nodes.Count; i++)
             {
                 ComparerTreeNodes(tv1.Nodes[i], tv2.Nodes[i]);
             }
@@ -383,6 +394,15 @@ namespace Project_IA
 
         private void graphAleatoirebutton_Click(object sender, EventArgs e)
         {
+
+            GraphpictureBox.Visible = true;
+            groupBox2.Visible = true;
+            nf_label.Visible = true;
+            ni_label.Visible = true;
+            noeud_debut_textbox.Visible = true;
+            noeud_fin_textbox.Visible = true;
+            boutonConsignes.Visible = true;
+            GrapheListBoxgraphe.Visible = true;
             GrapheListBoxgraphe.Items.Clear();
 
             Random random = new Random();
@@ -527,15 +547,7 @@ namespace Project_IA
             return _LN;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ToutEnsembleFerme_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void treeView1_AfterSelect(object sender, EventArgs e) { }
 
@@ -559,20 +571,7 @@ namespace Project_IA
             treeViewEtudiant.ExpandAll();
         }
    
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -581,34 +580,60 @@ namespace Project_IA
            
         }
 
-        private void noeud_debut_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
-            affichageSolution(N0, solution);
+            string message = "ATTENTION \r\n";
+           
+            if (ToutEnsembleOuvert.Text=="")
+            {
+                message += ("Vous devez remplir les ensembles Ouverts au format 1,2,3... \r\n");
+            }
+            if (ToutEnsembleFerme.Text=="")
+            {
+                message += ("Vous devez remplir les ensembles Fermés au format 1,2,3... \r\n");
+            }
+            if (treeViewEtudiant.Nodes.Count == 0)
+            {
+                message += ("Vous devez remplir l'arbre d'exploration en cliquant sur générer l'arbre puis en éditant les noeuds\r\n");
+            }
+            if(message== "ATTENTION \r\n")
+            {
+
+                groupBox3.Visible = true;
+                affichageSolution(N0, solution);
+            }
+            else { MessageBox.Show(message); }
+            
         }
 
         private void boutonConsignes_Click(object sender, EventArgs e)
         {
-            if (treeViewSolution.Nodes.Count == 0)
-            {
-                commentaireTextBox.Text += ( "Vous devez remplir l'arbre d'exploration en cliquant sur générer l'arbre puis en éditant les noeuds\r\n");
-            }
+            string message="";
             try
             {
-               ensembleFermeEleve = Convert.ToInt32(ToutEnsembleFerme.Text);
+                numinitial = Convert.ToInt32(noeud_debut_textbox.Text);
             }
             catch
             {
-                   commentaireTextBox.Text += ("Vous devez remplir les ensembles Fermés au format 1,2,3... \r\n");
+                message += ("Vous devez entrer un noeud initial \r\n");
+            }
+            try
+            {
+                numfinal = Convert.ToInt32(noeud_fin_textbox.Text);
+            }
+            catch
+            {
+                message += ("Vous devez entrer un noeud final \r\n");
+            }
+            try
+            {
+                ensembleFermeEleve = Convert.ToInt32(ToutEnsembleFerme.Text);
+            }
+            catch
+            {
+                message += ("Vous devez remplir les ensembles Fermés au format 1,2,3... \r\n");
             }
             try
             {
@@ -616,24 +641,56 @@ namespace Project_IA
             }
             catch
             {
-                commentaireTextBox.Text += ("Vous devez remplir les ensembles Ouverts au format 1,2,3... \r\n");
+                message += ("Vous devez remplir les ensembles Ouverts au format 1,2,3... \r\n");
             }
             
-            try
+            
+            if (treeViewSolution.Nodes.Count == 0)
             {
-                numinitial = Convert.ToInt32(noeud_debut.Text);
+                message += ("Vous devez remplir l'arbre d'exploration en cliquant sur générer l'arbre puis en éditant les noeuds\r\n");
+                message += ("Les noeuds doivent être sous la forme 0:0, 1:3");
             }
-            catch
+           
+            if (message!="")
             {
-                commentaireTextBox.Text += ("Vous devez entrer un noeud initial \r\n");
+                MessageBox.Show(message);
             }
-            try
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (quizz==false)
             {
-                numfinal = Convert.ToInt32(noeud_fin.Text);
+                Accueil accueil = new Accueil();
+                accueil.Show();
+                this.Hide();
             }
-            catch
+            else
             {
-                commentaireTextBox.Text += ("Vous devez entrer un noeud final \r\n");
+                if (question1==2 && compteurQuestion2== treeViewSolution.Nodes.Count)
+                {
+                    Quizz quizz = new Quizz(3);
+                    quizz.Show();
+                    this.Hide();
+                }
+                else if (question1!=2 && compteurQuestion2 != 0 &&compteurQuestion2 == treeViewSolution.GetNodeCount(true))
+                {
+                    Quizz quizz = new Quizz(1);
+                    quizz.Show();
+                    this.Hide();
+                }
+                else if (question1 == 2 && compteurQuestion2 != treeViewSolution.Nodes.Count)
+                {
+                    Quizz quizz = new Quizz(2);
+                    quizz.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    Quizz quizz = new Quizz(0);
+                    quizz.Show();
+                    this.Hide();
+                }
             }
         }
     }

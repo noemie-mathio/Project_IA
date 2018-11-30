@@ -7,7 +7,7 @@
     <reponse2>3 degrés de liberté</reponse2>
     <reponse3>2 degrés de liberté</reponse3>
     <reponse4>Ca dépends</reponse4>
-    <explicationBonneReponse>Blablabla</explicationBonneReponse>
+    <explicationBonneReponse>La liaison rotule peut tourner sur tous ses 3 axes (rotation) mais ne peut pas translater sur les axes x, y ou z</explicationBonneReponse>
   </QuestionsCours>
   <QuestionsCours>
     <bonnereponse>3</bonnereponse>
@@ -16,16 +16,16 @@
     <reponse2>Le servo-contrôleur n’est pas programmable</reponse2>
     <reponse3>Le servo-contrôleur ne fonctionne pas en autonomie</reponse3>
     <reponse4>Le micro-contrôleur ne possede pas de mémoire interne</reponse4>
-    <explicationBonneReponse>Blablabla</explicationBonneReponse>
+    <explicationBonneReponse>Le micro-controleur possede un programme (C) et une mémoire interne, il fonctionne en autonomie, et possede une plus large marge de manoeuvre qu'un servo-controleur</explicationBonneReponse>
   </QuestionsCours>
   <QuestionsCours>
     <bonnereponse>2</bonnereponse>
-    <question>Quel est l’avantage d’une résolution utilisant A+ sur un simple Dijkstra?</question>
-    <reponse1>Trouver une solution plus rapide</reponse1>
-    <reponse2>Trouver une solution plus rapidement</reponse2>
+    <question>Quel est l’avantage d’une résolution utilisant A* sur un simple Dijkstra?</question>
+    <reponse1>Trouver une solution plus rapide </reponse1>
+    <reponse2>Trouver plus rapidement une solution </reponse2>
     <reponse3>Trouver une meilleur solution</reponse3>
     <reponse4>Redessiner le graphe</reponse4>
-    <explicationBonneReponse>Blabla</explicationBonneReponse>
+    <explicationBonneReponse> Le Dijkstra va tester chaque possibilité (radial) là ou le A* testera les chemins "le long" d'un heuristique (pas d'analyse des chemins trop éloignés de l'heuristique). </explicationBonneReponse>
   </QuestionsCours>
   <QuestionsCours>
     <bonnereponse>1</bonnereponse>
@@ -34,16 +34,16 @@
     <reponse2>Trouver le chemin le plus court</reponse2>
     <reponse3>Trouver l’équilibre le moins énergétique</reponse3>
     <reponse4>Trouver une meilleure solution</reponse4>
-    <explicationBonneReponse>Le but de min-max est de trouver le meilleur coup à jouer à partir d'un état donné du jeu. Le principe consiste à construire un arbre de jeu : c'est un arbre qui représente toutes les évolutions possibles du jeu à partir de la configuration actuelle.</explicationBonneReponse>
+    <explicationBonneReponse>Le but de min-max est de trouver le meilleur coup à jouer à partir d'un état donné du jeu. Le principe consiste à construire un arbre de jeu : \r\n c'est un arbre qui représente toutes les évolutions possibles du jeu à partir de la configuration actuelle.</explicationBonneReponse>
   </QuestionsCours>
   <QuestionsCours>
     <bonnereponse>3</bonnereponse>
-    <question>Quelle amélioration apporte l’algorithme Alpha-Beta par rapport à l’algorithme min/max ?</question>
+    <question>Quelle amélioration apporte l’algorithme Alpha-Beta par rapport à l’algorithme MinMax ?</question>
     <reponse1>Mieux identifier le coup de l’adversaire</reponse1>
     <reponse2>Trouver une meilleur solution</reponse2>
     <reponse3>Ne pas étudier les coups possibles moins forts</reponse3>
     <reponse4>Identifier le chemin le plus court</reponse4>
-    <explicationBonneReponse>Blabla</explicationBonneReponse>
+    <explicationBonneReponse> L'algorithme Alpha-Beta est une version améliorer de l'algorithme MinMax car il n'étudie pas tous les coups. \r\n En effet, il n'étudie pas les coups possibles qui sont moins forts. </explicationBonneReponse>
   </QuestionsCours>
   <QuestionsCours>
     <bonnereponse>4</bonnereponse>
@@ -120,9 +120,9 @@
   </QuestionsCours>
   <QuestionsCours>
     <bonnereponse>1</bonnereponse>
-    <question>Vous prenez en cours une partie de puissance 4 mais vous ne savez pas quel est le meilleur coup \n à jouer pour anticiper les 3 prochains coups. Quel algorithme utiliseriez-vous ?</question>
+    <question>Vous prenez en cours une partie de puissance 4 mais vous ne savez pas quel est le meilleur coup \r\n à jouer pour anticiper les 3 prochains coups. Quel algorithme utiliseriez-vous ?</question>
     <reponse1>L'algorithme MinMax</reponse1>
-    <reponse2>L'algorithme Alpha Beta</reponse2>
+    <reponse2>L'algorithme génétique</reponse2>
     <reponse3>L'algorithme de Dijkstra</reponse3>
     <reponse4>L'algorithme A*</reponse4>
     <explicationBonneReponse>L'algorithme MinMax permet de déterminer le meilleur coup possible à partir d'une situation donnée</explicationBonneReponse>
@@ -152,7 +152,7 @@
     <reponse2>Un robot accomplit automatiquement des tâches</reponse2>
     <reponse3>Un robot peut imiter ou reproduire des actions humaines</reponse3>
     <reponse4>Un robot ne peut pas effectuer des tâches sans un contrôle de l'homme </reponse4>
-    <explicationBonneReponse>Un robot est un dispositif mécatronique conçu pour accomplir automatiquement des tâches imitant ou reproduisant des tâches imitant ou reproduisant, dans un domain précis, des actions humaines</explicationBonneReponse>
+    <explicationBonneReponse>Un robot est un dispositif mécatronique conçu pour accomplir automatiquement des tâches imitant ou reproduisant, dans un domain précis, des actions humaines</explicationBonneReponse>
   </QuestionsCours>
   <QuestionsCours>
     <bonnereponse>3</bonnereponse>
@@ -176,7 +176,7 @@
     <bonnereponse>3</bonnereponse>
     <question>Vous souhaitez trouver le chemin le plus cours entre Lyon et Lille. Quel algorithme utilisez-vous ?</question>
     <reponse1>Un perceptron</reponse1>
-    <reponse2>Dijkstra</reponse2>
+    <reponse2>Algorithme génétique</reponse2>
     <reponse3>A*</reponse3>
     <reponse4>Un algorithme MinMax</reponse4>
     <explicationBonneReponse>Utilisation de l'algorithme A* qui va prendre en compte le contexte pour trouver la meilleure solution.</explicationBonneReponse>
@@ -188,7 +188,7 @@
     <reponse2>Une navigation qui permet de trouver un chemin direct en passant par des endroits inconnus</reponse2>
     <reponse3>Une navigation qui connaît des choses relatives sur un chemin et la distance entre les lieux</reponse3>
     <reponse4>Une navigation qui connaît des choses relatives sur un chemin mais pas la distance entre les lieux</reponse4>
-    <explicationBonneReponse>Naviagation topologique : connaissance de chose relatives sur un chemin mais on a pas la distance entre les lieux. Exemple : après tel élément rencontré dans l’environnement, il faut tourner à gauche ou à droite</explicationBonneReponse>
+    <explicationBonneReponse>Naviagation topologique : connaissance de chose relatives sur un chemin mais on a pas la distance entre les lieux. Exemple : \n\r après tel élément rencontré dans l’environnement, il faut tourner à gauche ou à droite</explicationBonneReponse>
   </QuestionsCours>
   <QuestionsCours>
     <bonnereponse>2</bonnereponse>

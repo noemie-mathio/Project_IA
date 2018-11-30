@@ -28,13 +28,12 @@ namespace Project_IA
         private void quizButton_Click(object sender, EventArgs e)
         {
             Quizz QCM = new Quizz();
-            QCM.Show();
             this.Hide();
         }
 
         private void dijkstraButton_Click(object sender, EventArgs e)
         {
-            Dijkstra Dijkstra = new Dijkstra();
+            Dijkstra Dijkstra = new Dijkstra(false);
             Dijkstra.Show();
             this.Hide();
         }
