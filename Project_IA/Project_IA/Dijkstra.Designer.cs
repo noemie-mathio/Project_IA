@@ -28,60 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button_Dijkstra = new System.Windows.Forms.Button();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.SoumettreReponses = new System.Windows.Forms.Button();
+            this.treeViewSolution = new System.Windows.Forms.TreeView();
             this.GraphAleatoirebutton = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.listBoxgraphe = new System.Windows.Forms.ListBox();
+            this.GrapheListBoxgraphe = new System.Windows.Forms.ListBox();
             this.ToutEnsembleFerme = new System.Windows.Forms.TextBox();
             this.ToutEnsembleOuvert = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.commentaireTextBox = new System.Windows.Forms.TextBox();
+            this.affichageCheminListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.treeView2 = new System.Windows.Forms.TreeView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.treeViewEtudiant = new System.Windows.Forms.TreeView();
+            this.nodeTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.editNode = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.boutonConsignes = new System.Windows.Forms.Button();
+            this.GraphpictureBox = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.noeud_fin = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.noeud_debut = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.GraphpictureBox = new System.Windows.Forms.PictureBox();
-            this.noeud_fin = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GraphpictureBox)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GraphpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // button_Dijkstra
+            // SoumettreReponses
             // 
-            this.button_Dijkstra.Location = new System.Drawing.Point(136, 32);
-            this.button_Dijkstra.Name = "button_Dijkstra";
-            this.button_Dijkstra.Size = new System.Drawing.Size(152, 23);
-            this.button_Dijkstra.TabIndex = 3;
-            this.button_Dijkstra.Text = "Soumettre les réponses";
-            this.button_Dijkstra.UseVisualStyleBackColor = true;
-            this.button_Dijkstra.Click += new System.EventHandler(this.button_Dijkstra_Click);
+            this.SoumettreReponses.Location = new System.Drawing.Point(174, 270);
+            this.SoumettreReponses.Name = "SoumettreReponses";
+            this.SoumettreReponses.Size = new System.Drawing.Size(98, 44);
+            this.SoumettreReponses.TabIndex = 3;
+            this.SoumettreReponses.Text = "Générer l\'arbre";
+            this.SoumettreReponses.UseVisualStyleBackColor = true;
+            this.SoumettreReponses.Click += new System.EventHandler(this.button_Dijkstra_Click);
             // 
-            // treeView1
+            // treeViewSolution
             // 
-            this.treeView1.Location = new System.Drawing.Point(231, 92);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(152, 112);
-            this.treeView1.TabIndex = 7;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.treeViewSolution.ForeColor = System.Drawing.Color.Red;
+            this.treeViewSolution.Location = new System.Drawing.Point(231, 92);
+            this.treeViewSolution.Name = "treeViewSolution";
+            this.treeViewSolution.Size = new System.Drawing.Size(152, 112);
+            this.treeViewSolution.TabIndex = 7;
+            this.treeViewSolution.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // GraphAleatoirebutton
             // 
@@ -93,14 +95,14 @@
             this.GraphAleatoirebutton.UseVisualStyleBackColor = true;
             this.GraphAleatoirebutton.Click += new System.EventHandler(this.graphAleatoirebutton_Click);
             // 
-            // listBoxgraphe
+            // GrapheListBoxgraphe
             // 
-            this.listBoxgraphe.FormattingEnabled = true;
-            this.listBoxgraphe.Location = new System.Drawing.Point(159, 18);
-            this.listBoxgraphe.Margin = new System.Windows.Forms.Padding(2);
-            this.listBoxgraphe.Name = "listBoxgraphe";
-            this.listBoxgraphe.Size = new System.Drawing.Size(141, 121);
-            this.listBoxgraphe.TabIndex = 9;
+            this.GrapheListBoxgraphe.FormattingEnabled = true;
+            this.GrapheListBoxgraphe.Location = new System.Drawing.Point(159, 18);
+            this.GrapheListBoxgraphe.Margin = new System.Windows.Forms.Padding(2);
+            this.GrapheListBoxgraphe.Name = "GrapheListBoxgraphe";
+            this.GrapheListBoxgraphe.Size = new System.Drawing.Size(141, 108);
+            this.GrapheListBoxgraphe.TabIndex = 9;
             // 
             // ToutEnsembleFerme
             // 
@@ -119,21 +121,21 @@
             this.ToutEnsembleOuvert.Size = new System.Drawing.Size(122, 125);
             this.ToutEnsembleOuvert.TabIndex = 12;
             // 
-            // textBox1
+            // commentaireTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 234);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(377, 84);
-            this.textBox1.TabIndex = 13;
+            this.commentaireTextBox.Location = new System.Drawing.Point(12, 234);
+            this.commentaireTextBox.Multiline = true;
+            this.commentaireTextBox.Name = "commentaireTextBox";
+            this.commentaireTextBox.Size = new System.Drawing.Size(467, 84);
+            this.commentaireTextBox.TabIndex = 13;
             // 
-            // listBox1
+            // affichageCheminListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(6, 92);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(153, 82);
-            this.listBox1.TabIndex = 14;
+            this.affichageCheminListBox.FormattingEnabled = true;
+            this.affichageCheminListBox.Location = new System.Drawing.Point(6, 92);
+            this.affichageCheminListBox.Name = "affichageCheminListBox";
+            this.affichageCheminListBox.Size = new System.Drawing.Size(153, 82);
+            this.affichageCheminListBox.TabIndex = 14;
             // 
             // label1
             // 
@@ -182,31 +184,22 @@
             this.label5.TabIndex = 19;
             this.label5.Text = "Commentaires";
             // 
-            // treeView2
+            // treeViewEtudiant
             // 
-            this.treeView2.Location = new System.Drawing.Point(11, 218);
-            this.treeView2.Name = "treeView2";
-            this.treeView2.Size = new System.Drawing.Size(154, 109);
-            this.treeView2.TabIndex = 20;
-            this.treeView2.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView2_AfterSelect);
+            this.treeViewEtudiant.ForeColor = System.Drawing.Color.Black;
+            this.treeViewEtudiant.Location = new System.Drawing.Point(11, 218);
+            this.treeViewEtudiant.Name = "treeViewEtudiant";
+            this.treeViewEtudiant.Size = new System.Drawing.Size(154, 109);
+            this.treeViewEtudiant.TabIndex = 20;
+            this.treeViewEtudiant.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView2_AfterSelect);
             // 
-            // textBox2
+            // nodeTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(232, 204);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(40, 20);
-            this.textBox2.TabIndex = 21;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(181, 239);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Ajout Noeud";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.nodeTextBox.Location = new System.Drawing.Point(232, 198);
+            this.nodeTextBox.Name = "nodeTextBox";
+            this.nodeTextBox.Size = new System.Drawing.Size(40, 20);
+            this.nodeTextBox.TabIndex = 21;
+            this.nodeTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
             // label6
             // 
@@ -220,7 +213,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(171, 198);
+            this.label7.Location = new System.Drawing.Point(171, 192);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 26);
             this.label7.TabIndex = 24;
@@ -258,30 +251,66 @@
             this.label10.Text = "La solution";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // button2
+            // editNode
             // 
-            this.button2.Location = new System.Drawing.Point(181, 282);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Supr Noeud";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.editNode.Location = new System.Drawing.Point(174, 232);
+            this.editNode.Name = "editNode";
+            this.editNode.Size = new System.Drawing.Size(98, 23);
+            this.editNode.TabIndex = 28;
+            this.editNode.Text = "Editer Noeud";
+            this.editNode.UseVisualStyleBackColor = true;
+            this.editNode.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.boutonConsignes);
             this.groupBox1.Controls.Add(this.GraphpictureBox);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.noeud_fin);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.noeud_debut);
-            this.groupBox1.Controls.Add(this.listBoxgraphe);
+            this.groupBox1.Controls.Add(this.GrapheListBoxgraphe);
             this.groupBox1.Controls.Add(this.GraphAleatoirebutton);
             this.groupBox1.Location = new System.Drawing.Point(9, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(725, 168);
+            this.groupBox1.Size = new System.Drawing.Size(828, 187);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
+            // 
+            // boutonConsignes
+            // 
+            this.boutonConsignes.Location = new System.Drawing.Point(164, 132);
+            this.boutonConsignes.Name = "boutonConsignes";
+            this.boutonConsignes.Size = new System.Drawing.Size(100, 39);
+            this.boutonConsignes.TabIndex = 33;
+            this.boutonConsignes.Text = "Consignes";
+            this.boutonConsignes.UseVisualStyleBackColor = true;
+            this.boutonConsignes.Click += new System.EventHandler(this.boutonConsignes_Click);
+            // 
+            // GraphpictureBox
+            // 
+            this.GraphpictureBox.Location = new System.Drawing.Point(342, 21);
+            this.GraphpictureBox.Name = "GraphpictureBox";
+            this.GraphpictureBox.Size = new System.Drawing.Size(461, 118);
+            this.GraphpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.GraphpictureBox.TabIndex = 32;
+            this.GraphpictureBox.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(21, 111);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 13);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "noeud final";
+            // 
+            // noeud_fin
+            // 
+            this.noeud_fin.Location = new System.Drawing.Point(25, 132);
+            this.noeud_fin.Name = "noeud_fin";
+            this.noeud_fin.Size = new System.Drawing.Size(100, 20);
+            this.noeud_fin.TabIndex = 11;
             // 
             // label11
             // 
@@ -303,111 +332,95 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.editNode);
+            this.groupBox2.Controls.Add(this.SoumettreReponses);
             this.groupBox2.Controls.Add(this.ToutEnsembleFerme);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.nodeTextBox);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.treeView2);
+            this.groupBox2.Controls.Add(this.treeViewEtudiant);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.ToutEnsembleOuvert);
-            this.groupBox2.Location = new System.Drawing.Point(12, 201);
+            this.groupBox2.Location = new System.Drawing.Point(12, 219);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(303, 333);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(112, 30);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(149, 25);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "Soumettre les réponse";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.listBox1);
-            this.groupBox3.Controls.Add(this.button_Dijkstra);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.commentaireTextBox);
+            this.groupBox3.Controls.Add(this.affichageCheminListBox);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.treeView1);
+            this.groupBox3.Controls.Add(this.treeViewSolution);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(333, 201);
+            this.groupBox3.Location = new System.Drawing.Point(333, 219);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(401, 333);
+            this.groupBox3.Size = new System.Drawing.Size(504, 333);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
-            // 
-            // GraphpictureBox
-            // 
-            this.GraphpictureBox.Location = new System.Drawing.Point(342, 21);
-            this.GraphpictureBox.Name = "GraphpictureBox";
-            this.GraphpictureBox.Size = new System.Drawing.Size(365, 118);
-            this.GraphpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.GraphpictureBox.TabIndex = 32;
-            this.GraphpictureBox.TabStop = false;
-            // 
-            // noeud_fin
-            // 
-            this.noeud_fin.Location = new System.Drawing.Point(25, 132);
-            this.noeud_fin.Name = "noeud_fin";
-            this.noeud_fin.Size = new System.Drawing.Size(100, 20);
-            this.noeud_fin.TabIndex = 11;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(21, 111);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 13);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "noeud final";
             // 
             // Dijkstra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 546);
+            this.ClientSize = new System.Drawing.Size(861, 589);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Dijkstra";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GraphpictureBox)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GraphpictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button_Dijkstra;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Button SoumettreReponses;
+        private System.Windows.Forms.TreeView treeViewSolution;
         private System.Windows.Forms.Button GraphAleatoirebutton;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.ListBox listBoxgraphe;
+        private System.Windows.Forms.ListBox GrapheListBoxgraphe;
         private System.Windows.Forms.TextBox ToutEnsembleFerme;
         private System.Windows.Forms.TextBox ToutEnsembleOuvert;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox commentaireTextBox;
+        private System.Windows.Forms.ListBox affichageCheminListBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TreeView treeView2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TreeView treeViewEtudiant;
+        private System.Windows.Forms.TextBox nodeTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button editNode;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -416,5 +429,7 @@
         private System.Windows.Forms.TextBox noeud_fin;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button boutonConsignes;
     }
 }

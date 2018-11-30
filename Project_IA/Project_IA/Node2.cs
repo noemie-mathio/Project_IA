@@ -24,7 +24,7 @@ namespace Project_IA
             return numero.ToString();
         }
 
-        public override double GetArcCost(GenericNode N2)
+        public override int GetArcCost(GenericNode N2)
         {
             Node2 N2bis = (Node2)N2;
             return Dijkstra.matrice[numero, N2bis.numero];
@@ -52,7 +52,7 @@ namespace Project_IA
         }
 
 
-        public override double CalculeHCost()
+        public override int CalculeHCost()
         {
             return (0);
         }

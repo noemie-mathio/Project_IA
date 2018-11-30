@@ -164,7 +164,7 @@ namespace Project_IA
             // On suppose le TreeView préexistant
             TV.Nodes.Clear();
 
-            TreeNode TN = new TreeNode(L_Fermes[0].ToString());
+            TreeNode TN = new TreeNode(L_Fermes[0].ToString()+" : " + L_Fermes[0].Cout_Total.ToString());
             TV.Nodes.Add(TN);
 
             AjouteBranche(L_Fermes[0], TN);
@@ -196,7 +196,7 @@ namespace Project_IA
         {
             foreach (GenericNode GNfils in GN.GetEnfants())
             {
-                TreeNode TNfils = new TreeNode(GNfils.ToString());
+                TreeNode TNfils = new TreeNode(GNfils.ToString() + " : " + GNfils.Cout_Total.ToString());
                 TN.Nodes.Add(TNfils);
                 if (GNfils.GetEnfants().Count > 0) AjouteBranche(GNfils, TNfils);
             }

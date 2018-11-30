@@ -10,9 +10,9 @@ namespace Project_IA
     // pour résoudre un problème particulier en y ajoutant des infos liées au contexte du problème
     abstract public class GenericNode
     {
-        protected double GCost;               //coût du chemin du noeud initial jusqu'à ce noeud
-        protected double HCost;               //estimation heuristique du coût pour atteindre le noeud final
-        protected double TotalCost;           //coût total (g+h)
+        protected int GCost;               //coût du chemin du noeud initial jusqu'à ce noeud
+        protected int HCost;               //estimation heuristique du coût pour atteindre le noeud final
+        protected int TotalCost;           //coût total (g+h)
         protected GenericNode ParentNode;     // noeud parent
         protected List<GenericNode> Enfants;  // noeuds enfants
 
@@ -23,17 +23,17 @@ namespace Project_IA
         }
 
 
-        public double GetGCost()
+        public int GetGCost()
         {
             return GCost;
         }
 
-        public void SetGCost(double g)
+        public void SetGCost(int g)
         {
             GCost = g;
         }
 
-        public double Cout_Total
+        public int Cout_Total
         {
             get { return TotalCost; }
             set { TotalCost = value; }
@@ -76,10 +76,10 @@ namespace Project_IA
         // Méthodes abstrates, donc à surcharger obligatoirement avec override dans une classe fille
         public abstract bool IsEqual(GenericNode N2);
         public abstract String getNumero();
-        public abstract double GetArcCost(GenericNode N2);
+        public abstract int GetArcCost(GenericNode N2);
         public abstract bool EndState();
         public abstract List<GenericNode> GetListSucc();
-        public abstract double CalculeHCost();
+        public abstract int CalculeHCost();
         // On peut aussi penser à surcharger ToString() pour afficher correctement un état
         // c'est utile pour l'affichage du treenode
     }
